@@ -8,7 +8,7 @@ Aus [Moodle](https://moodle.tu-dortmund.de/):
 Die Struktur dieses Projekts und die grundlegende Methodik sind an den
 [Toolbox-Workshop](https://toolbox.pep-dortmund.org/notes.html) von
 [PeP et al. e.V.](https://pep-dortmund.org/) angelehnt. Als Hilfe stellt die
-[Fachschaft](https://fachschaft-physik.tu-dortmund.de/wordpress/studium/praktikum/altprotokolle/)
+[Fachschaft](https://fachschaft-physik.tu-dortmund.de/wordpress/studium/praktikum/altprotokolle-fp/)
 Altprotokolle zur Verfügung.
 
 **Autoren**
