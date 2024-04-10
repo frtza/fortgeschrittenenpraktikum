@@ -1,0 +1,33 @@
+\input{header.tex}
+
+\subject{\texorpdfstring{\vspace{2ex}}{}123\texorpdfstring{\vspace{-2ex}}{}} % Nummer
+\title{Template} % Titel: Name des Versuchs
+\date{
+	Durchführung: 29. Februar 2023% Datum
+	\\ Abgabe: 6. März 2023% Datum
+}
+
+\begin{document}
+
+\pagenumbering{gobble}
+
+\maketitle
+\thispagestyle{empty}
+
+\pagenumbering{arabic}
+
+\tableofcontents
+\newpage
+
+\input{content/zielsetzung.tex}
+\input{content/theorie.tex}
+\input{content/durchfuehrung.tex}
+\input{content/auswertung.tex}
+\input{content/diskussion.tex}
+
+\printbibliography{}
+
+\newpage
+\input{content/anhang.tex}
+
+\end{document}

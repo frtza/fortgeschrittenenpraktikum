@@ -1,0 +1,46 @@
+% essential math commands
+\usepackage{amsmath}
+% many math symbols
+\usepackage{amssymb}
+% extensions for amsmath
+\usepackage{mathtools}
+% font settings
+\usepackage{fontspec} % loads Latin Modern Fonts automatically
+
+\usepackage[
+	math-style=ISO,		% ┐
+	bold-style=ISO,		% │
+	sans-style=italic,	% │ follow iso standard
+	nabla=upright,		% │
+	partial=upright,	% ┘
+	warnings-off={				% ┐
+		mathtools-colon,		% │ remove redundant warnings
+		mathtools-overbracket,	% ┘
+	},
+]{unicode-math}
+
+% traditional math fonts
+\setmathfont{Latin Modern Math}
+% \setmathfont{XITS Math}[range={scr, bfscr}]
+% \setmathfont{XITS Math}[range={cal, bfcal}, StylisticSet=1]
+
+% numbers and units num, unit, qty, ang
+\usepackage[
+	locale=DE,					% german settings
+	separate-uncertainty=true,	% always use pm for uncertainties
+	per-mode=reciprocal,		% negative power for inverse units
+	output-decimal-marker=.,	% use . instead of , for decimals
+]{siunitx}
+
+% chemical formulas
+\usepackage[
+	version=4,
+	math-greek=default,	% ┐ allow functioning with unicode-math
+	text-greek=default,	% ┘
+]{mhchem}
+
+% additional fraction type sfrac to frac, dfrac, tfrac, cfrac
+\usepackage{xfrac}
+
+% input useful macros
+\input{template/extension/latex/pfrac.tex} % fraction type with equal v and h spacing pfrac

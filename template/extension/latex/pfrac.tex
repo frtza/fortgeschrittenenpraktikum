@@ -1,0 +1,59 @@
+% Hammerite, https://tex.stackexchange.com/a/257122
+
+\usepackage{pgfmath, xparse}
+
+\newlength{\MathStrutDepth}
+\newlength{\MathStrutHeight}
+\settoheight{\MathStrutHeight}{$\mathstrut$}
+\settodepth{\MathStrutDepth}{$\mathstrut$}
+
+\newlength{\NumeratorDepth}
+\newlength{\DenominatorHeight}
+\newlength{\DepthNegativeDifference}
+\newlength{\HeightPositiveDifference}
+\newlength{\NumeratorBaselineCorrection}
+\newlength{\DenominatorBaselineCorrection}
+
+\newlength{\AdditionalEVSFracVerticalSpacing}
+\setlength{\AdditionalEVSFracVerticalSpacing}{0.05mm}
+
+% Fraction with equal top-and-bottom vertical spacing around the bar.
+% Suited only to simple fractions that do not appear near other fractions.
+% When used alongside other fractions, numerator and denominator baselines
+% might not be aligned, which might give ugly results.
+% Additionally, the default line thickness for overlines and fractions is restored.
+\NewDocumentCommand\pfrac{omom}{%
+% 		\Umathfractionrule\displaystyle=0.4pt\relax
+% 		\Umathoverbarrule\displaystyle=0.4pt\relax
+% 		\Umathoverbarvgap\displaystyle=1.4pt\relax
+% 		\Umathfractionrule\textstyle=0.4pt\relax
+% 		\Umathoverbarrule\textstyle=0.4pt\relax
+% 		\Umathoverbarvgap\textstyle=1.4pt\relax
+% 		\Umathfractionrule\crampeddisplaystyle=0.4pt\relax
+% 		\Umathoverbarrule\crampeddisplaystyle=0.4pt\relax
+% 		\Umathoverbarvgap\crampeddisplaystyle=1.4pt\relax
+% 		\Umathfractionrule\crampedtextstyle=0.4pt\relax
+% 		\Umathoverbarrule\crampedtextstyle=0.4pt\relax
+% 		\Umathoverbarvgap\crampedtextstyle=1.4pt\relax
+    \IfValueTF{#1}%
+              {\settodepth{\NumeratorDepth}{$#1$}}%
+              {\settodepth{\NumeratorDepth}{$#2$}}%
+    \IfValueTF{#3}%
+              {\settoheight{\DenominatorHeight}{$#3$}}%
+              {\settoheight{\DenominatorHeight}{$#4$}}%
+    \pgfmathsetlength%
+        {\DepthNegativeDifference}%
+        {\NumeratorDepth - \MathStrutDepth}%
+    \pgfmathsetlength%
+        {\HeightPositiveDifference}%
+        {\MathStrutHeight - \DenominatorHeight}%
+    \pgfmathsetlength%
+        {\NumeratorBaselineCorrection}%
+        {\AdditionalEVSFracVerticalSpacing + \DepthNegativeDifference + \HeightPositiveDifference}%
+    \pgfmathsetlength%
+        {\DenominatorBaselineCorrection}%
+        {-\AdditionalEVSFracVerticalSpacing}%
+    \def\Numerator{\raisebox{\NumeratorBaselineCorrection}{$#2$}}%
+    \def\Denominator{\raisebox{\DenominatorBaselineCorrection}{$#4$}}%
+    \frac{\Numerator}{\Denominator}%
+}
