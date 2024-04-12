@@ -6,7 +6,7 @@
 \begin{figure}
     \centering
     \includegraphics[width=0.8\textwidth]{content/grafik/bandstructure.pdf}
-    \caption{Bandstrukturen verschiedener Materialklassen im Vergleich. \cite{wiki_band}}
+    \caption{Energieschemata verschiedener Materialklassen im Vergleich. \cite{wiki_band}}
     \label{fig:baender}
 \end{figure}
 
@@ -60,4 +60,46 @@
 
 \begin{align}
     \bm{E}(L) = E_0 e^{i\psi} (\cos\theta \,\bm{\hat{x}} + \sin\theta \,\bm{\hat{y}})
+\end{align}
+
+\begin{align}
+    v = \pfrac{\omega}{k}
+\end{align}
+
+\begin{align}
+    n = \pfrac{c}{v} = \pfrac{ck}{\omega}
+\end{align}
+
+\begin{align}
+    \theta = \pfrac{L\omega}{2c} (n_R - n_L)
+\end{align}
+
+\begin{align}
+    \chi = \begin{pmatrix}
+        \chi_{xx} & 0 & 0 \\
+        0 & \chi_{yy} & 0 \\
+        0 & 0 & \chi_{zz} \end{pmatrix}
+\end{align}
+
+\begin{align}
+    \chi = \begin{pmatrix}
+        \chi_{xx} & i\chi_{xy} & 0 \\
+        -i\chi_{xy} & \chi_{xx} & 0 \\
+        0 & 0 & \Chi_{zz} \end{pmatrix}
+\end{align}
+
+\begin{align}
+    \bm{D} = \varepsilon_0 \bm{E} + \bm{P} \approx \varepsilon_0 (1 + \chi) \bm{E}
+\end{align}
+
+\begin{align}
+    \bm{\nabla} \times (\bm{\nabla} \times \bm{E}) = -\bm{\nabla} \times \pfrac{\partial \bm{B}}{\partial t} =
+    -\mu_0 \pfrac{\partial}{\partial t} \bm{\nabla} \times \bm{H} = -\mu_0 \pfrac{\partial}{\partial t}
+    \left( \bm{j} + \pfrac{\partial \bm{D}}{\partial t} \right)
+\end{align}
+
+\begin{align}
+    \bm{\nabla} \times (\bm{\nabla} \times \bm{E}) \approx -\mu_0 \pfrac{\partial^2 \bm{D}}{\partial t^2} \approx
+    -\varepsilon_0 \mu_0 (1 + \chi) \pfrac{\partial^2 \bm{E}}{\partial t^2} =
+    -\pfrac{1}{c^2} (1 + \chi) \pfrac{\partial^2 \bm{E}}{\partial t^2}
 \end{align}
