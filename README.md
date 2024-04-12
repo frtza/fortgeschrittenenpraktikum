@@ -6,7 +6,7 @@ Aus [Moodle](https://moodle.tu-dortmund.de/):
 > Das Physikalische Praktikum für Fortgeschrittene ist eine einsemestrige Veranstaltung und vertieft die in den Grundpraktika erlernten Techniken.
 
 Die Struktur dieses Projekts und die grundlegende Methodik sind an den
-[Toolbox-Workshop](https://toolbox.pep-dortmund.org/notes.html) von
+[Toolbox-Workshop](https://toolbox.pep-dortmund.org/notes/) von
 [PeP et al. e.V.](https://pep-dortmund.org/) angelehnt. Als Hilfe stellt die
 [Fachschaft](https://fachschaft-physik.tu-dortmund.de/wordpress/studium/praktikum/altprotokolle-fp/)
 Altprotokolle zur Verfügung.
