@@ -1,160 +1,274 @@
 \section[Theorie]{Theorie \textnormal{\cite{faraday}}}
 \label{sec:theorie}
 
+Nichtrelativistische Quantensysteme werden durch die Schrödingergleichung beschrieben. Die Dynamik eines Teilchens der
+Masse $m$ im Zustand $\bm{\Psi}$ nimmt dann die Form
+\begin{align*}
+    E \bm{\Psi} = H \bm{\Psi} = \pfrac{p^2}{2m} \bm{\Psi} + V \bm{\Psi} = \pfrac{\hbar^2 k^2}{2m} \bm{\Psi} + V \bm{\Psi}
+\end{align*}
+an, wobei $E$ die Energie, $p$ den Impuls und $k$ die Wellenzahl beschreiben. Mit $\hbar$ wird die reduzierte Planckkonstante
+bezeichnet. Für den freien Grenzfall mit verschwindendem Potential $V$ weisen Energieeigenzustände demnach
+eine parabolische Dispersion
+\begin{align}
+    E(k) = \pfrac{\hbar^2 k^2}{2m} \tag{1a}\label{eqn:frei}
+\end{align}
+auf. Im für die in Festkörpern auftretende Gitterperiodizität konzipierten reduzierten Zonenschema folgen diese Funktionen
+den erlaubten Energiebändern der Gitterelektronen. Unter der Annahme freier Elektronen entstehen dann Entartungen am Zonenrand.
+
 \subsection{Bandstruktur}
 
-\begin{figure}
-    \centering
-    \includegraphics[width=0.8\textwidth]{content/grafik/bandstructure.pdf}
-    \caption{Energieschemata verschiedener Materialklassen im Vergleich. \cite{wiki_band}}
-    \label{fig:baender}
-\end{figure}
+Durch die strukturelle Anordnung der Gitteratome wirkt im Festkörper ein periodisches Potential, das für ein Auflösen der
+Energieentartung der Elektronen sorgt. Stattdessen bilden sich Bandlücken aus, deren Energiebereiche nicht besetzt werden
+können. Die Beschreibung als freie Teilchen ist nun ebenfalls nicht mehr gültig. Für schwach gebundene Elektronen kann
+$E(k)$ allerdings um ein Minimum $E'(k_0) = 0$ in $k$ entwickelt werden. Bis zur quadratischen Ordnung ergeben die ersten
+Glieder der Potenzreihe
+\begin{align*}
+    E(k) \approx E(k_0) + E'(k_0) (k - k_0) + \pfrac{1}{2} E''(k_0) (k - k_0)^2 = E(k_0) + \pfrac{1}{2} E''(k_0) (k - k_0)^2
+\end{align*}
+und vereinfachen sich mit der Auswahl $E(k_0) \equiv 0$ und $k_0 \equiv 0$ zu
+\begin{align*}
+    E(k) \approx \pfrac{1}{2} E''(0) k^2
+\end{align*}
+als parabolische Näherung. Dieser Ausdruck lässt sich analog zu~\eqref{eqn:frei} als
+\begin{align}
+    E(k) \approx \pfrac{\hbar^2 k^2}{2m^{*}} \tag{1b}\label{eqn:quasi}\stepcounter{equation}
+\end{align}
+formulieren. \enlargethispage{\baselineskip}\pagebreak
 
-\begin{figure}
+An dieser Stelle definieren wir den in~\eqref{eqn:quasi} verwendeten Ausdruck
+\begin{align}
+    m^{*} = \hbar^2 \left( \pfrac{\del^2 E}{\del k^2} \right)^{\!\! -1} \label{eqn:effektiv}
+\end{align}
+als effektive Masse. Die Interpretation dieser Schreibweise besagt also, dass sich quasifreie Elektronen in zweiter Ordnung
+wie freie Ladungsträger mit Masse $m^{*}$ verhalten. Damit Abweichungen in verschiedene Raumrichtungen vernachlässigbar sind,
+wird ein hinreichend hoher Grad an Symmetrie vom Kristall gefordert.
+
+\begin{figure}[H]
+    \vspace{1ex}
     \centering
-    \includegraphics[width=0.6\textwidth]{content/grafik/bandstruktur.jpg}
+    \includegraphics[width=0.55\textwidth]{content/grafik/bandstruktur.jpg}
     \caption{Berechnete Bandstruktur von GaAs um die Bandlücke. \cite{coh_jam_el}}
     \label{fig:band}
 \end{figure}
 
+Abbildung~\ref{fig:band} zeigt exemplarische Bandverläufe für reines GaAs. Neben dem Auftreten von Bandlücken lässt sich auch
+die lokal parabolische Form der Elektronendispersion deutlich erkennen. Unsere Approximation erscheint damit gerechtfertigt.
+
+Zur Charakterisierung wesentlicher Materialeigenschaften von Festkörpern ist es sinnvoll, die Begriffe Valenzband~(VB) und
+Leitungsband~(LB) einzuführen. Bei einer absoluten Temperatur $T = 0$ gibt das VB den höchsten vollständig gefüllten
+Energiebereich an, während das LB den niedrigsten wenigstens teilweise oder auch vollständig unbesetzten Bereich umfasst.
+In dieser Betrachtung ist ein Stoff gerade dann leitfähig, wenn sich ausreichend viele Elektronen im LB befinden. 
+
+Im gegebenen Kontext sollte zur Einordnung verschiedener Materialklassen außerdem die Fermienergie~$E_F$ erwähnt werden.
+Am absoluten Temperaturnullpunkt sind laut der Fermi-Dirac Verteilung alle niedrigeren Zustände $E < E_F$ besetzt
+und alle höheren Zustände $E > E_F$ unbesetzt. \enlargethispage{\baselineskip}\pagebreak
+
+Durch Erwärmung wird diese Trennung zunehmend unscharf. Da viele relevante Festkörper eine über die Boltzmannkonstante~$k_B$
+und $E_F = k_B T_F$ definierte Fermitemperatur~$T_F$~weit oberhalb des Schmelzpunktes besitzen, wird $T = 0$ hier als
+Näherung beibehalten.
+
+\begin{figure}[H]
+    \vspace{3ex}
+    \centering
+    \includegraphics[width=0.7\textwidth]{content/grafik/bandstructure.pdf}
+    \caption{Energieschemata verschiedener Materialklassen im Vergleich. \cite{wiki_band}}
+    \label{fig:schema}
+\end{figure}
+
+In Abbildung~\ref{fig:schema} sind einige mögliche Konfigurationen von VB (unten) und LB (oben) in Relation zu $E_F$
+schematisch aufgeführt. Für Metalle und Halbmetalle liegt $E_F$ innerhalb des LB, sodass solche Stoffe elektrischen Strom
+gut leiten. Auf der anderen Seite besitzen Isolatoren eine große Bandlücke von mehreren \unit{\electronvolt}
+zwischen VB und LB, welche auch $E_F$ enthält. Da selbst für hohe Temperaturen kaum Elektronen das LB erreichen, sind
+enstsprechende Stoffe nichtleitend. Zwischen diesen Kategorien lassen sich die sogenannten Halbleiter einordnen. Sie
+weisen zwar ebenfalls eine Bandlücke um $E_F$ auf, allerdings fällt diese mit wenigen \unit{\electronvolt} vergleichsweise
+klein aus. Dank der niedrigeren Energiedifferenz können bereits bei moderaten Temperaturen signifikante Zahlen an Elektronen
+in das LB aufsteigen, sodass sich die Leitungseigenschaften des Materials leicht ändern lassen.
+
 \subsection{Dotierung}
+
+Die Kategorie der Halbleiter wird nach Abbildung~\ref{fig:schema} in drei Unterkategorien eingeteilt. Bei intrinsischen
+Halbleitern (mittig) handelt es sich um Reinstoffe, welche die zuvor beschriebenen Eigenschaften erfüllen. Daneben kann
+die Leitfähigkeit von Materie aber auch durch gezieltes Einbringen von Fremdatomen präzise angepasst werden. Ein solches
+Vorgehen wird Dotierung genannt, die resultierenden Mischstoffe werden je nach Art als Halbleiter vom p\hspace{0.25ex}-Typ
+(links) oder n\hspace{0.15ex}-Typ (rechts) bezeichnet. 
+
+Bei der n\hspace{0.15ex}-Dotierung werden Atome mit Elektronenüberschuss als Donatoren eingebracht. Die zusätzlichen
+negativen Ladungen besitzen Energien knapp unterhalb des LB, sodass der Abstand zwischen LB und $E_F$ stark reduziert
+wird.
+
+Zur p\hspace{0.25ex}-Dotierung werden dagegen Atome mit Elektronendefizit als Akzeptoren verwendet. Die Energien
+der zusätzlichen als Löcher bezeichneten positiven Ladungen liegen knapp oberhalb des VB, sodass die Lücke zwischen VB und
+$E_F$ stark reduziert wird.
+
+Beide Methoden steigern die Konduktivität des Halbleiters, indem insgesamt weniger Energie aufzuwenden ist, um Elektronen
+ins LB zu heben. 
 
 \subsection{Faraday-Effekt}
 
-\begin{figure}
+Der Faraday-Effekt bezeichnet das Auftreten einer Rotation der Polarisationsrichtung von linear polarisierten elektromagnetischen
+Wellen beim Durchlaufen eines von einem homogenen Magnetfeld durchdrungenen transparenten Festkörpers in Richtung der Feldlinien.
+Abbildung~\ref{fig:drehung} stellt dieses Phänomen für den allgemeinen Fall dar.
+
+\begin{figure}[H]
+    \vfill{2ex}
     \centering
     \includegraphics[width=0.7\textwidth]{content/grafik/drehung.pdf}
-    \caption{Drehung der Polarisationsebene einer Lichtwelle beim Durchgang durch einen Kristall. \cite{faraday}}
+    \captionsetup{width=.95\linewidth}
+    \caption{Drehung der Polarisationsebene beim Durchgang durch einen Kristall. \cite{faraday}}
     \label{fig:drehung}
 \end{figure}
 
-\begin{align}
+\subsubsection{Zirkulare Doppelbrechung}
+
+Die beobachtete Drehung der Schwingungsebene bei Transmission lässt sich erklären, indem für linksgerichtet und rechtsgerichtet
+polarisierte Lichtwellen jeweils abweichende Phasengeschwindigkeiten vorrausgesetzt werden. Das elektrische Feld lässt sich dann zu
+\begin{align*}
     \bm{E}(z) = \pfrac{1}{2} \left(\bm{E}_R(z) + \bm{E}_L(z)\right)
-\end{align}
-
+\end{align*}
+zerlegen, wobei die einzelnen Komponenten
+\begin{align*}
+    \bm{E}_R(z) &= E_0 \left(\bm{\hat{x}} - i \bm{\hat{y}}\right) e^{ik_Rz} %\tag{3a}\label{eqn:rpol} \\
+    \bm{E}_L(z) &= E_0 \left(\bm{\hat{x}} + i \bm{\hat{y}}\right) e^{ik_Lz} %\tag{3b}\label{eqn:lpol}\stepcounter{equation}
+\end{align*}
+lauten. Daraus kann beim Eintritt ins Material an der Stelle $z = 0$ direkt
 \begin{align}
-    \bm{E}_R(z) &= E_0 \left(\bm{\hat{x}} - i \bm{\hat{y}}\right) e^{ik_Rz} \\
-    \bm{E}_L(z) &= E_0 \left(\bm{\hat{x}} + i \bm{\hat{y}}\right) e^{ik_Lz}
+    \bm{E}(0) = E_0 \bm{\hat{x}} \label{eqn:eintritt}
 \end{align}
+abgelesen werden. \enlargethispage{\baselineskip}\pagebreak
 
-\begin{align}
-    \bm{E}(0) = E_0 \bm{\hat{x}}
-\end{align}
-
-\begin{align}
+Nachdem die Länge des Festkörpers $L$ zurückgelegt ist, gibt
+\begin{align*}
     \bm{E}(L) = \pfrac{1}{2} E_0 \left( 
                 \left( e^{ik_RL} + e^{ik_LL} \right) \bm{\hat{x}} +
                 \left( e^{ik_RL} - e^{ik_LL} \right) \bm{\hat{y}} \right)
-\end{align}
-
+\end{align*}
+die Feldstärke an. Durch Einführen der Hilfsgrößen
 \begin{align}
-    \psi &\equiv \pfrac{L}{2} (k_R + k_L) \\
-    \theta &\equiv \pfrac{L}{2} (k_R - k_L)
+    \psi &\equiv \pfrac{L}{2} (k_R + k_L) \nonumber \\
+    \theta &\equiv \pfrac{L}{2} (k_R - k_L) \tag{4a}\label{eqn:theta_a}
 \end{align}
-
-\begin{align}
+lässt sich dieser Term zu
+\begin{align*}
     \bm{E}(L) = \pfrac{1}{2} E_0 \left( 
                 \left( e^{i\psi}e^{i\theta} + e^{i\psi}e^{-i\theta} \right) \bm{\hat{x}} +
                 \left( e^{i\psi}e^{i\theta} - e^{i\psi}e^{-i\theta} \right) \bm{\hat{y}} \right)
-\end{align}
-
-\begin{align}
+\end{align*}
+umschreiben, mit der eulerschen Formel $e^{ia} = \cos a + i \sin a$ wird daraus
+\begin{align*}
     \bm{E}(L) = E_0 e^{i\psi} (\cos\theta \,\bm{\hat{x}} + \sin\theta \,\bm{\hat{y}})
-\end{align}
+\end{align*}
+beim Austritt aus dem Material. Im Vergleich mit~\eqref{eqn:eintritt} wird deutlich, dass es sich hierbei wieder um eine
+linear polarisierte Welle handelt, die um einen Winkel $\theta$ gedreht schwingt. 
 
-\begin{align}
+Mithilfe der Definition für Phasengeschwindigkeit
+\begin{align*}
     v = \pfrac{\omega}{k}
-\end{align}
-
-\begin{align}
+\end{align*}
+und Brechungsindex
+\begin{align*}
     n = \pfrac{c}{\raisebox{0.5ex}{$v$}} = \pfrac{ck}{\raisebox{0.5ex}{$\omega$}}
-\end{align}
-
+\end{align*}
+lässt sich~\eqref{eqn:theta_a} als
 \begin{align}
-    \theta = \pfrac{L\omega}{2c} (n_R - n_L)
+    \theta = \pfrac{L\omega}{2c} (n_R - n_L) \tag{4b}\label{eqn:theta_b}\stepcounter{equation}
 \end{align}
+formulieren. Dabei beschreibt $c$ die Vakuumslichtgeschwindigkeit.
 
-\begin{align}
+Zirkulare Doppelbrechung tritt als Konsequenz induzierter elektrischer Dipolmomente auf, die eine makroskopische
+Gesamtpolarisation $\bm{P}$ erzeugen. Für kleine Feldstärken $\bm{E}$ kann diese mit der Influenzkonstanten $\varepsilon_0$
+über $\bm{P} \approx \varepsilon_0 \bm{\chi E}$ aufgestellt werden. Im isotropen Medium wird die dielektrische Suszeptibilität
+$\bm{\chi}$ skalar, für den anisotropen Fall muss sie als Tensor aufgefasst werden. Bei ordinärer Brechung gibt
+\begin{align*}
     \bm{\chi} = \begin{pmatrix}
         \chi_{xx} & 0 & 0 \\
         0 & \chi_{yy} & 0 \\
         0 & 0 & \chi_{zz} \end{pmatrix}
-\end{align}
+\end{align*}
+die Schreibweise von $\bm{\chi}$ als diagonale Matrix nach Hauptachsentransformation an.
 
-\begin{align}
+Um Doppelbrechung zu erzeugen, muss $\bm{\chi}$ die Form einer nichtdiagonalen hermiteschen Matrix annehmen.
+Der einfachste Fall ist mit
+\begin{align*}
     \bm{\chi} = \begin{pmatrix}
         \chi_{xx} & i\chi_{xy} & 0 \\
         -i\chi_{xy} & \chi_{xx} & 0 \\
-        0 & 0 & \Chi_{zz} \end{pmatrix}
-\end{align}
+        0 & 0 & \chi_{zz} \end{pmatrix}
+\end{align*}
+gegeben, wobei gleichartige Brechung in der Normalenebene zur Ausbreitungsrichtung angesetzt wird. Im folgenden zeigen wir,
+dass aus dieser Formulierung verschiedene Wellenvektoren für beide Polarisationsanteile folgen.
 
+Zur Beschreibung der Welle in Materie wird die dielektrische Verschiebung
 \begin{align}
-    \bm{D} = \varepsilon_0 \bm{E} + \bm{P} \approx \varepsilon_0 (1 + \chi) \bm{E}
+    \bm{D} = \varepsilon_0 \bm{E} + \bm{P} \approx \varepsilon_0 (\bm{1 + \chi}) \bm{E} \label{eqn:verschiebung}
 \end{align}
-
-\begin{align}
+verwendet. Weiter ergibt sich aus den Maxwellgleichungen sowie der Relation zwischen magnetischer Flussdichte $\bm{B}$ und
+Feldstärke $\bm{H}$ 
+\begin{align*}
     \bm{\nabla} \times (\bm{\nabla} \times \bm{E}) = -\bm{\nabla} \times \pfrac{\partial \bm{B}}{\partial t} =
     -\mu_0 \pfrac{\partial}{\partial t} \bm{\nabla} \times \bm{H} = -\mu_0 \pfrac{\partial}{\partial t}
     \left( \bm{j} + \pfrac{\partial \bm{D}}{\partial t} \right)
-\end{align}
-
-\begin{align}
+\end{align*}
+und indem~\eqref{eqn:verschiebung} verwendet wird
+\begin{align*}
     \bm{\nabla} \times (\bm{\nabla} \times \bm{E}) \approx -\mu_0 \pfrac{\partial^2 \bm{D}}{\partial t^2} \approx
-    -\varepsilon_0 \mu_0 (1 + \chi) \pfrac{\partial^2 \bm{E}}{\partial t^2} =
-    -\pfrac{1}{c^2} (1 + \chi) \pfrac{\partial^2 \bm{E}}{\partial t^2}
-\end{align}
-
-\begin{align}
+    -\varepsilon_0 \mu_0 (\bm{1 + \chi}) \pfrac{\partial^2 \bm{E}}{\partial t^2} =
+    -\pfrac{1}{c^2} (\bm{1 + \chi}) \pfrac{\partial^2 \bm{E}}{\partial t^2}
+\end{align*}
+unter Vernachlässigung der Stromdichte $\bm{j}$ gegenüber der Änderung der Polarisation. Mit dem Ansatz einer ebene Welle
+\begin{align*}
     \bm{E} = \bm{E}_0 e^{i(\bm{kr} - \omega t)}
-\end{align}
-
+\end{align*}
+folgt nach Ausführen der Differentialoperatoren
 \begin{align}
-    \bm{k} \times (\bm{k} \times \bm{E}) = -\pfrac{\omega^2}{c^2} (1 + \chi) \bm{E}
+    \bm{k} \times (\bm{k} \times \bm{E}) \approx -\pfrac{\omega^2}{c^2} (\bm{1 + \chi}) \bm{E} \label{eqn:näherung}
 \end{align}
-
-\begin{align}
+als Näherungsergebnis. Durch Koordinatenwahl
+\begin{align*}
     \bm{k} = k\bm{\hat{z}}
-\end{align}
-
-\begin{align}
+\end{align*}
+und
+\begin{align*}
     \bm{E} = E_x \bm{\hat{x}} + E_y \bm{\hat{y}} + E_z \bm{\hat{z}}
-\end{align}
-
+\end{align*}
+kann außerdem
 \begin{align}
-    \bm{k} \times (\bm{k} \times \bm{E}) = -k^2 (E_x \bm{\hat{x}} + E_y \bm{\hat{y}})
+    \bm{k} \times (\bm{k} \times \bm{E}) = -k^2 (E_x \bm{\hat{x}} + E_y \bm{\hat{y}}) \label{eqn:kreuz}
 \end{align}
+für die linke Seite von~\eqref{eqn:näherung} geschrieben werden.
 
+Ausführen des Matrixprodukts liefert
 \begin{align}
-    \bm{\chi E} = (\chi_{xx}E_x + i\chi_{xy}E_y) \bm{\hat{x}} + (\chi_{xx} E_y - i \chi_{xy}E_x) \bm{\hat{y}} + \chi_{zz} E_z \bm{\hat{z}}
+    \bm{\chi E} = (\chi_{xx}E_x + i\chi_{xy}E_y) \bm{\hat{x}} + (\chi_{xx} E_y - i \chi_{xy}E_x) \bm{\hat{y}} +
+    \chi_{zz} E_z \bm{\hat{z}} \label{eqn:produkt}
 \end{align}
-
+für die rechte Seite von~\eqref{eqn:näherung} und erlaubt für die Komponente in Ausbreitungsrichtung
 \begin{align}
     \pfrac{\omega^2}{c^2} (1 + \chi_{zz}) E_z = 0
 \end{align}
-
+direkt die Aussage, dass die Welle wegen
 \begin{align}
     E_z = 0
 \end{align}
-
+transversal schwingt. Die orthogonalen Komponenten können als homogenes lineares Gleichungssystem
 \begin{align}
     \bm{C} \begin{pmatrix} E_x \\ E_y \end{pmatrix} = \begin{pmatrix}
     \pfrac{\omega^2}{c^2} (1 + \chi_{xx}) - k^2 & i\pfrac{\omega^2}{c^2} \chi_{xy} \\
     i\pfrac{\omega^2}{c^2} \chi_{xy} & -\pfrac{\omega^2}{c^2} (1 + \chi_{xx}) + k^2 \end{pmatrix}
     \begin{pmatrix} E_x \\ E_y \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \end{pmatrix}
 \end{align}
-
+zusammengefasst werden. Damit dieses eine nichtriviale Lösung besitzt, muss zwingend die Determinante der Koeffizientenmatrix
 \begin{align}
     0 = -\det \bm{C} = \left( \pfrac{\omega^2}{c^2} (1 + \chi_{xx}) - k^2 \right)^{\!\! 2} + i^2 \pfrac{\omega^4}{c^4} \chi_{xy}^2
 \end{align}
-
+verschwinden. Es ergeben sich zwei Lösungen für die Wellenzahl
 \begin{align}
     k_{\pm} = \pfrac{\omega}{\raisebox{0.5ex}{$c$}} \sqrt{1 + \chi_{xx} \pm \chi_{xy}}
 \end{align}
-
+und somit
 \begin{align}
     v^R_L = \pfrac{c}{\sqrt{1 + \chi_{xx} \pm \chi_{xy}}}
 \end{align}
-
+für die Phasengeschwindigkeit. 
 \begin{align}
     v = \pfrac{c}{\sqrt{1 + \chi_{xx}}}
 \end{align}
@@ -171,6 +285,8 @@
 \begin{align}
     \theta \approx \pfrac{L\omega}{2c\sqrt{1 + \chi_{xx}}} \chi_{xy} = \pfrac{L\omega v}{2c^2} \chi_{xy} = \pfrac{L\omega}{2cn} \chi_{xy}
 \end{align}
+
+\subsubsection{Rotationswinkel}
 
 \begin{align}
     m \pfrac{\del^2 \bm{r}}{\del t^2} + K \bm{r} = -e_0\bm{E} - e_0\pfrac{\del \bm{r}}{\del t} \times \bm{B}
