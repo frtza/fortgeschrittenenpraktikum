@@ -9,9 +9,9 @@ Masse $m$ im Zustand $\bm{\Psi}$ nimmt dann die Form
 an, wobei $E$ die Energie, $p$ den Impuls und $k$ die Wellenzahl beschreiben. Mit $\hbar$ wird die reduzierte Planckkonstante
 bezeichnet. Für den freien Grenzfall mit verschwindendem Potential $V$ weisen Energieeigenzustände demnach
 eine parabolische Dispersion
-\begin{align}
-    E(k) = \pfrac{\hbar^2 k^2}{2m} \tag{1a}\label{eqn:frei}
-\end{align}
+\begin{align*}
+    E(k) = \pfrac{\hbar^2 k^2}{2m} %\tag{1a}\label{eqn:frei}
+\end{align*}
 auf. Im für die in Festkörpern auftretende Gitterperiodizität konzipierten reduzierten Zonenschema folgen diese Funktionen
 den erlaubten Energiebändern der Gitterelektronen. Unter der Annahme freier Elektronen entstehen dann Entartungen am Zonenrand.
 
@@ -29,13 +29,13 @@ und vereinfachen sich mit der Auswahl $E(k_0) \equiv 0$ und $k_0 \equiv 0$ zu
 \begin{align*}
     E(k) \approx \pfrac{1}{2} E''(0) k^2
 \end{align*}
-als parabolische Näherung. Dieser Ausdruck lässt sich analog zu~\eqref{eqn:frei} als
-\begin{align}
-    E(k) \approx \pfrac{\hbar^2 k^2}{2m^{*}} \tag{1b}\label{eqn:quasi}\stepcounter{equation}
-\end{align}
+als parabolische Näherung. Dieser Ausdruck lässt sich analog zum vollständig freien Grenzfall als
+\begin{align*}
+    E(k) \approx \pfrac{\hbar^2 k^2}{2m^{*}} %\tag{1b}\label{eqn:quasi}\stepcounter{equation}
+\end{align*}
 formulieren. \enlargethispage{\baselineskip}\pagebreak
 
-An dieser Stelle definieren wir den in~\eqref{eqn:quasi} verwendeten Ausdruck
+An dieser Stelle definieren wir den Ausdruck
 \begin{align}
     m^{*} = \hbar^2 \left( \pfrac{\del^2 E}{\del k^2} \right)^{\!\! -1} \label{eqn:effektiv}
 \end{align}
@@ -145,7 +145,7 @@ Nachdem die Länge des Festkörpers $L$ zurückgelegt ist, gibt
 die Feldstärke an. Durch Einführen der Hilfsgrößen
 \begin{align}
     \psi &\equiv \pfrac{L}{2} (k_R + k_L) \nonumber \\
-    \theta &\equiv \pfrac{L}{2} (k_R - k_L) \tag{4a}\label{eqn:theta_a}
+    \theta &\equiv \pfrac{L}{2} (k_R - k_L) \label{eqn:theta_a}
 \end{align}
 lässt sich dieser Term zu
 \begin{align*}
@@ -169,9 +169,9 @@ und Brechungsindex
     n = \pfrac{c}{\raisebox{0.5ex}{$v$}} = \pfrac{ck}{\raisebox{0.5ex}{$\omega$}}
 \end{align*}
 lässt sich~\eqref{eqn:theta_a} als
-\begin{align}
-    \theta = \pfrac{L\omega}{2c} (n_R - n_L) \tag{4b}\label{eqn:theta_b}\stepcounter{equation}
-\end{align}
+\begin{align*}
+    \theta = \pfrac{L\omega}{2c} (n_R - n_L)
+\end{align*}
 formulieren. Dabei beschreibt $c$ die Vakuumslichtgeschwindigkeit.
 
 Zirkulare Doppelbrechung tritt als Konsequenz induzierter elektrischer Dipolmomente auf, die eine makroskopische
@@ -214,7 +214,8 @@ und indem~\eqref{eqn:verschiebung} verwendet wird
     -\varepsilon_0 \mu_0 (\bm{1 + \chi}) \pfrac{\partial^2 \bm{E}}{\partial t^2} =
     -\pfrac{1}{c^2} (\bm{1 + \chi}) \pfrac{\partial^2 \bm{E}}{\partial t^2}
 \end{align*}
-unter Vernachlässigung der Stromdichte $\bm{j}$ gegenüber der Änderung der Polarisation. Mit dem Ansatz einer ebene Welle
+unter Vernachlässigung der Stromdichte $\bm{j}$ gegenüber der Änderung der Polarisation. Mit dem Ansatz einer ebenen Welle
+mit $\bm{k}$ als Wellenvektor und $\omega$ als Kreisfrequenz
 \begin{align*}
     \bm{E} = \bm{E}_0 e^{i(\bm{kr} - \omega t)}
 \end{align*}
@@ -231,168 +232,199 @@ und
     \bm{E} = E_x \bm{\hat{x}} + E_y \bm{\hat{y}} + E_z \bm{\hat{z}}
 \end{align*}
 kann außerdem
-\begin{align}
-    \bm{k} \times (\bm{k} \times \bm{E}) = -k^2 (E_x \bm{\hat{x}} + E_y \bm{\hat{y}}) \label{eqn:kreuz}
-\end{align}
+\begin{align*}
+    \bm{k} \times (\bm{k} \times \bm{E}) = -k^2 (E_x \bm{\hat{x}} + E_y \bm{\hat{y}})
+\end{align*}
 für die linke Seite von~\eqref{eqn:näherung} geschrieben werden.
 
 Ausführen des Matrixprodukts liefert
-\begin{align}
+\begin{align*}
     \bm{\chi E} = (\chi_{xx}E_x + i\chi_{xy}E_y) \bm{\hat{x}} + (\chi_{xx} E_y - i \chi_{xy}E_x) \bm{\hat{y}} +
-    \chi_{zz} E_z \bm{\hat{z}} \label{eqn:produkt}
-\end{align}
+    \chi_{zz} E_z \bm{\hat{z}} 
+\end{align*}
 für die rechte Seite von~\eqref{eqn:näherung} und erlaubt für die Komponente in Ausbreitungsrichtung
-\begin{align}
-    \pfrac{\omega^2}{c^2} (1 + \chi_{zz}) E_z = 0
-\end{align}
+\begin{align*}
+    \pfrac{\omega^2}{c^2} (1 + \chi_{zz}) E_z \approx 0
+\end{align*}
 direkt die Aussage, dass die Welle wegen
-\begin{align}
-    E_z = 0
-\end{align}
-transversal schwingt. Die orthogonalen Komponenten können als homogenes lineares Gleichungssystem
+\begin{align*}
+    E_z \approx 0
+\end{align*}
+transversal schwingt. Die dazu orthogonalen Komponenten können anhand~\eqref{eqn:näherung} leicht als homogenes lineares Gleichungssystem
 \begin{align}
     \bm{C} \begin{pmatrix} E_x \\ E_y \end{pmatrix} = \begin{pmatrix}
     \pfrac{\omega^2}{c^2} (1 + \chi_{xx}) - k^2 & i\pfrac{\omega^2}{c^2} \chi_{xy} \\
     i\pfrac{\omega^2}{c^2} \chi_{xy} & -\pfrac{\omega^2}{c^2} (1 + \chi_{xx}) + k^2 \end{pmatrix}
-    \begin{pmatrix} E_x \\ E_y \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \end{pmatrix}
+    \begin{pmatrix} E_x \\ E_y \end{pmatrix} \approx \begin{pmatrix} 0 \\ 0 \end{pmatrix} \label{eqn:system}
 \end{align}
 zusammengefasst werden. Damit dieses eine nichtriviale Lösung besitzt, muss zwingend die Determinante der Koeffizientenmatrix
-\begin{align}
+\begin{align*}
     0 = -\det \bm{C} = \left( \pfrac{\omega^2}{c^2} (1 + \chi_{xx}) - k^2 \right)^{\!\! 2} + i^2 \pfrac{\omega^4}{c^4} \chi_{xy}^2
-\end{align}
-verschwinden. Es ergeben sich zwei Lösungen für die Wellenzahl
+\end{align*}
+verschwinden. Es ergeben sich zwei Lösungen
 \begin{align}
-    k_{\pm} = \pfrac{\omega}{\raisebox{0.5ex}{$c$}} \sqrt{1 + \chi_{xx} \pm \chi_{xy}}
+    k_{\pm} = \pfrac{\omega}{\raisebox{0.5ex}{$c$}} \sqrt{1 + \chi_{xx} \pm \chi_{xy}} \label{eqn:wellenzahl}
 \end{align}
-und somit
-\begin{align}
+für die Wellenzahl und somit
+\begin{align*}
     v^R_L = \pfrac{c}{\sqrt{1 + \chi_{xx} \pm \chi_{xy}}}
-\end{align}
-für die Phasengeschwindigkeit. 
+\end{align*}
+für die Phasengeschwindigkeit, die entweder größer oder kleiner als 
 \begin{align}
-    v = \pfrac{c}{\sqrt{1 + \chi_{xx}}}
+    v = \pfrac{c}{\sqrt{1 + \chi_{xx}}} \label{eqn:geschwindigkeit}
 \end{align}
+für den Fall $\chi_{xy} = 0$ ist. Einsetzen von~\eqref{eqn:wellenzahl} in~\eqref{eqn:system} liefert
+\begin{align}
+    (E_x)^R_L = \pm \, i E_y
+\end{align}
+und belegt damit die Behauptung, dass sich je eine rechtszirkular und eine linkszirkular polarisierte Welle mit unterschiedlichen
+Phasengeschwindigkeiten überlagern, um beim Wiedereintritt ins Vakuum eine zur initialen Ausrichtung gedrehte linear
+polarisierte Welle zu bilden.
 
-\begin{align}
-    E_x \,\!^{\raisebox{0.6ex}{$_R$}}_{\raisebox{0.15ex}{$_L$}} = \pm \, i E_y
-\end{align}
-
-\begin{align}
+Aus Einsetzten von~\eqref{eqn:wellenzahl} in~\eqref{eqn:theta_a} folgt
+\begin{align*}
     \theta = \pfrac{L}{2} (k_{+} - k_{-}) = \pfrac{L\omega}{2c} \left( \sqrt{1 + \chi_{xx} + \chi_{xy}} -
     \sqrt{1 + \chi_{xx} + \chi_{xy}} \right)
-\end{align}
-
+\end{align*}
+als Bestimmungsformel für den Drehwinkel. Allgemein darf $\chi_{xy} \ll \chi_{xx}$ angenommen werden, sodass eine
+Reihenentwicklung bis zum linearen Glied
 \begin{align}
-    \theta \approx \pfrac{L\omega}{2c\sqrt{1 + \chi_{xx}}} \chi_{xy} = \pfrac{L\omega v}{2c^2} \chi_{xy} = \pfrac{L\omega}{2cn} \chi_{xy}
+    \theta \approx \pfrac{L\omega}{2c\sqrt{1 + \chi_{xx}}} \chi_{xy} = \pfrac{L\omega v}{2c^2} \chi_{xy} =
+    \pfrac{L\omega}{2cn} \chi_{xy} \label{eqn:theta_b}
 \end{align}
+eine gute Näherung liefert. Zur Berechnung von $\theta$ aus experimentell zugänglichen Größen muss jetzt nur noch $\chi_{xy}$
+gefunden werden.
 
 \subsubsection{Rotationswinkel}
 
-\begin{align}
+Optisch inaktive Materialien werden erst durch Anlegen eines äußeren Magnetfeldes $\bm{B}$ doppelbrechend. Um diesen Effekt
+genauer zu untersuchen, stellen wir mit
+\begin{align*}
     m \pfrac{\del^2 \bm{r}}{\del t^2} + K \bm{r} = -e_0\bm{E} - e_0\pfrac{\del \bm{r}}{\del t} \times \bm{B}
-\end{align}
+\end{align*}
+ein einfaches Modell für die gebundenen Gitterelektronen auf. Hier geben $\bm{r}$ die Auslenkung zur Gleichgewichtslage, $K$ eine
+Kopplungskonstante der linearen Rückstellkraft und $\bm{E}$ die Feldstärke der einfallenden Lichtwelle an. Die Elementarladung wird
+mit $e_0$ bezeichnet. Geschwindigkeitsproportionale Dämpfungseffekte sowie die magnetische Komponente der Welle tragen nur schwach
+bei und werden daher nicht berücksichtigt. Zusammenfassend lassen sich Elektronen also als geladene harmonische Oszillatoren unter
+dem Einfluss der klassischen Kräfte nach Coulomb und Lorentz auffassen.
 
-\begin{align}
+Wir nehmen wieder eine oszillatorische Zeitabhängigkeit für das Feld an und fordern, dass die Ladungen proportional dazu
+ausgelenkt werden. Einsetzen von
+\begin{align*}
     \bm{E} \sim \bm{r} \sim e^{-i\omega t}
-\end{align}
-
-\begin{align}
+\end{align*}
+erlaubt das Auflösen der Differentialoperatoren und liefert
+\begin{align*}
     -m\omega^2 \bm{r} + K\bm{r} = -e_0\bm{E} + i e_0 \omega \bm{r} \times \bm{B}
-\end{align}
-
-\begin{align}
+\end{align*}
+als Umformulierung. Aufgrund der vergleichsweise hohen Frequenz tritt mit
+\begin{align*}
     \bm{P} = -Ne\bm{r}
-\end{align}
-
-\begin{align}
+\end{align*}
+ausschließlich eine Verschiebungspolarisation auf, wobei $N$ die Anzahl der Elektronen pro Volumeneinheit angibt.
+Durch Eliminieren von $\bm{r}$ lässt sich damit
+\begin{align*}
     -m\omega^2 \bm{P} + K\bm{P} = Ne^2\bm{E} + i e_0 \omega \bm{P} \times \bm{B}
-\end{align}
+\end{align*}
+aufstellen. \enlargethispage{\baselineskip}\pagebreak
 
-\begin{align}
+Mit der vereinfachten Annahme eines homogenen äußeren Feldes
+\begin{align*}
     \bm{B} = B \bm{\hat{z}}
-\end{align}
-
-\begin{align}
+\end{align*}
+gibt die Komponentenschreibweise
+\begin{align*}
     (K - m\omega^2) P_x &= Ne_0^2 E_x + i e_0 \omega P_y B \\
     (K - m\omega^2) P_y &= Ne_0^2 E_y - i e_0 \omega P_x B \\
     (K - m\omega^2) P_z &= Ne_0^2 E_z
-\end{align}
-
-\begin{align}
+\end{align*}
+ein Gleichungssystem vor. Um daraus eine nichttriviale Lösung unabhängig von den Feldstärkekomponenten zu erhalten, muss
+für den Suszeptibilitätstensor ein Ansatz mit imaginären nichtdiagonalen Einträgen gewählt werden. Die Trivialität der
+dritten Komponente führt zu
+\begin{align*}
+    \bm{\chi} = \begin{pmatrix}
+        \chi_{xx} & i\chi_{xy} & 0 \\
+        i\chi_{yx} & \chi_{xx} & 0 \\
+        0 & 0 & \chi_{zz} \end{pmatrix}
+\end{align*}
+als einfachste Variante. Für die erste Komponente folgt dann
+\begin{align*}
     \varepsilon_0 (K - m\omega^2)(\chi_{xx}E_x + i\chi_{xy}E_y) = Ne_0^2 E_x +
     i \varepsilon_0 e_0 \omega (i\chi_{yx} E_x + \chi_{xx} E_y) B
-\end{align}
-
+\end{align*}
+und
 \begin{align}
-    \varepsilon_0 (K - m\omega^2)\chi_{xx} &= Ne_0^2 - \varepsilon_0 e_0 \omega \chi_{yx}B \\
-    \varepsilon_0 (K - m\omega^2)\chi_{xy} &= \varepsilon_0 e_0 \omega \chi_{xx}B \\
+    \varepsilon_0 (K - m\omega^2)\chi_{xx} &= Ne_0^2 - \varepsilon_0 e_0 \omega \chi_{yx}B \tag{11a}\label{eqn:komp_1a}\\
+    \varepsilon_0 (K - m\omega^2)\chi_{xy} &= \varepsilon_0 e_0 \omega \chi_{xx}B \tag{11b}\label{eqn:komp_1b}\stepcounter{equation}
 \end{align}
-
-\begin{align}
+durch Vergleich von Realteilen und Imaginärteilen. Für die zweite Komponente gilt
+\begin{align*}
     \varepsilon_0 (K - m\omega^2)(i\chi_{yx}E_x + \chi_{xx}E_y) = Ne_0^2 E_y -
     i \varepsilon_0 e_0 \omega (\chi_{xx} E_x + i\chi_{xy} E_y) B
-\end{align}
-
+\end{align*}
+und
 \begin{align}
-    \varepsilon_0 (K - m\omega^2)\chi_{xx} &= Ne_0^2 + \varepsilon_0 e_0 \omega \chi_{xy}B \\
-    \varepsilon_0 (K - m\omega^2)\chi_{yx} &= -\varepsilon_0 e_0 \omega \chi_{xx}B
+    \varepsilon_0 (K - m\omega^2)\chi_{xx} &= Ne_0^2 + \varepsilon_0 e_0 \omega \chi_{xy}B \tag{12a}\label{eqn:komp_2a} \\
+    \varepsilon_0 (K - m\omega^2)\chi_{yx} &= -\varepsilon_0 e_0 \omega \chi_{xx}B \tag{12b}\label{eqn:komp_2b}\stepcounter{equation}
 \end{align}
-
-\begin{align}
+aus erneutem Koeffizientenvergleich. Betrachtung der Gleichungspaare~\eqref{eqn:komp_1a} und~\eqref{eqn:komp_2a}~oder
+\eqref{eqn:komp_1b} und~\eqref{eqn:komp_2b} lässt erkennen, dass
+\begin{align*}
     \chi_{xy} = -\chi_{yx}
-\end{align}
-
-\begin{align}
+\end{align*}
+erfüllt sein muss. Einsetzen erlaubt die Herleitung von
+\begin{align*}
     \chi_{xy} = \pfrac{N e_0^3 \omega B}{\varepsilon_0 \left( (K - m\omega^2)^2 - (e_0\omega B)^2 \right)}
-\end{align}
+\end{align*}
+für den gesuchten Ausdruck. \enlargethispage{\baselineskip}\pagebreak
 
-\begin{align}
+Der Rotationswinkel lässt sich dann nach~\eqref{eqn:theta_b} zu
+\begin{align*}
     \theta \approx \pfrac{LN e_0^3 \omega^2 B}{2\varepsilon_0 c n \left( (K - m\omega^2)^2 - (e_0\omega B)^2 \right)} =
     \frac{LN e_0^3 \omega^2 B}{2\varepsilon_0 c m^2 \left( \!\left( \pfrac{K}{m} - \omega^2 \right)^{\!\! 2} - 
     \pfrac{e_0^2 B^2}{m^2} \omega^2 \right)}
-\end{align}
-
-\begin{align}
-    \omega_0 &\equiv \sqrt{\pfrac{K}{\raisebox{0.5ex}{$m$}}} \\
-    \omega_C &\equiv \frac{e_0 B}{\raisebox{0.5ex}{$m$}}
-\end{align}
-
-\begin{align}
+\end{align*}
+abschätzen. Darin lassen sich die Resonanzfrequenz
+\begin{align*}
+    \omega_0 \equiv \sqrt{\pfrac{K}{\raisebox{0.5ex}{$m$}}}
+\end{align*}
+und die Zyklotronfrequenz
+\begin{align*}
+    \omega_c \equiv \frac{e_0 B}{\raisebox{0.5ex}{$m$}}
+\end{align*}
+identifizieren, mit deren Hilfe sich der Ausdruck zu
+\begin{align*}
     \theta \approx \frac{LN e_0^3 \omega^2 B}{2\varepsilon_0 c m^2 \left( ( \omega_0^2 - \omega^2 )^2 - 
     \omega_C^2 \,\omega^2 \right)}
-\end{align}
-
-\begin{align}
+\end{align*}
+vereinfacht. Typischerweise gilt im Experiment
+\begin{align*}
     \omega_0^2 - \omega^2 \gg \omega_C \,\omega
-\end{align}
-
-\begin{align}
+\end{align*}
+und erlaubt das Schreiben von
+\begin{align*}
     \theta \approx \frac{LN e_0^3 \omega^2 B}{2\varepsilon_0 c m^2 ( \omega_0^2 - \omega^2 )^2}
-\end{align}
-
-\begin{align}
+\end{align*}
+als weitere Vereinfachung. Über die Beziehung
+\begin{align*}
     \omega = 2\pi \nu = 2\pi \pfrac{c}{\lambda}
-\end{align}
+\end{align*}
+kann der Winkel auch in Abhängigkeit zur Wellenlänge $\lambda$ definiert werden.
 
-\begin{align}
-    \omega \ll \omega_0
-\end{align}
-
-\begin{align}
+Bei Messfrequenzen $\omega \ll \omega_0$ gilt
+\begin{align*}
     \theta \approx \frac{LN e_0^3 \omega^2 B}{2\varepsilon_0 c m^2 \omega_0^4} = 
     \frac{2\pi^2 LN e_0^3 cB}{\varepsilon_0 m^2 \lambda^2 \omega_0^4}
-\end{align}
-
-\begin{align}
-    \omega \gg \omega_0
-\end{align}
-
-\begin{align}
+\end{align*}
+und für $\omega \gg \omega_0$ wiederum
+\begin{align*}
     \theta \approx \frac{LN e_0^3 B}{2\varepsilon_0 c m^2 \omega^2} = 
     \frac{LN e_0^3 \lambda^2 B}{8\pi^2 \varepsilon_0 c^3 m^2 n}
-\end{align}
-
+\end{align*}
+als finale Näherung. Letzterer Fall beschreibt die Problemstellung quasifreier Elektronen am besten. Die Vorschrift
 \begin{align}
     \pfrac{\theta}{L} \approx \frac{N e_0^3 B}{2\varepsilon_0 c m^{*2} \omega^2} = 
-    \frac{N e_0^3 \lambda^2 B}{8\pi^2 \varepsilon_0 c^3 m^{*2} n}
+    \frac{N e_0^3 \lambda^2 B}{8\pi^2 \varepsilon_0 c^3 m^{*2} n} \label{eqn:ausgleichsrechnung}
 \end{align}
+erlaubt uns also, die in~\eqref{eqn:effektiv} definierte effektive Elektronenmasse mit guter Genauigkeit
+und unabhängig von der Ausdehnung der Probe zu bestimmen.
