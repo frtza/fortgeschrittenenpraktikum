@@ -57,6 +57,7 @@ plt.ylabel(r'$\theta$ / rad m$^{-1}$')
 
 plt.gca().ticklabel_format(scilimits=(0,0))
 
+plt.savefig('build/doped-2.pdf')
 plt.close()
 
 L = 5.11e-3
@@ -74,7 +75,7 @@ plt.ylabel(r'$\theta$ / rad m$^{-1}$')
 
 plt.gca().ticklabel_format(scilimits=(0,0))
 
-plt.savefig('build/doped-2.pdf')
+plt.savefig('build/pure.pdf')
 plt.close()
 
 thetadiff_1 = np.abs(theta - theta_1)
@@ -117,7 +118,7 @@ plt.legend(frameon=False)
 
 plt.gca().ticklabel_format(scilimits=(0,0))
 
-plt.savefig('build/pure.pdf')
+plt.savefig('build/mass.pdf')
 plt.close()
 
 me = const.electron_mass
