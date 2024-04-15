@@ -152,3 +152,23 @@ print()
 print(f'(1)   m* = {m1:.2} kg = {m1 / me:.3f} me')
 print(f'(2)   m* = {m2:.2} kg = {m2 / me:.3f} me')
 print()
+
+with open('build/a-1.tex', 'w') as f:
+	f.write(r'\qty{')
+	f.write(f'{a_1*1e-12:.2f}({ae_1*1e-12:.2f})e12')
+	f.write(r'}{\radian\per\meter\cubed}')
+
+with open('build/a-2.tex', 'w') as f:
+	f.write(r'\qty{')
+	f.write(f'{a_2*1e-12:.2f}({ae_2*1e-12:.2f})e12')
+	f.write(r'}{\radian\per\meter\cubed}')
+
+with open('build/b-1.tex', 'w') as f:
+	f.write(r'\qty{')
+	f.write(f'{b_1:.2f}({be_1:.2f})')
+	f.write(r'}{\radian\per\meter}')
+
+with open('build/b-2.tex', 'w') as f:
+	f.write(r'\qty{')
+	f.write(f'{b_2:.2f}({be_2:.2f})')
+	f.write(r'}{\radian\per\meter}')
