@@ -129,7 +129,7 @@ plt.savefig('build/mass.pdf')
 plt.close()
 
 me = const.electron_mass
-m = 0.067 * me
+m = 0.078 * me
 
 m1 = np.sqrt((K * N_1 * b / n) / a_1)
 m2 = np.sqrt((K * N_2 * b / n) / a_2)
@@ -172,6 +172,31 @@ with open('build/b-2.tex', 'w') as f:
 	f.write(r'\qty{')
 	f.write(f'{b_2:.2f}({be_2:.2f})')
 	f.write(r'}{\radian\per\meter}')
+
+with open('build/c.tex', 'w') as f:
+	f.write(r'\qty{')
+	f.write(f'{c * 1e-8:.3f}e8')
+	f.write(r'}{\meter\per\second}')
+
+with open('build/e-0.tex', 'w') as f:
+	f.write(r'\qty{')
+	f.write(f'{e * 1e19:.3f}e-19')
+	f.write(r'}{\coulomb}')
+
+with open('build/m-0.tex', 'w') as f:
+	f.write(r'\qty{')
+	f.write(f'{me * 1e31:.3f}e-31')
+	f.write(r'}{\kilo\gram}')
+
+with open('build/m-1.tex', 'w') as f:
+	f.write(r'(\num{')
+	f.write(f'{m1 / me:.3f}')
+	f.write(r'})\,m_0')
+
+with open('build/m-2.tex', 'w') as f:
+	f.write(r'(\num{')
+	f.write(f'{m2 / me:.3f}')
+	f.write(r'})\,m_0')
 
 table_footer = r'''		\bottomrule
 	\end{tabular}
