@@ -4,6 +4,7 @@ import numpy as np
 import scipy.constants as const
 import uncertainties.unumpy as unp
 from uncertainties.unumpy import nominal_values as noms, std_devs as stds, uarray as uar
+from uncertainties import ufloat
 
 def degmin(ang : np.ndarray):
     return ang.astype(int) + (ang - ang.astype(int)) / 0.6
@@ -131,8 +132,11 @@ plt.close()
 me = const.electron_mass
 m = 0.078 * me
 
-m1 = np.sqrt((K * N_1 * b / n) / a_1)
-m2 = np.sqrt((K * N_2 * b / n) / a_2)
+aa1 = ufloat(a_1, ae_1)
+aa2 = ufloat(a_2, ae_2)
+
+m1 = unp.sqrt((K * N_1 * b / n) / aa1)
+m2 = unp.sqrt((K * N_2 * b / n) / aa2)
 
 print()
 print('Fit:')
@@ -190,12 +194,12 @@ with open('build/m-0.tex', 'w') as f:
 
 with open('build/m-1.tex', 'w') as f:
 	f.write(r'(\num{')
-	f.write(f'{m1 / me:.3f}')
+	f.write(f'{noms(m1) / me:.3f}({stds(m1) / me:.3f})')
 	f.write(r'})\,m_0')
 
 with open('build/m-2.tex', 'w') as f:
 	f.write(r'(\num{')
-	f.write(f'{m2 / me:.3f}')
+	f.write(f'{noms(m2) / me:.3f}({stds(m2) / me:.3f})')
 	f.write(r'})\,m_0')
 
 table_footer = r'''		\bottomrule
