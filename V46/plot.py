@@ -27,10 +27,10 @@ plt.close()
 L = 1.36e-3
 
 l, th1, th2 = np.genfromtxt('data/doped-1.txt', unpack=True)
-th1, th2 = degmin(th1), degmin(th2)
+th1_1, th2_1 = degmin(th1), degmin(th2)
 
 l = l * 1e-6
-theta_1 = rad((th1 - th2) / 2) / L
+theta_1 = rad((th1_1 - th2_1) / 2) / L
 
 plt.plot(l**2, theta_1, 'kx', ms=3.21)
 
@@ -45,10 +45,10 @@ plt.close()
 L = 1.296e-3
 
 l, th1, th2 = np.genfromtxt('data/doped-2.txt', unpack=True)
-th1, th2 = degmin(th1), degmin(th2)
+th1_2, th2_2 = degmin(th1), degmin(th2)
 
 l = l * 1e-6
-theta_2 = rad((th1 - th2) / 2) / L
+theta_2 = rad((th1_2 - th2_2) / 2) / L
 
 plt.plot(l**2, theta_2, 'kx', ms=3.21)
 
@@ -63,10 +63,10 @@ plt.close()
 L = 5.11e-3
 
 l, th1, th2 = np.genfromtxt('data/pure.txt', unpack=True)
-th1, th2 = degmin(th1), degmin(th2)
+th1_3, th2_3 = degmin(th1), degmin(th2)
 
 l = l * 1e-6
-theta = rad((th1 - th2) / 2) / L
+theta = rad((th1_3 - th2_3) / 2) / L
 
 plt.plot(l**2, theta, 'kx', ms=3.21)
 
@@ -84,7 +84,7 @@ thetadiff_2 = np.abs(theta - theta_2)
 mask = np.array([False, False, True, True, True, True, True, False, True])
 
 b = np.max(B)
-n = 3.4
+n = 3.397
 
 N_1 = 1.2e24
 N_2 = 2.8e24
@@ -172,3 +172,38 @@ with open('build/b-2.tex', 'w') as f:
 	f.write(r'\qty{')
 	f.write(f'{b_2:.2f}({be_2:.2f})')
 	f.write(r'}{\radian\per\meter}')
+
+table_footer = r'''		\bottomrule
+	\end{tabular}
+'''
+table_header = r'''	\begin{tabular}{S[table-format=1.3] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2]}
+		\toprule
+		& \multicolumn{2}{c}{n-GaAs (1)} & \multicolumn{2}{c}{n-GaAs (2)} & \multicolumn{2}{c}{GaAs} \\
+		\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule{6-7}
+		{$\lambda \mathbin{/} \unit{\micro\meter}$} &
+        {$\theta_1 \mathbin{/} \unit{\degree}$} & {$\theta_2 \mathbin{/} \unit{\degree}$} &
+        {$\theta_1 \mathbin{/} \unit{\degree}$} & {$\theta_2 \mathbin{/} \unit{\degree}$} &
+        {$\theta_1 \mathbin{/} \unit{\degree}$} & {$\theta_2 \mathbin{/} \unit{\degree}$} \\
+		\midrule
+'''
+row_template = r'		{0:1.3f} & {1:3.2f} & {2:3.2f} & {3:3.2f} & {4:3.2f} & {5:3.2f} & {6:3.2f} \\'
+with open('build/table_samples.tex', 'w') as f:
+    f.write(table_header)
+    for row in zip(l * 1e6, th1_1, th2_1, th1_2, th2_2, th1_3, th2_3):
+        f.write(row_template.format(*row))
+        f.write('\n')
+    f.write(table_footer)
+table_header = r'''	\begin{tabular}{S[table-format=2.0] S[table-format=3.0] S[table-format=2.0] S[table-format=3.0] S[table-format=2.0] S[table-format=3.0]}
+		\toprule
+		{$z \mathbin{/} \unit{\milli\meter}$} & {$B \mathbin{/} \unit{\milli\tesla}$} &
+		{$z \mathbin{/} \unit{\milli\meter}$} & {$B \mathbin{/} \unit{\milli\tesla}$} &
+		{$z \mathbin{/} \unit{\milli\meter}$} & {$B \mathbin{/} \unit{\milli\tesla}$} \\
+		\cmidrule(lr){1-2}\cmidrule(lr){3-4}\cmidrule(lr){5-6}
+'''
+row_template = r'		{0:2.0f} & {1:3.0f} & {2:2.0f} & {3:3.0f} & {4:2.0f} & {5:3.0f} \\'
+with open('build/table_field.tex', 'w') as f:
+    f.write(table_header)
+    for row in zip(z[0:7] * 1e3, B[0:7] * 1e3, z[7:14] * 1e3, B[7:14] * 1e3, z[14:21] * 1e3, B[14:21] * 1e3):
+        f.write(row_template.format(*row))
+        f.write('\n')
+    f.write(table_footer)
