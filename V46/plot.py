@@ -95,8 +95,15 @@ eps = const.epsilon_0
 
 K = e**3 / (8 * np.pi**2 * eps * c**3)
 
-a_1, b_1 = np.polyfit(l[mask]**2, theta_1[mask], deg=1)
-a_2, b_2 = np.polyfit(l[mask]**2, theta_2[mask], deg=1)
+par_1, cov_1 = np.polyfit(l[mask]**2, theta_1[mask], deg=1, cov=True)
+err_1 = np.sqrt(np.diag(cov_1))
+par_2, cov_2 = np.polyfit(l[mask]**2, theta_2[mask], deg=1, cov=True)
+err_2 = np.sqrt(np.diag(cov_2))
+
+a_1, b_1 = par_1[0], par_1[1] 
+ae_1, be_1 = err_1[0], err_1[1]
+a_2, b_2 = par_2[0], par_2[1] 
+ae_2, be_2 = err_2[0], err_2[1]
 
 ll = np.array([-1, 1])
 
@@ -130,8 +137,8 @@ m2 = np.sqrt((K * N_2 * b / n) / a_2)
 print()
 print('Fit:')
 print()
-print(f'(1)   a = {a_1:.3}   b = {b_1:.3}')
-print(f'(2)   a = {a_2:.3}   b = {b_2:.3}')
+print(f'(1)   a = {a_1:.3} +- {ae_1:.3}   b = {b_1:.3} +- {be_1:.3}')
+print(f'(2)   a = {a_2:.3} +- {ae_2:.3}   b = {b_2:.3} +- {be_2:.3}')
 print()
 print()
 print('Literatur:')
