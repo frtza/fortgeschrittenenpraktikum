@@ -13,7 +13,7 @@ Wechselwirkung.
 
 Da der Absorbtionskoeffizient für Gamma-Strahlung bei Gasen sehr niedrig ist, 
 werden Gamma-Strahlen-Detektoren aus Festkörpern gebaut. Das Matrial des Detektors muss so gewählt werden, dass
-die Anzahl Elektronen-Loch-Paare gesammelt und als elektrisches Signal wiedergegeben werden kann.
+die Anzahl der Elektronen-Loch-Paare gesammelt und als elektrisches Signal wiedergegeben werden kann.
 Zusätzlich ist der Grad der Interaktion von Gamma-Strahlung mit Materie abhängig von der Energie der Strahlung.
 Der Intensitätsverlust  eine $\gamma$-Strahls in Materie ist abhängig von der jeweiligen Schichtdicke des Materials $d$,
 der Elektronendichte und dem Wirkungsquerschnitt $\sigma$. Dabei ist der Wirkungsquerschnitt ein Maß für die Wahrscheinlichkeit einer Teilchenreaktion.
@@ -26,11 +26,11 @@ bei bestimmter Energie verursacht durch den Absorber misst, gegen die Gamma-Stra
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\textwidth]{content/grafik/dämpfungskoeffizientGermanium.jpg}
-    \caption{ \cite{gamma_ray}}
+    \caption{Der Dämpfungskoeffizient von Germanium und dessen Komponenten. \cite{gamma_ray}}
     \label{fig:koeffizient}
 \end{figure}
 
-Die totale Kurve setzt sich aus verschiedenen Komponenten zusammen: Der Photoeffekt, der Compton Effekt und die Paarerzeugung.
+Die totale Kurve setzt sich aus verschiedenen Komponenten zusammen: Dem Photoeffekt, dem Compton Effekt und der Paarerzeugung.
 Im Folgenden werden die einzelnen Komponenten erläutert.
 
 \subsubsection{Der Photoeffekt}
@@ -42,7 +42,7 @@ Das Atom nimmt dabei den Rückstoßimpuls auf und wird ionisiert.
 Anhand der Abbildung \ref{fig:koeffizient} lässt sich ablesen, dass für Energie im Bereich bis zu \qty{100}{\kilo\eV} 
 Absorbtion durch den Photoeffekt dominiert. Der Wirkungsquerschnitt des Photoeffekts fällt für große Energien ab.
 Bei konstanter Photonen-Energie nimmt $\sigma$ stark zu für wachsende $Z$.
-Demnach ist der Wirkungsquerschnitt abhängig von Energie der der $\gamma$-Quanten und der Kernladungszahl $Z$.
+Demnach ist der Wirkungsquerschnitt abhängig von Energie der $\gamma$-Quanten und der Kernladungszahl $Z$.
 %Für natürliche Strahler ergibt sich $ \sigma_{\text{Ph}} \sim Z^{\alpha} / E^{\delta} $
 
 \subsubsection{Der Compton Effekt}
@@ -88,7 +88,7 @@ Für den Wirkungsquerschnit pro Atom kommt es zu einer linearen Abhängigkeit
 
 Die Linearität gilt für die Annahme von freien Elektronen, also für Energien oberhalb der
 Bindungsenergie des Elektronen.
-Für kleinere Energien der Compton Wirkungsquerschnitt in Materie ab.
+Für kleinere Energien nimmt der Compton Wirkungsquerschnitt in Materie ab.
 
 \subsubsection{Die Paarerzeugung}
 \label{paarerzeugung}
@@ -97,7 +97,7 @@ Eine weitere Wechselwirkung ist die Paarerzeugung, wobei ein Photon mit dem ganz
 Das $\gamma$-Quant kann in dem Coulomb Feld einer Ladung in ein Elektron-Positron-Paar umgewandelt werden.
 Aufgrund der Impulserhaltung kann Paarerzeugung nur auftreten, wenn ein Stoßpartner in Form eines Atoms oder eines Hüllenelektrons
 gegeben ist.
-Damit Paarbildung auftreten kann, muss für Energie der Photonen die Bedingung 
+Damit Paarbildung auftreten kann, muss für die Energie der Photonen die Bedingung 
 \begin{equation}
     E_\gamma \approx 2 m_e c^2
 \end{equation}
@@ -152,5 +152,26 @@ Cs-137 beispielhaft gezeigt.
 \end{figure}
 
 Existenziell für die Bestimmung der Gammenergien ist der Photopeak oder auch der Full Energy Peak.
-Er gibt die gesamte Energie des einfallenden $\gamma$-Quants an. Nur wenn der Photoeffekt stattgefunden hat ist die Deponierung der #
-gesamten Energie im Detektor möglich.
+Er gibt die gesamte Energie des einfallenden $\gamma$-Quants an. Nur wenn der Photoeffekt stattgefunden hat ist die Deponierung der 
+gesamten Energie im Detektor möglich. 
+Das Compton Kontinuum erstreckt sich von $E_{\text{min}}$ bis $E_{\text{max}}$. Die minimale Energie $E_{\text{min}}$ ist dabei festgelegt über
+die Nachweisgrenze des Detektors, welche in diesem Fall bei etwa \qty{40}{\kilo\eV} bis \qty{50}{\kilo\eV} liegt. Der Begriff Compton
+Kontinuum rührt aus der kontinuierlichen Energieabgabe beim Compton Effekt her.
+Die maximal abgegebene Energie $E_{\text{max}}$ wird als Compton-Kante bezeichnet.
+Diese lässt sich anhand von
+\begin{equation}
+    E_{\text{max}} = E_\gamma \frac{2 \epsilon}{1+2\epsilon}
+\end{equation}
+bestimmen.
+
+Im Bereuch des Compton Kontinuums kommt es zu einem zusätzlichen Anstieg, dieser wird als Rückstreupeak
+bezeichnet. Die $\gamma$-Quanten strahlen konzentrisch und daher gelangen diese auch in das umliegende Material.
+Demnach erfolgen nicht ausschließlich im Detektor Compton-Effekte, sondern auch in der Umgebung. Diese Quanten gelangen nach der
+Streuung in den Detektor und verantworten eine höhere Zählrate.
+Berechnet werden kann der Peak über
+\begin{equation}
+    E_{\text{back}} = E_\gamma \frac{1}{1+2\epsilon}.
+\end{equation}
+
+
+
