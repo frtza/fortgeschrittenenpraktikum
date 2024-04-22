@@ -143,7 +143,7 @@ Das Resulatat ist in der Abbildung \ref{fig:plot6} dargestellt.
     \label{fig:plot6}
 \end{figure}
 
-\subsection{Untersuchung eines monochromatischen Gamma Spektrums.}
+\subsection{Untersuchung eines monochromatischen Gamma-Spektrums.}
 \label{sec:untersuchung gamma spektrum}
 
 Für den ersten Aufgabenteil dieses Abschnittes wurde ein Cs-137 Strahler vermessen.
@@ -214,8 +214,27 @@ In der Abbildung \ref{fig:plot9} ist diese Anpassung sichtbar.
     \label{fig:plot9}
 \end{figure}
 
-Hervorgefrufen sind der Rückstreupeak und die Compton-Kante. Außerdem sind die zur Ausgleichsrechnung verwendeten Messpunkte farblich
+Hervorgehoben sind der Rückstreupeak und die Compton-Kante. Außerdem sind die zur Ausgleichsrechnung verwendeten Messpunkte farblich
 markiert, da im Energiebereich knapp unterhalb der Compton-Kante ein relativ störungsfreier Verlauf erwartet wird.
+
+Anhand des Literaturwerts $E_\gamma = \qty{661.66}{\kilo\eV}$ \cite{Kalibration} lässt dazu sich
+aus \eqref{eqn:Ecompton} und \eqref{eqn:Erückstreu} jeweils $E_\text{max} \approx \qty{476.93}{\kilo\eV}$ und
+$E_\text{back} \approx \qty{184.29}{\kilo\eV}$ berechnen. Für den Fit wird die Proportionalität \eqref{eqn:Wirkungsquerschnitt}
+mit einer Skalierung $a = \num{224.62 +- 2.38}$ versehen, Integration über den angezeigten Bereich liefert $N = \num{193026 +- 2049}$
+als Inhalt des gesamten Comptonkontinuums.
+
+Im Vergleich zum Photopeak ist der Compton-Inhalt demnach etwa um einen Faktor \num{2.015 +- 0.023} größer.
+
+Aus den in Abbildung \ref{fig:koeffizient} für $E_\gamma$ abgelesenen Extinktionskoeffizienten
+$\mu_\text{Compton} \approx \qty{0.4}{\per\centi\meter}$ und $\mu_\text{Photo} \approx \qty{0.01}{\per\centi\meter}$ 
+folgt aus dem Verhältnis der über
+\begin{equation*}
+    P = 1 - e^{- \mu l}
+\end{equation*}
+ermittelten Absorptionswahrscheinlichkeiten stattdessen ein Faktor \num{20.65} für die Vorhersage des relativen Inhalts von
+Compton- zu Photobereich.
+
+\subsection{Aktivitätsbestimmung anhand charakteristischer Gammapeaks}
 
 \begin{figure}[H]
     \centering
@@ -230,6 +249,8 @@ markiert, da im Energiebereich knapp unterhalb der Compton-Kante ein relativ st�
     \caption{Die Emissionsenergien von Ba-133. \cite{Kalibration}}
     \label{fig:baE}
 \end{figure}
+
+\subsection{Identifikation einer Probe mit unbekannter Zusammensetzung}
 
 \begin{figure}[H]
     \centering
