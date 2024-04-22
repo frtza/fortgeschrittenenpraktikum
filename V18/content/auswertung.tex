@@ -27,14 +27,13 @@ Die Emissionsenergien von Eu-152 sind in der Abbildung \ref{fig:euE} gegeben.
     \label{fig:euE}
 \end{figure}
 
-Nun werden die zugeordneten Emissionsenergien gegen die Kanäle aufgetragen.
+Nun werden die bereits zugeordneten Emissionsenergien gegen die Kanalnummer $K$ aufgetragen.
 Anschließend wird eine lineare Ausgleichsgerade der Form 
 \begin{equation*}
     a \cdot K + b
 \end{equation*}
-an die Werte angelegt. $K$ bezeichnet dabei die Kanalnummer.
-Die Ausgleichsgerade ist in der Abbildung \ref{fig:plot2}
-zu sehen.
+an die Werte angelegt.
+Die Messwerte und die Emissionsenergien sind mit der Ausgleichsgerade in der Abbildung \ref{fig:plot2} zu sehen.
 
 \begin{figure}[H]
     \centering
@@ -43,7 +42,7 @@ zu sehen.
     \label{fig:plot2}
 \end{figure}
 
-Für die Parameter ergeben sich die Werte
+Für die Parameter der Gerade ergeben sich die Werte
 \begin{align*}
     a   &= \qty{0.2073+-0.0001}{\kilo\eV} \\
     b   &= \qty{-1.3399 +- 0.2191}{\kilo\eV}.
@@ -55,8 +54,7 @@ Für die Energiekalibration ergibt sich demnach
 \end{equation*}
 
 Zur Verdeutlichung der Zuordnung der Emissionswahrscheinlichkeiten wurde das Spektrum von Eu-152 mit der Energieskala erneut erstellt und
-wird in der Abbildung \ref{fig:plot3}
-abgebildet.
+wird in der Abbildung \ref{fig:plot3} abgebildet. Damit ist die Energiekalibration des Ge-Detektors abgeschlossen.
 
 \begin{figure}[H]
     \centering
@@ -65,8 +63,8 @@ abgebildet.
    \label{fig:plot3}
 \end{figure}
 
-An die Full Energy Peaks wird jeweils eine Gaußfunktion gefitet. In der Abbildung \ref{fig:plot4} ist für den Peak bei $E$ = \qty{122}{\kilo\eV}
-die Gaußkurve und die Messwerte abgebildet.
+An die Full Energy Peaks wird jeweils eine Gaußfunktion gefitet. In der Abbildung \ref{fig:plot4} sind für den Peak bei $E$ = \qty{122}{\kilo\eV}
+die Gaußkurve und die Messwerte exemplarisch abgebildet.
 
 \begin{figure}[H]
     \centering
@@ -75,20 +73,20 @@ die Gaußkurve und die Messwerte abgebildet.
    \label{fig:plot4}
 \end{figure}
 
-Es ist so möglich die Gesamtanzahl der Impulse pro Peak zu bestimmen zur weiteren Berechnung der Vollenergienachweiswahrscheinlichkeit.
+Es ist so möglich die Gesamtanzahl der Impulse pro Peak zu bestimmen. Dies ist nötwendig zur weiteren Berechnung der Vollenergienachweiswahrscheinlichkeit.
 Anhand des Fits kann auch der Hintergrund als konstant modelliert und durch subtraktion kompensiert werden.
 
 Die Vollenergienachweiswahrscheinlichkeit wird mit der Gleichung 
 \begin{equation*}
     Q = \frac{N}{AWt} \cdot \frac{4\pi}{\Omega}
 \end{equation*}
-bestimmt. $W$ Gibt die Emissionswahrscheinlichkeit an, A enspricht der Aktivität der Probe am Messtag (22.04.2024) und t
-ist die Zeitspanne, über die gemessen wird.
+bestimmt. $W$ Gibt die Emissionswahrscheinlichkeit an, $A$ enspricht der Aktivität der Probe am Messtag (22.04.2024) und $t$
+ist die Zeitspanne, über die gemessen wird. Wie im Abschnitt \ref{sec:durchführung} nachzulesen, wurde über einen Zeitraum von ungefähr \qty{2700}{\second} gemessen.
 Zur Bestimmung der Aktivität der Probe wird das Zerfallsgesetzt gemäß
 \begin{equation*}
     N(t) = N_0 \exp(-\lambda t)
 \end{equation*}
-nach $t$ abgeleitet. Daraus folgt der Zusammenhang
+nach $t$ abgeleitet. Daraus folgt der Zusammenhang für die aktuelle Aktivität der Probe
 \begin{equation*}
     A(t) = A_0 \exp(-\lambda t).
 \end{equation*}
@@ -99,15 +97,38 @@ Die Aktivität am 01.10.2000 und die Halbwertszeit von Eu-152 sind geben durch
     T_{\frac{1}{2}} &= \qty{4934}{\day}.
 \end{align*}
 
-Für den Tag der Messung (22.04.2024) ergibt sich eine Aktivität von
+Für den Tag der Messung (22.04.2024) ergibt sich damit eine Aktivität von
 \begin{equation*}
     A = \qty{1233+-18}{\becquerel}.
 \end{equation*}
 
-Abschließen muss $\Omega$ berechnet werden und zwar anhand der Gleichung
+Abschließen muss  der Raumwinkelanteil $\Omega$ berechnet werden und zwar anhand der Gleichung
 \begin{equation*}
     \Omega = \frac{1}{2} \left(1- \frac{a}{\sqrt{a^2+r^2}}\right).
 \end{equation*}
 
 Dabei bezeichnet $a$ den Abstand der Probe zum Detektor, dieser beträgt in Summe \qty{85}{\milli\meter}.
-Der Radius $r$ des Zylinders entspricht \qty{22.5}{\milli\meter}.
+Der Radius $r$ des zylinderförmigen Ge-Detektors entspricht \qty{22.5}{\milli\meter}.
+Für den Raumwinkelanteil ergibt sich ein Wert von \num{0.01665}.
+Nun können die berechneten Werte für die Vollenergienachweiswahrscheinlichkeit $Q$ mit den zugehörigen Energien in einem Diagramm
+aufgetragen werden. Dies ist in der Abbildung \ref{fig:plot5} gezeigt.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{content/plots/plot5.jpg}
+   \caption{Die Effizienz des hochreinen Geermanium Detektors in Abhängigkeit der Energie.}
+   \label{fig:plot5}
+\end{figure}
+
+Der Fit in der Abbildung \ref{fig:plot5} wurde mit einer Funktion der Form 
+\begin{equation*}
+    a \cdot b^x + c
+\end{equation*}
+an die Messwerte angelegt.
+Für die Parameter ergeben sich die Werte
+\begin{align*}
+    a   &= \num{1.8087 +- 0.0643} \\
+    b   &= \num{0.9956 +- 0.0002} \\
+    c   &= \num{0.1461 +- 0.0114}.
+\end{align*}
+Dabei ist zu beachten, dass $Q$ einheitenlos ist. 
