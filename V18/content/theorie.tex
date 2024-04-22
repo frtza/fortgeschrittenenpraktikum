@@ -1,19 +1,19 @@
 \section[Theorie]{Theorie \textnormal{\cite{germanium}}}
 \label{sec:theorie}
 
-Zum Verständnis des hochreinen Germaniumdektektors werden die theorethschen Grundlagen dessen im Folgenden erläutert.
+Zum Verständnis des hochreinen Germaniumdektektors werden die theorethschen Grundlagen im Folgenden erläutert.
 
 \subsection{Die Wechselwirkung von Strahlung mit Materie}
 \label{sec:WW mit Materie}
 
 Bei der Gamma-Strahlungs-Detektion werden Elektronen des Detektor-Matrials von den Gamma-Photonen angeregt und damit werden die 
-Atome ionisiert. Daher bilden sich Elektronen-Loch-Paare. Die Primärenelektronen ionisieren wiederum weitere Atome des Detektor-Mediums und erzeugen somit weitere Elektron Loch Paare.
+Atome ionisiert. Es bilden sich Elektronen-Loch-Paare. Die Primärenelektronen ionisieren wiederum weitere Atome des Detektor-Mediums und erzeugen somit weitere Elektron Loch Paare.
 Die Anzahl der Elektronen-Loch Paare ist direkt proportional zur Energie des Elektrons aus der primären
 Wechselwirkung.
 
 Da der Absorbtionskoeffizient für Gamma-Strahlung bei Gasen sehr niedrig ist, 
 werden Gamma-Strahlen-Detektoren aus Festkörpern gebaut. Das Matrial des Detektors muss so gewählt werden, dass
-die Anzahl Elektronen-Loch-Paare gesammelt und als elektrisches Signal wiedergegeben werden kann.
+die Anzahl der Elektronen-Loch-Paare gesammelt und als elektrisches Signal wiedergegeben werden kann.
 Zusätzlich ist der Grad der Interaktion von Gamma-Strahlung mit Materie abhängig von der Energie der Strahlung.
 Der Intensitätsverlust  eine $\gamma$-Strahls in Materie ist abhängig von der jeweiligen Schichtdicke des Materials $d$,
 der Elektronendichte und dem Wirkungsquerschnitt $\sigma$. Dabei ist der Wirkungsquerschnitt ein Maß für die Wahrscheinlichkeit einer Teilchenreaktion.
@@ -26,11 +26,11 @@ bei bestimmter Energie verursacht durch den Absorber misst, gegen die Gamma-Stra
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\textwidth]{content/grafik/dämpfungskoeffizientGermanium.jpg}
-    \caption{ \cite{gamma_ray}}
+    \caption{Der Dämpfungskoeffizient von Germanium und dessen Komponenten. \cite{gamma_ray}}
     \label{fig:koeffizient}
 \end{figure}
 
-Die totale Kurve setzt sich aus verschiedenen Komponenten zusammen: Der Photoeffekt, der Compton Effekt und die Paarerzeugung.
+Die totale Kurve setzt sich aus verschiedenen Komponenten zusammen: Dem Photoeffekt, dem Compton Effekt und der Paarerzeugung.
 Im Folgenden werden die einzelnen Komponenten erläutert.
 
 \subsubsection{Der Photoeffekt}
@@ -39,19 +39,19 @@ Im Folgenden werden die einzelnen Komponenten erläutert.
 Der Photoeffekt beschreibt den Prozess bei dem ein ein Gamma-Quant mit einem Hüllenelektron wechselwirkt.
 Das Photon wird absorbiert, daher gibt es seine gesamte Energie an das Atom ab, und ein Elektron wird emittiert. 
 Das Atom nimmt dabei den Rückstoßimpuls auf und wird ionisiert.
-Anhand der Abbildung \ref{fig:koeffizient} lässt sich ablesen, dass für Energie im Bereich bis zu \qty{100}{\kilo\eV} 
+Anhand der Abbildung \ref{fig:koeffizient} lässt sich ablesen, dass für Energien im Bereich bis zu \qty{100}{\kilo\eV} 
 Absorbtion durch den Photoeffekt dominiert. Der Wirkungsquerschnitt des Photoeffekts fällt für große Energien ab.
 Bei konstanter Photonen-Energie nimmt $\sigma$ stark zu für wachsende $Z$.
-Demnach ist der Wirkungsquerschnitt abhängig von Energie der der $\gamma$-Quanten und der Kernladungszahl $Z$.
+Demnach ist der Wirkungsquerschnitt abhängig von der Energie der $\gamma$-Quanten und der Kernladungszahl $Z$.
 %Für natürliche Strahler ergibt sich $ \sigma_{\text{Ph}} \sim Z^{\alpha} / E^{\delta} $
 
 \subsubsection{Der Compton Effekt}
 \label{sec:compton}
 
-Der Compton-Effekt ist die Streuunug eines Photons an einem quasi-freien oder freien Elektron.
+Der Compton-Effekt ist die Streuunug eines Photons an einem quasi-freien oder freien Elektrons.
 Die Hüllenelektronen eines Atoms werden hier als quasi-frei betrachtet unter der Bedingung, dass
 die Enrgie des Photons viel größer als die Bindungsenergie der Elektronen ist. Dieser Prozess
-dominiert in Materie um \qty{1}{\mega\eV}.
+dominiert in Materie um den Bereich \qty{1}{\mega\eV}.
 Die Kinematik der Compton Streuung ist in Abilldung \ref{fig:compton} zu sehen.
 
 \begin{figure}[H]
@@ -88,7 +88,7 @@ Für den Wirkungsquerschnit pro Atom kommt es zu einer linearen Abhängigkeit
 
 Die Linearität gilt für die Annahme von freien Elektronen, also für Energien oberhalb der
 Bindungsenergie des Elektronen.
-Für kleinere Energien der Compton Wirkungsquerschnitt in Materie ab.
+Für kleinere Energien nimmt der Compton Wirkungsquerschnitt in Materie ab.
 
 \subsubsection{Die Paarerzeugung}
 \label{paarerzeugung}
@@ -97,27 +97,27 @@ Eine weitere Wechselwirkung ist die Paarerzeugung, wobei ein Photon mit dem ganz
 Das $\gamma$-Quant kann in dem Coulomb Feld einer Ladung in ein Elektron-Positron-Paar umgewandelt werden.
 Aufgrund der Impulserhaltung kann Paarerzeugung nur auftreten, wenn ein Stoßpartner in Form eines Atoms oder eines Hüllenelektrons
 gegeben ist.
-Damit Paarbildung auftreten kann, muss für Energie der Photonen die Bedingung 
+Damit Paarbildung auftreten kann, muss für die Energie der Photonen die Bedingung 
 \begin{equation}
     E_\gamma \approx 2 m_e c^2
 \end{equation}
 erfüllt sein. 
-Zusammen mit der Abbildung \ref{fig:koeffizient} folgt, dass die Paarerzeugung für Energien größer als \qty{1}{\mega\eV} dominiert.
+Aus der Abbildung \ref{fig:koeffizient} folgt, dass die Paarerzeugung für Energien größer als \qty{1}{\mega\eV} dominiert.
 
 \subsection{Grundlagen eines Halbleiter-Detektors}
 \label{sec:Halbleiter-Detektor}
 
 Halbleiterdetektoren aus Silizium oder Germanium eigenen sich für den Nachweis von Gammastrahlung und die Bestimmung derer Energie mit einer hohen Gnauigkeit.
-Die zentrale Komponente des Detektors ist die Halbleiterdiode. In diesem Versuch wird ein Germaiumdektektor verwendet.
+Die zentrale Komponente des Detektors ist die Halbleiterdiode. In diesem Versuch wird ein hochreiner Germaiumdektektor verwendet.
 Die Diode besteht aus einem zylinderförmigen Germanium Kristall. Die Oberfläche ist über Eindiffusion von Lithium Atomen n-dotiert.
 An diese wird der Pluspol der Sperrspannung angelegt. Im Inneren des Kristalls befindet sich eine koaxiale Bohrung, welche an der Oberfläche mit Gold bedampft wurde, sodass diese p-dotiert ist.
-Es kommt zur Ausbildung einer ausgedehnten Verarmungszone. Wenn nun die Gammastrahlung ,bei einer Energie $E_{\gamma} $ oberhalb der Bandlücke, eintrifft, wird ein Primärelektron von dem Photon angregt.
+Es kommt zur Ausbildung einer ausgedehnten Verarmungszone. Wenn nun die Gammastrahlung bei einer Energie $E_{\gamma} $ oberhalb der Bandlücke eintrifft, wird ein Primärelektron von dem Photon angregt.
 Sodass das Elektron von dem Valenzband in das Leitungsband angehoben wird. Wird eine Elektron in ein anderes höher liegendes Band angregt, lässt dieses eine freie Stelle über. 
 Diese wird als Loch mit einer positiven Ladung interpertiert.
 Die Energie dieses Elektrons ist sehr hoch, daher kommt es mehrfach zu Anregung von Sekundärteilchen, welche wiederum freie Stellen zurücklässt. Die Erzeugung von sekundäre Elektronen ist ein statistischer Prozess.
 Da die Löcher als Teilchen mit positiver Ladung angesehen werden können und die Elektronen eine negative Ladung besitzen, werden die Löcher von der n-dotierten Schicht und die Elektronen von der p-dotierten Schicht angezogen.
-So fließt ein Strom der gemessen werden kann.
-Die Anzahl der Elektronen-Loch-Paare $n$ ist direkt abhängig zu der absorbierten Energie der Gammastrahlung $E_{\text{absorbiert}}$. Für die Energie $\epsilon$, die benötigt wird,
+So fließt ein Strom, der gemessen werden kann.
+Die Anzahl der Elektronen-Loch-Paare $n$ ist direkt abhängig zu der absorbierten Energie der Gammastrahlung $E_{\text{absorbiert}}$. Für die Energie $\epsilon$, die benötigt wird
 um ein Elektron-Loch-Paar zu erzeugen gilt der Zusammenhang
 
 \begin{equation}
@@ -125,11 +125,11 @@ um ein Elektron-Loch-Paar zu erzeugen gilt der Zusammenhang
 \end{equation}
 
 Die Elektronen und die Löcher müssen in dem Detektormatreial gut mobil sein. Die größe des Kristalls ist ebenfalls eine nicht zu vernachlässigende Eigenschaft.
-Wichtig ist dass der Absobtionskoeffizient groß ist, damit die Messung effektiv ist. Um dies zu garantieren werden Materialien mit einem großen Absobtionskoeffizient
-gewählt. Dieser hängt mit der Kernladungszahl $Z$ zusammen. Das Matrial muss zudem elektrische Charakteristika aufweise, da ein Stromimpuls gemessen werden soll. Zusammen mit der Mobiltät, die für die
+Wichtig ist, dass der Absobtionskoeffizient groß ist, damit die Messung effektiv sein kann. Um dies zu garantieren werden Materialien mit einem großen Absobtionskoeffizient
+gewählt. Dieser hängt mit der Kernladungszahl $Z$ zusammen. Das Matrial muss zudem elektrische Charakteristika aufweisen, da ein Stromimpuls gemessen werden soll. Zusammen mit der Mobiltät, die für die
 Elektronen und die Löcher gelten soll, kann der Schluss gezogen werden, dass sich Halbleiter gut für solche Detektoren eignen.
 
-In der Abbildung \ref{fig:halbleitermatrialien} sind einige Materialien,welche sich eignen würden für einen Halbleiterdetektoren und deren Eigenschaften.
+In der Abbildung \ref{fig:halbleitermatrialien} sind einige Materialien aufgelistet, welche sich eignen würden für einen Halbleiterdetektoren und deren Eigenschaften.
 
 \begin{figure}[H]
     \centering
@@ -152,5 +152,26 @@ Cs-137 beispielhaft gezeigt.
 \end{figure}
 
 Existenziell für die Bestimmung der Gammenergien ist der Photopeak oder auch der Full Energy Peak.
-Er gibt die gesamte Energie des einfallenden $\gamma$-Quants an. Nur wenn der Photoeffekt stattgefunden hat ist die Deponierung der #
-gesamten Energie im Detektor möglich.
+Er gibt die gesamte Energie des einfallenden $\gamma$-Quants an. Nur wenn der Photoeffekt stattgefunden hat, ist die Deponierung der 
+gesamten Energie im Detektor möglich. 
+Das Compton Kontinuum erstreckt sich von $E_{\text{min}}$ bis $E_{\text{max}}$. Die minimale Energie $E_{\text{min}}$ ist dabei festgelegt über
+die Nachweisgrenze des Detektors, welche in diesem Fall bei etwa \qty{40}{\kilo\eV} bis \qty{50}{\kilo\eV} liegt. Der Begriff Compton
+Kontinuum rührt aus der kontinuierlichen Energieabgabe beim Compton Effekt her.
+Die maximal abgegebene Energie $E_{\text{max}}$ wird als Compton-Kante bezeichnet.
+Diese lässt sich anhand von
+\begin{equation}
+    E_{\text{max}} = E_\gamma \frac{2 \epsilon}{1+2\epsilon}
+\end{equation}
+bestimmen.
+
+Im Bereich des Compton Kontinuums kommt es zu einem zusätzlichen Anstieg, dieser wird als Rückstreupeak
+bezeichnet. Die $\gamma$-Quanten strahlen konzentrisch und daher gelangen diese auch in das umliegende Material.
+Demnach erfolgen nicht ausschließlich im Detektor Compton-Effekte, sondern auch in der Umgebung. Diese Quanten gelangen nach der
+Streuung in den Detektor und verantworten eine höhere Zählrate.
+Berechnet werden kann der Peak über
+\begin{equation}
+    E_{\text{back}} = E_\gamma \frac{1}{1+2\epsilon}.
+\end{equation}
+
+
+
