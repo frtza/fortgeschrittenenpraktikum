@@ -63,7 +63,7 @@ wird in der Abbildung \ref{fig:plot3} abgebildet. Damit ist die Energiekalibrati
    \label{fig:plot3}
 \end{figure}
 
-An die Full Energy Peaks wird jeweils eine Gaußfunktion gefitet. In der Abbildung \ref{fig:plot4} sind für den Peak bei $E$ = \qty{122}{\kilo\eV}
+An die Full Energy Peaks wird jeweils eine Gaußfunktion t. In der Abbildung \ref{fig:plot4} sind für den Peak bei $E$ = \qty{122}{\kilo\eV}
 die Gaußkurve und die Messwerte exemplarisch abgebildet. Die Gaußfunktion hat die Form wie in Gleichung \ref{eqn:gauss}
 
 \begin{figure}[H]
@@ -202,4 +202,16 @@ Das Verhältnis beträgt
 \begin{equation*}
     \frac{f_{\text{fwhm}}}{f_{\text{fwtm}}} \approx \num{1.818}.
 \end{equation*}
-   
+
+Zur Approximation des Compton Kontinuums wird der Wirkungsquerschnitt nach Gleichung \ref{eqn:Wirkungsquerschnitt} an die Messdaten gefittet.
+So soll das Kontinuum besser abgeschätzt werden können für kleine Energien.
+In der Abbildung \ref{fig:plot9} ist diese Anpassung sichtbar.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{content/plots/plot9.jpg}
+    \caption{Darstellung des Compton Kontinuums.}
+    \label{fig:plot9}
+\end{figure}
+
+Hervorgefrufen sind der Rückstreupeak und die Compton-Kante.
