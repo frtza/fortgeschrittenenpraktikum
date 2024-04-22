@@ -64,7 +64,7 @@ wird in der Abbildung \ref{fig:plot3} abgebildet. Damit ist die Energiekalibrati
 \end{figure}
 
 An die Full Energy Peaks wird jeweils eine Gaußfunktion gefitet. In der Abbildung \ref{fig:plot4} sind für den Peak bei $E$ = \qty{122}{\kilo\eV}
-die Gaußkurve und die Messwerte exemplarisch abgebildet.
+die Gaußkurve und die Messwerte exemplarisch abgebildet. Die Gaußfunktion hat die Form wie in Gleichung \ref{eqn:gauss}
 
 \begin{figure}[H]
     \centering
@@ -73,7 +73,7 @@ die Gaußkurve und die Messwerte exemplarisch abgebildet.
    \label{fig:plot4}
 \end{figure}
 
-Es ist so möglich die Gesamtanzahl der Impulse pro Peak zu bestimmen. Dies ist nötwendig zur weiteren Berechnung der Vollenergienachweiswahrscheinlichkeit.
+Es ist so möglich die Gesamtanzahl der Impulse pro Peak zu bestimmen. Dies ist notwendig zur weiteren Berechnung der Vollenergienachweiswahrscheinlichkeit.
 Anhand des Fits kann auch der Hintergrund als konstant modelliert und durch subtraktion kompensiert werden.
 
 Die Vollenergienachweiswahrscheinlichkeit wird mit der Gleichung 
@@ -132,3 +132,74 @@ Für die Parameter ergeben sich die Werte
     c   &= \num{0.1461 +- 0.0114}.
 \end{align*}
 Dabei ist zu beachten, dass $Q$ einheitenlos ist. 
+
+Anschließend wird das anfängliche Spektrum von Eu-152 mit der Funktion der Effektiviät korrigiert.
+Das Resulatat ist in der Abbildung \ref{fig:plot6} dargestellt.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{content/plots/plot6.jpg}
+   \caption{korrigiertes Gammaspektrum des Eu-152 Strahlers.}
+    \label{fig:plot6}
+\end{figure}
+
+\subsection{Untersuchung eines monochromatischen Gamma Spetrums}
+\label{sec:untersuchung gamma spektrum}
+
+Für den ersten Aufgabenteil dieses Abschnittes wurde ein Cs-137 Strahler vermessen.
+Das dazugehöroge Spektrum ist in der Abbildung \ref{fig:plot7} zu sehen.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{content/plots/plot7.jpg}
+    \caption{Das Spektrum eines monochromatischen Cs-137 Strahlers.}
+    \label{fig:plot7}
+\end{figure}
+
+Abgelesen werden kann das Compton Kontinuum., die Compton-Kante, der Rückstreupeak und der Photopeak.
+Mit Hilfe eines Gaußkurve, welche an den Photopeak gelegt wird,soll die Anzahl der Impulse bestimmt werden.
+Indem dann die Halbwertsbreite und die Zehntelwertsbreite bestimmt wird, kann der Fit überprüft werden.
+Die Energie des Photopeakswird mittels dem SciPy Paket find-peaks ermittelt.
+Die Gauß-Kurve hat die Form 
+\begin{equation}
+    f(x) = b + \frac{N}{\sqrt{2 \pi \sigma^2}} \exp{-\frac{\left(x-\mu \right)^2}{2\sigma^2}}.
+    \label{eqn:gauss}
+\end{equation}
+ 
+Für die Parameter ergeben sich folgende Werte
+\begin{align*}
+    b &=    \num{7.739+- 2.241} \\
+    m &=  \num{661.182+- 0.004} \\
+    s &=    \num{0.944+-0.004} \\
+    N &= \num{7624.639+-27.994}.
+\end{align*}
+
+Der Photopeak mit der Gaußkurve ist in Abbildung \ref{fig:plot8} dargestellt.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{content/plots/plot8.jpg}
+    \caption{Full Energy Peak des Cs-137 Strahlers.}
+    \label{fig:plot8}
+\end{figure}
+
+Aus der Umstellung der Gaußfunktion folgen die theorethischen Werte
+\begin{align*}
+ f_{\text{fwhm}} &= 2 \sqrt{2 \ln{2}} \sigma \\
+ f_{\text{fwtm}} &= 2 \sqrt{2 \ln{10}} \sigma.
+\end{align*}
+Für das Verhältnis der Zehntelwertsbreite und der halbwertsbreite ergibt sich dann
+\begin{equation*}
+  \frac{f_{\text{fwhm}}}{f_{\text{fwtm}}} = \sqrt{\frac{\ln{10}}{\ln{2}}} \approx \num{1.823}
+\end{equation*}
+
+Aus der Messung wurden die charakteristischen Breiten durch die nächstgelegenden Messpunkte angenähert. 
+\begin{align*}
+    f_{\text{fwhm}} &\approx \qty{2.28}{\kilo\eV}\\
+    f_{\text{fwtm}} &\approx \qty{4.15}{\kilo\eV}.
+\end{align*}
+Das Verhältnis beträgt
+\begin{equation*}
+    \frac{f_{\text{fwhm}}}{f_{\text{fwtm}}} \approx \num{1.818}.
+\end{equation*}
+   
