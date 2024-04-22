@@ -3,7 +3,7 @@
 
 Im Anschluss werden die aufgenommenen Messwerte ausgewertet.
 
-\subsection{Energiekalibration und Bestimmung der Vollenergienachweiswahrscheinlichkeit}
+\subsection{Energiekalibration und Bestimmung der Nachweiseffizienz}
 \label{sec:auswertung1}
 
 Das aufgenommene Spektrum der Eu-152 Quelle ist in der Abbildung \ref{fig:plot1}
@@ -16,7 +16,7 @@ dargestellt. Die Anzahl der Impulse wurden für eine bessere Darstellbarkeit log
     \label{fig:plot1}
 \end{figure}
 
-Die Photopeaks werden mit dem SciPy Paket find-peaks ermittelt und rot markiert.
+Die Photopeaks werden mit dem SciPy Paket find\_peaks ermittelt und rot markiert.
 Unter dem Spektrum befinden sich die Emissionsenergien des Gammastrahlers, welche zum Abgleichen verwendet werden.
 Die Emissionsenergien von Eu-152 sind in der Abbildung \ref{fig:euE} gegeben.
 
@@ -63,7 +63,7 @@ wird in der Abbildung \ref{fig:plot3} abgebildet. Damit ist die Energiekalibrati
    \label{fig:plot3}
 \end{figure}
 
-An die Full Energy Peaks wird jeweils eine Gaußfunktion t. In der Abbildung \ref{fig:plot4} sind für den Peak bei $E$ = \qty{122}{\kilo\eV}
+An die Full Energy Peaks wird jeweils eine Gaußfunktion gefittet. In der Abbildung \ref{fig:plot4} sind für den Peak bei $E$ = \qty{122}{\kilo\eV}
 die Gaußkurve und die Messwerte exemplarisch abgebildet. Die Gaußfunktion hat die Form wie in Gleichung \ref{eqn:gauss}
 
 \begin{figure}[H]
@@ -74,7 +74,7 @@ die Gaußkurve und die Messwerte exemplarisch abgebildet. Die Gaußfunktion hat 
 \end{figure}
 
 Es ist so möglich die Gesamtanzahl der Impulse pro Peak zu bestimmen. Dies ist notwendig zur weiteren Berechnung der Vollenergienachweiswahrscheinlichkeit.
-Anhand des Fits kann auch der Hintergrund als konstant modelliert und durch subtraktion kompensiert werden.
+Anhand des Fits kann auch der Hintergrund als konstant modelliert und durch Subtraktion kompensiert werden.
 
 Die Vollenergienachweiswahrscheinlichkeit wird mit der Gleichung 
 \begin{equation*}
@@ -102,7 +102,7 @@ Für den Tag der Messung (22.04.2024) ergibt sich damit eine Aktivität von
     A = \qty{1233+-18}{\becquerel}.
 \end{equation*}
 
-Abschließen muss  der Raumwinkelanteil $\Omega$ berechnet werden und zwar anhand der Gleichung
+Abschließend muss der Raumwinkelanteil $\Omega$ berechnet werden und zwar anhand der Gleichung
 \begin{equation*}
     \frac{\Omega}{4\pi} = \frac{1}{2} \left(1- \frac{a}{\sqrt{a^2+r^2}}\right).
 \end{equation*}
@@ -116,7 +116,7 @@ aufgetragen werden. Dies ist in der Abbildung \ref{fig:plot5} gezeigt.
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{content/plots/plot5.jpg}
-   \caption{Die Effizienz des hochreinen Geermanium Detektors in Abhängigkeit der Energie.}
+   \caption{Die Effizienz des hochreinen Germanium Detektors in Abhängigkeit der Energie.}
    \label{fig:plot5}
 \end{figure}
 
@@ -131,7 +131,7 @@ Für die Parameter ergeben sich die Werte
     b   &= \num{0.9956 +- 0.0002} \\
     c   &= \num{0.0116 +- 0.0009}.
 \end{align*}
-Dabei ist zu beachten, dass $Q$ einheitenlos ist. 
+Dabei ist zu beachten, dass $Q$ einheitenlos ist, $x$ wird in \unit{\kilo\eV} angegeben. 
 
 Anschließend wird das anfängliche Spektrum von Eu-152 mit der Funktion der Effektiviät korrigiert.
 Das Resulatat ist in der Abbildung \ref{fig:plot6} dargestellt.
@@ -139,15 +139,15 @@ Das Resulatat ist in der Abbildung \ref{fig:plot6} dargestellt.
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{content/plots/plot6.jpg}
-   \caption{korrigiertes Gammaspektrum des Eu-152 Strahlers.}
+   \caption{Korrigiertes Gammaspektrum des Eu-152 Strahlers.}
     \label{fig:plot6}
 \end{figure}
 
-\subsection{Untersuchung eines monochromatischen Gamma Spetrums}
+\subsection{Untersuchung eines monochromatischen Gamma Spektrums.}
 \label{sec:untersuchung gamma spektrum}
 
 Für den ersten Aufgabenteil dieses Abschnittes wurde ein Cs-137 Strahler vermessen.
-Das dazugehöroge Spektrum ist in der Abbildung \ref{fig:plot7} zu sehen.
+Das dazugehörige Spektrum ist in der Abbildung \ref{fig:plot7} zu sehen.
 
 \begin{figure}[H]
     \centering
@@ -156,16 +156,16 @@ Das dazugehöroge Spektrum ist in der Abbildung \ref{fig:plot7} zu sehen.
     \label{fig:plot7}
 \end{figure}
 
-Abgelesen werden kann das Compton Kontinuum., die Compton-Kante, der Rückstreupeak und der Photopeak.
-Mit Hilfe eines Gaußkurve, welche an den Photopeak gelegt wird,soll die Anzahl der Impulse bestimmt werden.
+Abgelesen werden kann das Compton Kontinuum, die Compton-Kante, der Rückstreupeak und der Photopeak.
+Mit Hilfe eines Gaußkurve, welche an den Photopeak gelegt wird, soll die Anzahl der Impulse bestimmt werden.
 Indem dann die Halbwertsbreite und die Zehntelwertsbreite bestimmt wird, kann der Fit überprüft werden.
-Die Energie des Photopeakswird mittels dem SciPy Paket find-peaks ermittelt.
+Die Energie des Photopeaks wird mittels dem SciPy Paket find\_peaks ermittelt.
 Die Gauß-Kurve hat die Form 
 \begin{equation}
     f(x) = b + \frac{N}{\sqrt{2 \pi \sigma^2}} \exp{-\frac{\left(x-\mu \right)^2}{2\sigma^2}}.
     \label{eqn:gauss}
 \end{equation}
- 
+
 Für die Parameter ergeben sich folgende Werte
 \begin{align*}
     b &=    \num{97.247 +- 28.158} \\
@@ -183,12 +183,12 @@ Der Photopeak mit der Gaußkurve ist in Abbildung \ref{fig:plot8} dargestellt.
     \label{fig:plot8}
 \end{figure}
 
-Aus der Umstellung der Gaußfunktion folgen die theorethischen Werte
+Aus der Umstellung der Gaußfunktion folgen die theoretischen Werte
 \begin{align*}
  f_{\text{fwhm}} &= 2 \sqrt{2 \ln{2}} \sigma \\
  f_{\text{fwtm}} &= 2 \sqrt{2 \ln{10}} \sigma.
 \end{align*}
-Für das Verhältnis der Zehntelwertsbreite und der halbwertsbreite ergibt sich dann
+Für das Verhältnis der Zehntelwertsbreite und der Halbwertsbreite ergibt sich dann
 \begin{equation*}
   \frac{f_{\text{fwhm}}}{f_{\text{fwtm}}} = \sqrt{\frac{\ln{10}}{\ln{2}}} \approx \num{1.823}
 \end{equation*}
@@ -214,7 +214,8 @@ In der Abbildung \ref{fig:plot9} ist diese Anpassung sichtbar.
     \label{fig:plot9}
 \end{figure}
 
-Hervorgefrufen sind der Rückstreupeak und die Compton-Kante.
+Hervorgefrufen sind der Rückstreupeak und die Compton-Kante. Außerdem sind die zur Ausgleichsrechnung verwendeten Messpunkte farblich
+markiert, da im Energiebereich knapp unterhalb der Compton-Kante ein relativ störungsfreier Verlauf erwartet wird.
 
 \begin{figure}[H]
     \centering
