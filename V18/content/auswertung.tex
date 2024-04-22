@@ -22,7 +22,7 @@ Die Emissionsenergien von Eu-152 sind in der Abbildung \ref{fig:euE} gegeben.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[angle=270,width=0.6\textwidth]{content/grafik/euenergien.jpg}
+    \includegraphics[width=0.666\textwidth]{content/grafik/euenergien.jpg}
     \caption{Die Emissionsenergien von Eu-152. \cite{Kalibration}}
     \label{fig:euE}
 \end{figure}
@@ -82,7 +82,7 @@ Die Vollenergienachweiswahrscheinlichkeit wird mit der Gleichung
 \end{equation*}
 bestimmt. $W$ Gibt die Emissionswahrscheinlichkeit an, $A$ enspricht der Aktivität der Probe am Messtag (22.04.2024) und $t$
 ist die Zeitspanne, über die gemessen wird. Wie im Abschnitt \ref{sec:durchführung} nachzulesen, wurde über einen Zeitraum von ungefähr \qty{2700}{\second} gemessen.
-Zur Bestimmung der Aktivität der Probe wird das Zerfallsgesetzt gemäß
+Zur Bestimmung der Aktivität der Probe wird das Zerfallsgesetz gemäß
 \begin{equation*}
     N(t) = N_0 \exp(-\lambda t)
 \end{equation*}
@@ -91,7 +91,7 @@ nach $t$ abgeleitet. Daraus folgt der Zusammenhang für die aktuelle Aktivität 
     A(t) = A_0 \exp(-\lambda t).
 \end{equation*}
 
-Die Aktivität am 01.10.2000 und die Halbwertszeit von Eu-152 sind geben durch
+Die Aktivität \cite{germanium} am 01.10.2000 und die Halbwertszeit \cite{nudat} von Eu-152 sind geben durch
 \begin{align*}
     A_0     &= \qty{4130+-60}{\becquerel} \\
     T_{\frac{1}{2}} &= \qty{4934}{\day}.
@@ -104,7 +104,7 @@ Für den Tag der Messung (22.04.2024) ergibt sich damit eine Aktivität von
 
 Abschließen muss  der Raumwinkelanteil $\Omega$ berechnet werden und zwar anhand der Gleichung
 \begin{equation*}
-    \Omega = \frac{1}{2} \left(1- \frac{a}{\sqrt{a^2+r^2}}\right).
+    \frac{\Omega}{4\pi} = \frac{1}{2} \left(1- \frac{a}{\sqrt{a^2+r^2}}\right).
 \end{equation*}
 
 Dabei bezeichnet $a$ den Abstand der Probe zum Detektor, dieser beträgt in Summe \qty{85}{\milli\meter}.
@@ -127,9 +127,9 @@ Der Fit in der Abbildung \ref{fig:plot5} wurde mit einer Funktion der Form
 an die Messwerte angelegt.
 Für die Parameter ergeben sich die Werte
 \begin{align*}
-    a   &= \num{1.8087 +- 0.0643} \\
+    a   &= \num{0.1439 +- 0.0051} \\
     b   &= \num{0.9956 +- 0.0002} \\
-    c   &= \num{0.1461 +- 0.0114}.
+    c   &= \num{0.0116 +- 0.0009}.
 \end{align*}
 Dabei ist zu beachten, dass $Q$ einheitenlos ist. 
 
@@ -168,10 +168,10 @@ Die Gauß-Kurve hat die Form
  
 Für die Parameter ergeben sich folgende Werte
 \begin{align*}
-    b &=    \num{7.739+- 2.241} \\
-    m &=  \num{661.182+- 0.004} \\
-    s &=    \num{0.944+-0.004} \\
-    N &= \num{7624.639+-27.994}.
+    b &=    \num{97.247 +- 28.158} \\
+    m &=  \num{661.182 +-  0.004} \\
+    s &=    \num{0.944 +- 0.004} \\
+    N &= \num{95814 +- 352}.
 \end{align*}
 
 Der Photopeak mit der Gaußkurve ist in Abbildung \ref{fig:plot8} dargestellt.
@@ -215,3 +215,49 @@ In der Abbildung \ref{fig:plot9} ist diese Anpassung sichtbar.
 \end{figure}
 
 Hervorgefrufen sind der Rückstreupeak und die Compton-Kante.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{content/plots/plot10.jpg}
+    \caption{Darstellung des Ba-133 Spektrums.}
+    \label{fig:plot10}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.666\textwidth]{content/grafik/baenergien.jpg}
+    \caption{Die Emissionsenergien von Ba-133. \cite{Kalibration}}
+    \label{fig:baE}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.33\textwidth]{content/grafik/unbekannt.jpg}
+    \caption{Verwendete Gesteinsprobe zunächst unbekannter Zusammensetzung.}
+    \label{fig:unbekannt}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{content/grafik/Gammaspektrum_Uranerz.jpg}
+    \caption{Exemplarisches Gammaspektum von Uranerz-Gestein mit typischen Isotopen der Uran-Radium-Reihe
+             wie Ra-226, Pb-214, Bi-214. Als Alpha-Strahler taucht U-238 selbst nicht auf. Das K-40 stammt
+             nicht aus dem Urangestein, sondern ist natürlich in der Umwelt vorhanden.. \cite{gamma_uran}}
+    \label{fig:SpekU}
+\end{figure}
+
+\cite{iaea_recom}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{content/plots/plot11.jpg}
+    \caption{Darstellung des zunächst unbekannten Spektrums.}
+    \label{fig:plot11}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{content/plots/plot12.jpg}
+    \caption{Zuordnung von Spektralpeaks der Tochternuklide im Uranerz.}
+    \label{fig:plot12}
+\end{figure}
