@@ -236,6 +236,9 @@ Compton- zu Photobereich.
 
 \subsection{Aktivitätsbestimmung anhand charakteristischer Gammapeaks}
 
+Zur Bestimmung der Aktivität von Ba-133 wird zunächst analog zu den vorherigen Abschnitten vorgegangen: Peaks werden
+algorithmisch mit find\_peaks identifiziert und als Gauß-Kurven mit konstantem Background modelliert.
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{content/plots/plot10.jpg}
@@ -243,12 +246,25 @@ Compton- zu Photobereich.
     \label{fig:plot10}
 \end{figure}
 
+In Abbildung \ref{fig:plot10} sind zusätzlich die Literaturwerte aus Abbildung \ref{fig:baE} mit passender Energieskalierung
+dargestellt.
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.666\textwidth]{content/grafik/baenergien.jpg}
     \caption{Die Emissionsenergien von Ba-133. \cite{Kalibration}}
     \label{fig:baE}
 \end{figure}
+
+Anhand der assoziierten Emissionswahrscheinlichkeiten und den Gesamtinhalten der einzelnen Peaks lässt sich nach Umstellen
+der Effizienz nach
+
+\begin{equation*}
+    A = \frac{N}{Q W t} \cdot \frac{4\pi}{\Omega}
+\end{equation*}
+die Aktivität bemessen.
+
+
 
 \subsection{Identifikation einer Probe mit unbekannter Zusammensetzung}
 
