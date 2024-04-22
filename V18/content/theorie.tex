@@ -76,10 +76,9 @@ Den Wirkungsquerschnitt der Compton Streuung ergibt sich aus der Integration der
 \begin{equation}
     \frac{d \sigma}{d \Omega}=\frac{r_e^2}{2\left[1+\epsilon\left(1-\cos \theta_\gamma\right)\right]^2}\left(1+\cos ^2 \theta_\gamma+\frac{\epsilon^2\left(1-\cos \theta_\gamma\right)^2}{1+\epsilon\left(1-\cos \theta_\gamma\right)}\right).
 \end{equation}
-Der totale Compton-Wirkungsquerschnitt pro Elektron lauetet
+Für den differentiellen Wirkungsquerschnitt in Abhängigkeit zur Energie ergibt sich 
 \begin{equation}
-    \sigma_{\text{Compton}}=2 \pi r_e^2\left[\frac{1+\epsilon}{\epsilon^2}\left(\frac{2(1+\epsilon)}{1+2 \epsilon}-\frac{1}{\epsilon} \ln (1+2 \epsilon)\right)+\frac{1}{2 \epsilon} \ln (1+2 \epsilon)-\frac{1+3 \epsilon}{(1+2 \epsilon)^2}\right].
-    \label{eqn:Compton_Wirkungsquerschnitt}
+    \frac{d \sigma}{d E} = \frac{\pi r_{\text{e}}}{\epsilon E_\gamma} \left(2 - \frac{2 E}{\epsilon \left(E_\gamma - E \right)}+ \frac{E^2}{\epsilon^2 \left(E_\gamma - E \right)^2} + \frac{E^2}{E_\gamma \left(E_\gamma - E \right)}\right).
 \end{equation}
 
 Für den Wirkungsquerschnit pro Atom kommt es zu einer linearen Abhängigkeit
@@ -138,3 +137,20 @@ In der Abbildung \ref{fig:halbleitermatrialien} sind einige Materialien,welche s
     \caption{Die Eigenschaften einiger Materialien, welche geeignet wären zur Detektion von Gammastrahlung.\cite{gamma_ray}}
     \label{fig:halbleitermatrialien}
 \end{figure}
+
+\subsection{Das Spektrum eines monochromatischen Gammastrahlers}
+\label{sec:Gammastrahlung}
+
+Das Gammaspektrum weist verschiedene charakteristische Stellen auf. In Abbildung \ref{fig:gamma-cs} ist das Gammaspektrum von
+Cs-137 beispielhaft gezeigt.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{content/grafik/Gammaspektrum.jpg}
+    \caption{Das Gammaspektrum von Cs-137. \cite{Gammaspektrum}}
+    \label{fig:gamma-cs}
+\end{figure}
+
+Existenziell für die Bestimmung der Gammenergien ist der Photopeak oder auch der Full Energy Peak.
+Er gibt die gesamte Energie des einfallenden $\gamma$-Quants an. Nur wenn der Photoeffekt stattgefunden hat ist die Deponierung der #
+gesamten Energie im Detektor möglich.
