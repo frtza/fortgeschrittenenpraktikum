@@ -1,3 +1,47 @@
 \section{Diskussion}
 \label{sec:diskussion}
 
+Insgesamt zeigt sich bei der Auswertung der erwartete und entscheidende Vorteil hochreiner Germanium-Halbleiterdetektoren: Die
+aus den Kanälen übersetzte Energieskala kann Strukturen sehr genau auflösen. Daher fallen die in der Literatur gegebenen Peak-Werte
+teils bis in den Bereich moderner Messunsicherheiten von einigen \unit{\eV} mit den Messergebnissen zusammen.
+
+Modellierung von Energiezugehörigkeit und Effizienz sind ebenfalls zufriedenstellend. Bei der Energiekalibration wird der
+quasi perfekt lineare Zusammenhang des MCA deutlich. Die Nachweiswahrscheinlichkeit ist mit guter Übereinstimmung durch
+den gewählten Exponentialansatz beschrieben. Hierbei fällt auf, dass die Effizienz für steigende Energien monoton abfällt.
+Bei Werten ab etwa \qty{100}{\kilo\eV} ist dies plausibel, unterhalb dieser Grenze nimmt die Nachweiswahrscheinlichkeit
+rapide gegen geringere Energien ab. Der Fit darf also nicht als global gültige Korrektur verwendet werden.
+
+In diesem Zusammenhang stellt sich auch die Frage, nach der Anwendungsreihenfolge und der Verstärkung statistischer Schwankungen
+durch Division mit $Q(E)$: So kann durch die Korrektur ein Bias in die Daten eingeführt werden, der anschließende Fits
+verfälscht. Für höhere Energien werden Ausreißer zudem um zwei Größenordnungen verstärkt. Bei ausreichender Statistik
+sollten diese Einflüsse zwar signifikant oberhalb der Ungenauigkeit der Kanal-Energie-Beziehung liegen, aber dennoch im Vergleich
+zur vorherrschenden Streuung vernachlässigbar sein.
+
+Auch das monochromatische Gammaspektrum erfüllt qualitativ die Erwartung: Photopeak und Comptonkontinuum sind klar identifizierbar,
+Rückstreupeak und Comptonkante heben sich deutlich ab. In der genaueren Betrachtung fallen jedoch Probleme auf.
+
+Der gaußförmige Fit um den Vollenergiepeak ist zwar mit dem geforderten FWTM zu FWHM Verhältnis vereinbar, scheint jedoch relativ
+zum Datenverlauf geneigt zu sein. Diese asymmetrische Komponente ist kaum relevant für die Bestimmung des Gesamtinhalts, zeigt
+aber ausreichende Signifikanz um über ihren Ursprung zu spekulieren. Eine mögliche Quelle liegt in der Effizienzkorrektur, wobei diese
+eigentlich eine umgekehrte Schiefe verursachen müsste, bei der Werte zu höheren Energien nach oben tendieren. Möglicherweise handelt
+es sich um eine Überlagerung mit einem schwächeren Peak aus einer Verunreinigung, die knapp unterhalb des Cäsium-Peaks liegt. Weitere
+äußere Einflüsse können ebenso nicht ausgeschlossen werden, da die Bleikammer apparaturbedingt nicht völlig abgeschlossen ist.
+
+Auf ähnliche Art und Weise wir der Comptonbereich beeinflusst. Die theoretisch klar definierten Spitzen sind in der realen
+Verteilung gedämpft und verrauscht. Unter Berücksichtigung dieser Tatsache passen die aus der Theorie errechneten Werte von
+Comptonkante und Rückstreupeak gut zu den Daten. Nach Integration ist außerdem eindeutig, dass der gemessene Inhalt circa
+eine Größenordnung unterhalb der Erwartung liegt. Diese zunächst verblüffende Tatsache lässt sich mindestens teilweise durch
+Detektorlimits erklären. So wird das Kontinuum im niederenergetischen Bereich abgeschwächt oder sogar abgeschnitten. Durch
+stochastische Streuuprozesse im Behälter verzerrt die Verteilung zusätzlich bis zum Photopeak, sodass dort zusätzliche Signale
+aufgezeichnet werden. Ein hinreichend flacher Rand sollte durch den Background-Fit kompensiert werden. Es ist letztlich dennoch
+anzunehmen, dass der reale Inhalt des Photopeaks geringer und der des Comptonkontinuums größer ist, als hier geschätzt wird.
+
+Zur Aktivitätsbestimmung treten die zuvor beschriebenen Störfaktoren in Kombination auf. Besonders deutlich ist die Nachweisgrenze für
+niedrige Peak-Energien in Richtung harter Röntgenstrahlung zu erkennen. Die übrigen Werte widersprechen sich kaum und lassen somit auf
+eine in diesem Energiebereich zuverlässige Messung schließen.
+
+Zuletzt ist die hohe Konfidenz zur Identifikation der unbekannten Probe als Uranerz wieder mit der hohen Detektorauflösung
+begründet, die eine eindeutige Zuordnung der Gammalinien erlaubt. 
+
+Fehlereinflüsse wie das intrinsische Rauschen von Detektor und Ladungsverstärker können durch die Flüssigstickstoffkühlung und die
+ebenfalls dadurch ermöglichte angelegte Hochspannung kontrollieren.
