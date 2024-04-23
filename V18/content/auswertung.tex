@@ -258,15 +258,26 @@ dargestellt.
 
 Anhand der assoziierten Emissionswahrscheinlichkeiten und den Gesamtinhalten der einzelnen Peaks lässt sich nach Umstellen
 der Effizienz nach
-
 \begin{equation*}
     A = \frac{N}{Q W t} \cdot \frac{4\pi}{\Omega}
 \end{equation*}
 die Aktivität bemessen.
 
+Abbildung \ref{fig:aktiv} zeigt die so erhaltenen Aktivitäten. Daraus ergibt sich $A = \qty{843.92 +- 23.80}{\becquerel}$
+als Mittelwert, wobei der Wert bei $E_\gamma = \qty{81}{\kilo\eV}$ aufgrund signifikanter verfälschender Einflüsse des
+Detektorgehäuses bei niedrigen Energien verworfen wird.
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{content/grafik/aktiv.jpg}
+    \caption{Umrechnungsergebnisse zur Aktivität bei den jeweiligen Peakenergien.}
+    \label{fig:aktiv}
+\end{figure}
 
 \subsection{Identifikation einer Probe mit unbekannter Zusammensetzung}
+
+In diesem Abschnitt soll ein unbekanntes Gestein mithilfe seines Gammaspektrum eingeordnet werden. Für die in
+Abbildung \ref{fig:unbekannt} einsehbare Probe werden dazu zunächst plausible Kandidaten gesucht.
 
 \begin{figure}[H]
     \centering
@@ -275,27 +286,39 @@ die Aktivität bemessen.
     \label{fig:unbekannt}
 \end{figure}
 
+Eine anhand des Aussehens und der angenommenen radioaktiven Eigenschaften durchgeführte oberflächliche petrographische Suche
+deutet auf uranhaltige Erze hin. Im Gammabereich sollte der Alphastrahler U-238 allerdings nicht vorkommen, sodass es sich nur
+um Tochternuklide handeln könnte. Im Vergleich mit Abbildung \ref{fig:SpekU} bestätigen sich die bisherigen Annahmen. 
+
+Zur eigentlichen Verifikation werden die identifizierenden Gammalinien der häufigen Tochternuklide im auflösbaren Energiebereich
+benötigt. Die in Abbildung \ref{fig:SpekU} vermerkten Kandidatenistope werden unter Verwendung von Referenz \cite{iaea_recom} 
+charakterisiert.
+
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.7\textwidth]{content/grafik/Gammaspektrum_Uranerz.jpg}
+    \includegraphics[width=0.6\textwidth]{content/grafik/Gammaspektrum_Uranerz.jpg}
+    \captionsetup{width=.95\linewidth}
     \caption{Exemplarisches Gammaspektum von Uranerz-Gestein mit typischen Isotopen der Uran-Radium-Reihe
-             wie Ra-226, Pb-214, Bi-214. Als Alpha-Strahler taucht U-238 selbst nicht auf. Das K-40 stammt
-             nicht aus dem Urangestein, sondern ist natürlich in der Umwelt vorhanden.. \cite{gamma_uran}}
+             wie Ra-226, Pb-214, Bi-214. Als Alpha-Strahler taucht U-238 selbst nicht auf. K-40 stammt
+             nicht aus dem Urangestein, sondern ist natürlich in der Umwelt vorhanden. \cite{gamma_uran}}
     \label{fig:SpekU}
 \end{figure}
 
-\cite{iaea_recom}
-
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{content/plots/plot11.jpg}
+    \includegraphics[width=0.8\textwidth]{content/plots/plot11.jpg}
     \caption{Darstellung des zunächst unbekannten Spektrums.}
     \label{fig:plot11}
 \end{figure}
 
+Nun ähnelt die Methodik wieder den vorangegangenen Auswertungsschritten. Peaks werden in Abbildung \ref{fig:plot11} visuell
+verglichen und in \ref{fig:plot12} zugeordnet. Die Übereinstimmung der Peaks wird als Bestätigung der angesetzten Hypothese
+gewertet: Bei der gegebenen Probe handelt es sich um Uranerz, dessen Zerfallsverhalten dominant der Uran-Radium-Reihe 
+zuzuschreiben ist.
+
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{content/plots/plot12.jpg}
+    \includegraphics[width=0.8\textwidth]{content/plots/plot12.jpg}
     \caption{Zuordnung von Spektralpeaks der Tochternuklide im Uranerz.}
     \label{fig:plot12}
 \end{figure}
