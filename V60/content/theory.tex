@@ -27,7 +27,7 @@ An important component is the diode chip which can be seen in figure \ref{fig:di
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{content/graphics/laserdiodechip.jpg}
+    \includegraphics[width=0.5\textwidth]{content/graphics/laserdiodechip.jpg}
     \caption{Schematic view of a laser diode chip.} %\cite
     \label{fig:diodechip}
 \end{figure}
@@ -41,7 +41,10 @@ On this side the light comes out.
 Standing waves are formed inside the cavity. The leaving light beam is elliptical and strongly divergent due to the  rectangular shape of the
 exit apperature.
 
-The structure of the entire laser is shown figure \ref{fig:configuration}
+The light beam has two unwanted properties which are to be adjusted by an external resonator.
+On one hand the light beam has a large linewidth therefore it is unuseable to examine atomic structures.
+On the other hand the frequency stability ist very sebsitive to scattering of the emitted light back into the diode.
+A Littrow configuration is used in this experiment which is shown in figure \ref{fig:configuration}. 
 
 \begin{figure}[H]
     \centering
@@ -49,3 +52,11 @@ The structure of the entire laser is shown figure \ref{fig:configuration}
     \caption{Schematic configuration of the diode laser system.} %\cite
     \label{fig:configuration}
 \end{figure}
+
+The external cavity is realized with a lens and a diffraction grating.After leaving the inner cavity the light beam hits a lens which collimate the beam.
+Afterwards the light beam encounters the diffration grating. Most of the light directly reflected by the garting  $\left(m = 0 \, \text{grating order}\right)$.
+About $ 15 \% $ reflects back into the laser $\left(m = 1  \,\text{grating order}\right)$. The grating forms the external cavity.
+This results in a small loss of power, but a much more stable laser beam and a reduced linewidth on $\Delta \nu \approx \qty{1}{\mega\hertz}$.
+
+\subsubsection{Laser Tuning}
+\label{sec:Laser Tuning}
