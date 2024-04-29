@@ -27,7 +27,7 @@ An important component is the diode chip which can be seen in figure \ref{fig:di
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.7\textwidth]{content/graphics/laserdiodechip.jpg}
+    \includegraphics[width=0.5\textwidth]{content/graphics/laserdiodechip.jpg}
     \caption{Schematic view of a laser diode chip.} %\cite
     \label{fig:diodechip}
 \end{figure}
@@ -36,7 +36,7 @@ The chip consists of a p-doped and a n-doped layer. The p-n junction between the
 An excitation current can be connected to the upper and lower ends of the diode to create electron-hole pairs which recombine in the active layer and
 emitting light in the process. The current serves as a pump source for the population inversion which occurs in the laser medium.
 The wavelength of the emitted light ist approximateley that of the band gab of the semiconductor material.
-To create a cavity the long endings of the diode chip are impermeable whereby one end ist only semitransparent.
+To create a cavity the claved facets of the chip act as a partically refelceting miorrors.
 On this side the light comes out.
 Standing waves are formed inside the cavity. The leaving light beam is elliptical and strongly divergent due to the  rectangular shape of the
 exit apperature.
@@ -72,7 +72,7 @@ to one another.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{content/graphics/net_gain_components.jpg}
+    \includegraphics[width=0.5\textwidth]{content/graphics/net_gain_components.jpg}
     \caption{Schematic of the differen constributions to the net gain.} %\cite
     \label{fig:netgain}
 \end{figure}
@@ -84,20 +84,36 @@ Dependence is shown in figure \ref{fig:temp}.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{content/graphics/wavelenghttotemperature.jpg}
+    \includegraphics[width=0.5\textwidth]{content/graphics/wavelenghttotemperature.jpg}
     \caption{Dependence of the wavelength on the temperature of the diode.} %\cite
     \label{fig:temp}
 \end{figure}
 
 It can be seen that the wavelength correlates with the temperature of the diode.
-That means the temperature rise has an impact on the Bandgab which will be smaller.
+That means the rising temperature impacts the Bandgab, which shrinks.
 Once the medium gain curve is adjusted the cirve is so broad that it is unimportant for net gain.
 
-For the internal cavity the wavelenght of the light depends on the current which is represented in figure \ref{fig:cur}
-
+The internal cavity forms a small Fabry-Perot etalon thus a optical cavity with a normal mode structure. As shown in figure \ref{fig:netgain} the gain function
+is periodic in frequency, whereby the period is called free spectral range. Which is given by
+\begin{equation}
+    \Delta \nu = \frac{c}{2Ln}.
+\end{equation}
+In this equation $c$ is the speed of light, $n$ is the index of refraction and $L$ is the cavity length.
+For the internal cavity the wavelenght of the light depends on the current which is represented in figure \ref{fig:cur}.
+The current affects the diode in two ways. First, the diode is heated by the applied current. Second, the current changes the carrier concentration
+in the active medium.
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{content/graphics/current.jpg}
-    \caption{Dependence of the wavelength on the temperature of the diode.} %\cite
+    \includegraphics[width=0.5\textwidth]{content/graphics/current.jpg}
+    \caption{Dependence of the wavelength on the injection current at a fixed temperature.} %\cite
     \label{fig:cur}
 \end{figure}
+
+With a external cavity it is possible that the laser can be made to operate at any wavelength within a reasonably broad range.
+Since only light from a narrow wavelength band $\left(m = 1  \,\text{grating order}\right)$ will be fed back into the laser for a fixed grating,
+which can be found by 
+\begin{equation}
+    \lambda = 2 d \sin \theta.
+\end{equation}
+The size $d$ indicates the line spacing of the grating and $\theta$ is the grating angle. The external cavity ist limited on the one side by the grating and on the
+oder side by the refelctive back faced  of the diode. The length of the external cavity is much smaller which results denser peaks in figure \ref{fig:netgain}.
