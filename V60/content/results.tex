@@ -8,7 +8,9 @@ operates in the LASER regime. The now coherent wave interacts with the texture o
 image. The observed type of diffraction occurs due to the various bumps and grooves roughly matching the wavelength in size, resulting
 in random granulation as predicted by Huygens principle. 
 
-\begin{figure}
+While lasing, the intensity also increases much more rapidly due to the strictly linear dependence on charge carrier flow.
+
+\begin{figure}[H]
     \begin{subfigure}{0.48\textwidth}
         \centering
         \includegraphics[width=\linewidth]{content/measurement/led.jpg}
@@ -23,24 +25,31 @@ in random granulation as predicted by Huygens principle.
         \label{fig:pattern_laser}
     \end{subfigure}
     \caption{Comparison of light pattern slightly below and above the chosen threshold current $I = \qty{34.5}{\milli\ampere}$.
-             Notice the diffuse reflection on the left versus the coarse granulation on the right. These distinct appearances
+             Note the diffuse reflection on the left versus the coarse granulation on the right. These distinct appearances
              are the results from random diffraction of incoherent or coherent waves respectively.}
     \label{fig:pattern}
 \end{figure}
 
-The described patterns slightly below and above the current threshold can be viewed in Figure \ref{fig:pattern}. For the given
-apparatus, visual examination yields $I = \qty{34.5}{\milli\ampere}$ for the minimum lasing value, though there is some ambiguity,
+The described patterns can be viewed in Figure \ref{fig:pattern} for values slightly above and below the threshold. For the given
+apparatus, visual examination yields $I = \qty{34.5}{\milli\ampere}$ as the minimum lasing current, though there is some ambiguity
 as will be discussed later.
 
-\begin{figure}
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.48\linewidth]{content/measurement/fluorescence.jpg}
-    \captionsetup{width=0.58\linewidth}
+    \captionsetup{width=0.7\linewidth}
     \caption{Rubidium flourescence line along the laser beam as seen through the observation window in the vapor cell.}
     \label{fig:fluorescence}
 \end{figure}
 
-\begin{figure}
+To find the approximate resonance of the rubidium fluorescence, laser current and grating angle are adjusted until a bright flashing
+line along the path of the light beam manifests inside the vapor cell. To confirm this setting, Figure \ref{fig:fluorescence} displays
+the observed excitation.
+
+Following the previous steps, the hyperfine structure absorption spectrum of rubidium can be analysed. After iteratively tuning current
+and DC offset values for the piezo stack, we arrive at Figure \ref{fig:ramp} without any mode hops.
+
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.72\linewidth]{content/measurement/ramp.jpg}
     \captionsetup{width=0.8\linewidth}
@@ -50,7 +59,9 @@ as will be discussed later.
     \label{fig:ramp}
 \end{figure}
 
-\begin{figure}
+From this result, we finally obtain the corrected spectrum. Figure \ref{fig:spectrum} 
+
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.72\linewidth]{content/measurement/spectrum.jpg}
     \captionsetup{width=0.8\linewidth}
