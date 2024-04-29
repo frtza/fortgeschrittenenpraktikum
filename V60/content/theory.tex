@@ -9,10 +9,10 @@ The following section explains the theoretical principles of a diode laser.
 Before semiconductor lasers were invented, physicists used tunable 'dye' lasers.
 This worked by the use of a chemical dye as the active medium, i.e the material which produces the laser emission.
 A fixed-frequency 'pump'-laser is used to create a population inversion. Each individual dye will lase over a limited wavelenght range.
-This means with different dyes it is possible to generate a tunable lasers at basically all near-infrared wavelenghts.
+This means with different dyes it is possible to generate tunable lasers at basically all near-infrared wavelenghts.
 Dye Lasers have some disadvantages. They are very large, with high costs of purchase and operation.
 
-The situation has changed due to the development of the diode laser. These lasers are inexpensive,easy to operate and produce high power.
+The situation has changed due to the development of the diode laser. These lasers are inexpensive, easy to operate and produce high power.
 
 \subsection{Diode Laser}
 \label{sec:Diode Laser}
@@ -23,38 +23,38 @@ The basics of how a diode laser works are explained below.
 \label{Structure and Mode of Operation}
 
 A diode laser is a laser whose light is generated with a laser diode, i.e. with semiconductor materials.
-An important component is the diode chip which can be seen in figure \ref{fig:diodechip}.
+An important component is the diode chip which can be seen in Figure \ref{fig:diodechip}.
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\textwidth]{content/graphics/laserdiodechip.jpg}
-    \caption{Schematic view of a laser diode chip..\cite{diode_laser}} %\cite
+    \caption{Schematic view of a laser diode chip. \cite{diode_laser}} %\cite
     \label{fig:diodechip}
 \end{figure}
-The chip consists of a p-doped and a n-doped layer. The p-n junction between the layers is the active Medium.
+The chip consists of a p-doped and a n-doped layer. The p-n junction between the layers is the active medium.
 An excitation current can be connected to the upper and lower ends of the diode to create electron-hole pairs which recombine in the active layer and
-emitting light in the process. The current serves as a pump source for the population inversion which occurs in the laser medium.
-For population inversion are needed more than two states in the system otherwise the member will immediately drops down.
-The wavelength of the emitted light ist approximateley that of the band gab of the semiconductor material.
-To create a cavity the claved facets of the chip act as a partically refelceting miorrors.
+emit light in the process. The current serves as a pump source for the population inversion which occurs in the laser medium.
+For population inversion more than two states in the system are needed otherwise the member will immediately drop down.
+The wavelength of the emitted light is approximately that of the band gab of the semiconductor material.
+To create a cavity the claved facets of the chip act as a partially reflecting mirrors.
 On this side the light comes out.
-Standing waves are formed inside the cavity. The leaving light beam is elliptical and strongly divergent due to the  rectangular shape of the
+Standing waves are formed inside the cavity. The leaving light beam is elliptical and strongly divergent due to the rectangular shape of the
 exit apperature.
 
 The light beam has two unwanted properties which are to be adjusted by an external resonator.
-On one hand the light beam has a large linewidth therefore it is unuseable to examine atomic structures.
-On the other hand the frequency stability ist very sebsitive to scattering of the emitted light back into the diode.
-A Littrow configuration is used in this experiment which is shown in figure \ref{fig:configuration}. 
+On one hand the light beam has a large linewidth thereby being unuseable to examine atomic structures.
+On the other hand the frequency stability ist very sensitive to scattering of emitted light back into the diode.
+A Littrow configuration is used in this experiment which is shown in Figure \ref{fig:configuration}. 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{content/graphics/configuration.jpg}
-    \caption{Schematic configuration of the diode laser system.\cite{diode_laser}} %\cite
+    \caption{Schematic configuration of the diode laser system. \cite{diode_laser}} %\cite
     \label{fig:configuration}
 \end{figure}
 
-The external cavity is realized with a lens and a diffraction grating.After leaving the inner cavity the light beam hits a lens which collimate the beam.
-Afterwards the light beam encounters the diffration grating. Most of the light directly reflected by the garting  $\left(m = 0 \, \text{grating order}\right)$.
-About $ 15 \% $ reflects back into the laser $\left(m = 1  \,\text{grating order}\right)$. The grating forms the external cavity.
-This results in a small loss of power, but a much more stable laser beam and a reduced linewidth on $\Delta \nu \approx \qty{1}{\mega\hertz}$.
+The external cavity is realized with a lens and a diffraction grating. After leaving the inner cavity the light beam hits a lens which collimates the beam.
+Afterwards the light beam encounters the diffraction grating. Most of the light is directly reflected by the grating  $\left(m = 0 \, \text{grating order}\right)$.
+About $ 15 \% $ reflect back into the laser $\left(m = 1  \,\text{grating order}\right)$. The grating forms the external cavity.
+This results in a small loss of power, but a much more stable laser beam and a reduced linewidth of $\Delta \nu \approx \qty{1}{\mega\hertz}$.
 
 \subsubsection{Laser Tuning}
 \label{sec:Laser Tuning}
@@ -62,45 +62,44 @@ This results in a small loss of power, but a much more stable laser beam and a r
 To set up the wavelenght of the light emitted by the laser various components must be considered.
 Therefore the laser output depends for example on modulation of the current, the temperature of the diode and the postion of the grating.
 To understand each component it is important to understand that the laser will tend to lase at the mode frequency with the greatest net gain.
-As soon as the laser starts lasing in this mode it results a laser with a single-mode output beam. Under real conditions the laser will sometimes lase 
-in two or more modes at the same time. This experiment will concentrate to find a place in parameter space where the laser operates in a single mode.
+As soon as the laser starts lasing in this mode it results in a single-mode output beam. Under real conditions the laser will sometimes lase 
+in two or more modes at the same time. This experiment will concentrate to find a place in the parameter space where the laser operates in a single mode.
 
-In Figure \ref{fig:netgain} the wavelength is plotted as a function of the individual amplification modes.The curves are diplaced relative
-to one another.
+In Figure \ref{fig:netgain} the wavelength is plotted as a function of the individual amplification modes. The curves are diplaced relative to one another.
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\textwidth]{content/graphics/net_gain_components.jpg}
-    \caption{Schematic of the differen constributions to the net gain.\cite{diode_laser}} %\cite
+    \caption{Schematic of the different constributions to the net gain. \cite{diode_laser}} %\cite
     \label{fig:netgain}
 \end{figure}
 
-The active medium has a bandgab which depends on the material of the medium. This results a broad peak in the wavelenght distrinution of the amplification.
-The peak depends on the temprature of the material. In the case of rubidium for the resonance the temperature should be set so that the laser operates near 
+The active medium has a bandgap which depends on the material of the medium. This results in a broad peak in the wavelenght distribution of the amplification.
+The peak depends on the temperature of the material. In the case of rubidium for the resonance the temperature should be set so that the laser operates near 
 \qty{780}{\nano\meter}.
-Dependence is shown in figure \ref{fig:temp}.
+The dependence is shown in Figure \ref{fig:temp}.
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\textwidth]{content/graphics/wavelenghttotemperature.jpg}
-    \caption{Dependence of the wavelength on the temperature of the diode.\cite{diode_laser}} %\cite
+    \caption{Dependence of the wavelength on the temperature of the diode. \cite{diode_laser}} %\cite
     \label{fig:temp}
 \end{figure}
 It can be seen that the wavelength correlates with the temperature of the diode.
-That means the rising temperature impacts the Bandgab, which shrinks.
-Once the medium gain curve is adjusted the cirve is so broad that it is unimportant for net gain.
+That means the rising temperature impacts the Bandgap, which shrinks.
+Once the medium gain curve is adjusted the curve is so broad that it is unimportant for net gain.
 
-The internal cavity forms a small Fabry-Perot etalon thus a optical cavity with a normal mode structure. As shown in figure \ref{fig:netgain} the gain function
-is periodic in frequency, whereby the period is called free spectral range. Which is given by
+The internal cavity forms a small Fabry-Pérot étalon thus an optical cavity with a normal mode structure. As shown in Figure \ref{fig:netgain} the gain function
+is periodic in frequency, whereby the period is called free spectral range given by
 \begin{equation}
     \Delta \nu = \frac{c}{2Ln}.
 \end{equation}
 In this equation $c$ is the speed of light, $n$ is the index of refraction and $L$ is the cavity length.
-For the internal cavity the wavelength of the light depends on the current which is represented in figure \ref{fig:cur}.
+For the internal cavity the wavelength of the light depends on the current which is represented in Figure \ref{fig:cur}.
 The current affects the diode in two ways. First, the diode is heated by the applied current. Second, the current changes the carrier concentration
 in the active medium.
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\textwidth]{content/graphics/current.jpg}
-    \caption{Dependence of the wavelength on the injection current at a fixed temperature.\cite{diode_laser}} %\cite
+    \caption{Dependence of the wavelength on the injection current at a fixed temperature. \cite{diode_laser}} %\cite
     \label{fig:cur}
 \end{figure}
 
@@ -111,30 +110,30 @@ which can be found by
     \lambda = 2 d \sin \theta.
 \end{equation}
 The size $d$ indicates the line spacing of the grating and $\theta$ is the grating angle. The external cavity ist limited on the one side by the grating and on the
-oder side by the refelctive back faced  of the diode. The length of the external cavity is much smaller which results denser peaks in figure \ref{fig:netgain}.
-To shift the curve from the external cavity the position of the garting has to be moved with either the L/R knob on the laser or with the piezo-electric transducer.
-The laser should lase in a single mode operation at a given wavelength $\lambda_0$. Each gain component supposed to peak at $\lambda_0$ as shown in figure \ref{fig:netgain}.
+other side by the reflective back facet of the diode. The length of the external cavity is much larger which results in denser peaks in Figure \ref{fig:netgain}.
+To shift the curve from the external cavity the position of the grating has to be moved with either the L/R knob on the laser or with the piezo-electric transducer.
+The laser should lase in a single mode operation at a given wavelength $\lambda_0$. Each gain component is supposed to peak at $\lambda_0$ as shown in Figure \ref{fig:netgain}.
 
 Figure \ref{fig:best} diplays how the individual components overlap. It shows a " best guess " picture of the shape of the various modes in the laser.
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\textwidth]{content/graphics/best-guess.jpg}
-    \caption{Internal cavity, grating feedback and external cavity modes.\cite{diode_laser}}
+    \caption{Internal cavity, grating feedback and external cavity modes. \cite{diode_laser}}
     \label{fig:best} 
 \end{figure}
 
 Mode hops are a phenomenon which is important in the context of a single mode laser.
 In this case mode hops are the result of increasing the temperature which has an impact on the maximum gain of the medium and the internal cavity modes. 
-These will shift to longer wavelengths but not shift at the same rate. The outcome of this are the laser mode hops  to different peaks of the cavity gain function.
-Adjusting the angle of the grating results in mode hops. With changing the current of the laser it is possible to change the position of the internal modes.
+These will shift to longer wavelengths but not shift at the same rate. The outcome of this are the laser mode hopsto different peaks of the cavity gain function.
+Adjusting the angle of the grating results in mode hops. By changing the current of the laser it is possible to change the position of the internal modes.
 Figure \ref{fig:mode} shows the imapct of decreasing the grating angle on the external and internal modes.
 \begin{figure}[H] 
     \centering
     \includegraphics[width=0.5\textwidth]{content/graphics/modehops.jpg}
-    \caption{Series of pictures of the external and internal cavity modes as the grating angle decreased.\cite{diode_laser}} %\cite
+    \caption{Series of pictures of the external and internal cavity modes as the grating angle decreased. \cite{diode_laser}} %\cite
     \label{fig:mode} 
 \end{figure}
-For tunning the wavelength of the laser correctly the right grating angle and laser current must be found.
+For tuning the wavelength of the laser correctly the right grating angle and laser current must be found.
 
 \subsection{Rubidium Absorption Spectrum}
 \label{sec:Rubidium Absorption Spectrum}
@@ -143,6 +142,6 @@ Figure \ref{fig:Rb} shows the expected Rubidium spectrum and the Energy level di
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{content/graphics/Rb.jpg}
-    \caption{Energy level diagrams and the spectrum of rubidium.\cite{diode_laser}} %\cite
+    \caption{Energy level diagrams and the spectrum of rubidium. \cite{diode_laser}} %\cite
     \label{fig:Rb} 
 \end{figure}
