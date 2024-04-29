@@ -1,9 +1,48 @@
 \section{Results}
 \label{sec:results}
 
-q = \qty{4.803e-10}{\statcoulomb} = 
-\qty{4.803e-10}{\dyne\tothe{1/2}\centi\meter} = 
-\qty{4.803e-10}{\gram\tothe{1/2}\centi\meter\tothe{3/2}\per\second}
+\begin{figure}
+    \begin{subfigure}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{content/measurement/led.jpg}
+        \caption{LED regime at $I = \qty{34.4}{\milli\ampere}$.}
+        \label{fig:pattern_led}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{content/measurement/laser.jpg}
+        \caption{LASER regime at $I = \qty{34.6}{\milli\ampere}$.}
+        \label{fig:pattern_laser}
+    \end{subfigure}
+    \caption{Comparison of light pattern slightly below and above the chosen threshold current $I = \qty{34.5}{\milli\ampere}$.
+             Notice the diffuse reflection on the left versus the coarse granulation on the right. These distinct appearances
+             are the results from random diffraction of incoherent or coherent waves respectively.}
+    \label{fig:pattern}
+\end{figure}
 
-B = \qty{5.257e+14}{\gauss} = \qty{5.257e+14}{\centi\meter\tothe{-1/2}\gram\tothe{1/2}\per\second}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.48\linewidth]{content/measurement/fluorescence.jpg}
+    \captionsetup{width=0.58\linewidth}
+    \caption{Rubidium flourescence line along the laser beam as seen through the observation window in the vapor cell.}
+    \label{fig:fluorescence}
+\end{figure}
 
+\begin{figure}
+    \centering
+    \includegraphics[width=0.72\linewidth]{content/measurement/ramp.jpg}
+    \captionsetup{width=0.8\linewidth}
+    \caption{Modulated signal without correction (top). Triggered ramp output for laser and piezo stack (bottom).
+             As previously described, the expected linear proportionality between the two currents is clearly visible
+             outside the absorption dips.}
+    \label{fig:ramp}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.72\linewidth]{content/measurement/spectrum.jpg}
+    \captionsetup{width=0.8\linewidth}
+    \caption{Spectrum after manual compensation via background subtraction for the scanning current contribution.}
+    \label{fig:spectrum}
+\end{figure}
