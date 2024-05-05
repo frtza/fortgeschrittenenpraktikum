@@ -1,18 +1,91 @@
 \section[Theorie]{Theorie \textnormal{\cite{pumpen}}}
 \label{sec:theorie}
 
-\subsection{Zeeman Aufspaltung}
+Spätestens seit Einführung des Atommodells nach Bohr ist allgemein bekannt, dass sich Elektronenhüllen von Atomen aus
+scharf definierten Energieniveaus zusammensetzen, deren Besetzung durch das Ausschließungsprinzip nach Pauli beschrieben wird.
+Äußere Schalen sind nur teilweise oder gar nicht gefüllt und unterliegen dadurch zusätzlich der temperaturbedingten Verteilung
+nach Boltzmann. Für Zustände mit $E_1 < E_2$ folgt
+\begin{equation}
+	\frac{N_2}{N_1} = \frac{g_2}{\rb{0.5ex}{$g_1$}} e^{-\frac{E_2 - E_1}{k_B T}}
+	\label{eqn:besetzung}
+\end{equation}
+als das erwartete Verhältnis der Besetzungszahlen mit $k_B$ als Boltzmannkonstante und $T$ als absolute Temperatur. Die Faktoren
+$g_1$ und $g_2$ geben als statistische Gewichte die Multiplizität oder Entartung der jeweiligen Energien $E_1$ und $E_2$ an.
+
+Im thermischen Gleichgewicht gilt bei $g_1 = g_2$ also typischerweise $N_1 > N_2$ für äußere Niveaus. Die Beschreibung von Rubidium
+fällt in diesem Kontext besonders leicht, da nur ein Elektron in einer nicht vollständig gefüllten Schale liegt \cite{rubidium}.
+Unter Energieaufwand und bei passender Niveaustruktur lässt sich diese Relation zu $N_1 < N_2$ umkehren. Beim optischen Pumpen
+geschieht dies unter Einstrahlung von Lichtquanten, wobei die Photonenergie genau
+\begin{equation}
+	E_\gamma = h \nu = E_2 - E_1
+	\label{eqn:photon}
+\end{equation}
+betragen muss, um ein Elektron in die nächsthöhere Schale zu heben. Hierbei geben $h$ die Planckkonstante und $\nu$ die Frequenz an.
+Dieses Vorgehen erlaubt eine sehr präzise Messung niederenergetisches Strukturen innerhalb der Niveaus. Einige der so zugänglichen
+Größen sollen für das stabile $^{85}\text{Rb}$ und den langlebigen Betastrahler $^{87}\text{Rb}$ \cite{rubidium} bestimmt werden. 
+Dazu müssen gewisse Zusammenhänge zwischen Drehimpulsen und magnetischen Momenten im atomaren System bekannt sein.
 
 \subsection{Atomare Drehimpulse}
+
+Zur Untersuchung des Rubidiums müssen die relevanten Drehimpulsbeiträge verstanden werden. Abbildung \ref{fig:drehimpulse}
+skizziert deren Verknüpfungen in geometrischer Form.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.25\linewidth]{content/grafik/drehimpulse.jpg}
-	\caption{\cite{pumpen}}
+	\caption{Vektordiagramm sämtlicher Drehimpulse eines Atoms. \cite{pumpen}}
 	\label{fig:drehimpulse}
 \end{figure}
 
+Es lassen sich verschiedene Regionen unterscheiden, namentlich die Atomhülle und der Atomkern. Diese werden im folgenden 
+genauer betrachtet.
+
 \subsubsection{Hülle}
+
+Aus den Eigenwerten der Drehimpulsoperatoren folgen betragsweise
+\begin{align*}
+	\mu_J &= g_J \mu_B \sqrt{J(J + 1)} \\
+	\mu_S &= g_S \mu_B \sqrt{S(S + S)} \\
+	\mu_L &= \mu_B \sqrt{L(L + 1)}
+\end{align*}
+als zugehöroge magnetische Momente mit dem Bohr Magneton $\mu_B$ und den Quantenzahlen $J$ für den Gesamtdrehimpuls,
+$S$ für den Spin und $L$ für den Bahndrehimpuls. Mit $\mu_J$ wird der Landé Faktor bezeichnet, der die Kombination aus
+$\mu_S$ und $\mu_L$ berücksichtigt. Im weiteren Verlauf werden Korrekturen aus der Quantenelektrodynamik vernachlässigt
+und der gyromagnetische Faktor des Elektrons $g_S = 2$ gesetzt. Zudem schränkt $|S - L| \leq J \leq |S + L|$ den erlaubten
+Wertebereich ein.
+
+Solange äußere Magnetfelder klein genug sind um als Störung behandelt zu werden, wird das Gesamtmoment nach Russel und Saunders über
+\begin{equation*}
+	\bm{\mu}_J = \bm{\mu}_S + \bm{\mu}_L
+\end{equation*}
+als vereinfachte Kopplung ausgedrückt. Trigonometrische Überlegungen \mbox{führen schließlich}
+\begin{equation}
+	g_J = \frac{3 J (J + 1) + S(S + 1) - L(L + 1)}{2 J (J + 1)}
+	\label{eqn:hülle_lande}
+\end{equation}
+für die geltende Beziehung ein. An dieser Stelle sei angemerkt, dass Alkalimetalle wie Rubidium ihren gesamten Hüllendrehimpuls
+im einen äußeren Elektron tragen \cite{rubidium}. Daher kann in diesem Fall immer $S = \frac{1}{2}$ eingesetzt werden.
+
+Beim Anlegen eines äußeren lokal homogenen Magnetfeldes $\bm{B}$ wird die zuvor arbiträre Basiswahl durch eine natürliche Symmetrie
+ersetzt. Entlang der Feldrichtung präzidiert nun $\bm{\mu}_J$ und führt über die Richtungsquantelung die Wechselwirkungsenergie
+\begin{equation}
+	E_Z = M_J g_J \mu_B B
+	\label{eqn:lin_zeeman} 
+\end{equation}
+ein. Die Orientierungsquantenzahl $M_J$ gibt die Projektion von $\bm{J}$ auf die Feldachse an und läuft von $-J$ bis $J$ in
+ganzzahligen Schritten. Auf diese Weise werden die Energieniveaus in $2J + 1$ Unterniveaus gespalten, der sogenannte Zeeman Effekt
+tritt hier in linearer Form zum Vorschein.
+
+\subsubsection{Kern}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{content/grafik/hyperfein.jpg}
+	\caption{\cite{pumpen}}
+	\label{fig:hyperfein}
+\end{figure}
+
+\subsection{Optisches Pumpen}
 
 \begin{figure}[H]
 	\centering
@@ -27,17 +100,6 @@
 	\caption{\cite{pumpen}}
 	\label{fig:zeeman}
 \end{figure}
-
-\subsubsection{Kern}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.7\linewidth]{content/grafik/hyperfein.jpg}
-	\caption{\cite{pumpen}}
-	\label{fig:hyperfein}
-\end{figure}
-
-\subsection{Optisches Pumpen}
 
 \begin{figure}[H]
 	\centering
@@ -66,6 +128,8 @@
 	\caption{\cite{pumpen}}
 	\label{fig:minima}
 \end{figure}
+
+\subsection{Zeeman Aufspaltung}
 
 \subsection{Transiente Effekte}
 
