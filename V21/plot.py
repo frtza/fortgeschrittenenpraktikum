@@ -94,7 +94,7 @@ plt.plot(x_plot, f(x_plot, *params_2) * 10**3, 'b-', label='Lineare Regression 2
 #plt.ylabel(r'$f \:/\: \si{\hertz}$')
 plt.legend()
 plt.grid()
-plt.savefig('content/grafik/plot.pdf')
+plt.savefig('build/plot.pdf')
 
 #Ausgabe der Parameter
 
