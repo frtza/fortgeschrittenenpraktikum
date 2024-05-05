@@ -61,16 +61,17 @@ Solange äußere Magnetfelder klein genug sind um als Störung behandelt zu werd
 als vereinfachte Kopplung ausgedrückt. Trigonometrische Überlegungen \mbox{führen schließlich}
 \begin{equation}
 	g_J = \frac{3 J (J + 1) + S(S + 1) - L(L + 1)}{2 J (J + 1)}
-	\label{eqn:hülle_lande}
+	\label{eqn:lande_J}
 \end{equation}
 für die geltende Beziehung ein. An dieser Stelle sei angemerkt, dass Alkalimetalle wie Rubidium ihren gesamten Hüllendrehimpuls
-im einen äußeren Elektron tragen \cite{rubidium}. Daher kann in diesem Fall immer $S = \frac{1}{2}$ eingesetzt werden.
+im einen äußeren Elektron \cite{rubidium} tragen. Daher kann in diesem Fall immer $S = \frac{1}{2}$ eingesetzt werden.
 
 Beim Anlegen eines äußeren lokal homogenen Magnetfeldes $\bm{B}$ wird die zuvor arbiträre Basiswahl durch eine natürliche Symmetrie
-ersetzt. Entlang der Feldrichtung präzidiert nun $\bm{\mu}_J$ und führt über die Richtungsquantelung die Wechselwirkungsenergie
+ersetzt. Entlang der Feldrichtung präzidiert nun $\bm{\mu}_J$ und führt über Richtungsquantelung die Wechselwirkungsenergie
 \begin{equation}
 	E_Z = M_J g_J \mu_B B
-	\label{eqn:lin_zeeman} 
+	\tag{4a}
+	\label{eqn:lin_zeeman_J}
 \end{equation}
 ein. Die Orientierungsquantenzahl $M_J$ gibt die Projektion von $\bm{J}$ auf die Feldachse an und läuft von $-J$ bis $J$ in
 ganzzahligen Schritten. Auf diese Weise werden die Energieniveaus in $2J + 1$ Unterniveaus gespalten, der sogenannte Zeeman Effekt
@@ -78,65 +79,92 @@ tritt hier in linearer Form zum Vorschein.
 
 \subsubsection{Kern}
 
+Die beiden zu untersuchenden Isotope $^{85}\text{Rb}$ und $^{87}\text{Rb}$ besitzen mit den Quantenzahlen $I = \frac{5}{2}$
+und $I = \frac{3}{2}$ \cite{rubidium} zusätzlich einen jeweils von Null verschiedenen Kernspin, dessen Einfluss wie in
+Abbildung \ref{fig:drehimpulse} aufgezeigt per $\bm{F} = \bm{J} + \bm{I}$ im Drehimpuls des gesamten Atoms inkludiert werden muss.
+Dabei liegt $F$ ganzzahlig zwischen $|J - F|$ und $|J + F|$ mit einer zu $J$ analogen Zeeman Aufspaltung. Statt
+\eqref{eqn:lin_zeeman_J} gilt nun
+\begin{equation}
+	E_Z = M_F g_F \mu_B B
+	\tag{4b}\stepcounter{equation}
+	\label{eqn:lin_zeeman_F}
+\end{equation}
+mit $-F \leq M_F \leq F$ und dementsprechend $2F + 1$ Unterniveaus.
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.7\linewidth]{content/grafik/hyperfein.jpg}
-	\caption{\cite{pumpen}}
+	\captionsetup{width=0.95\linewidth}
+	\caption{Exemplarisches Termschema von $^{87}\text{Rb}$ unter Einwirkung eines Magnetfeldes. Energiedifferenzen sind
+			 nicht maßstabsgetreu und liegen im Bereich von \qty{1.5}{\eV} für die Feinstruktur und \qty{30}{\micro\eV} für
+			 die Hyperfeinstruktur. \cite{pumpen}}
 	\label{fig:hyperfein}
 \end{figure}
+
+In Abbildung \ref{fig:hyperfein} wird beispielhaft eine resultierende Niveauaufspaltung dargestellt. Durch einen Ansatz der Form
+\begin{equation*}
+	\mu_F = g_F \mu_B \sqrt{F(F + 1)}
+\end{equation*}
+ergibt sich nach ähnlicher Rechnung zu \eqref{eqn:lande_J} schließlich
+\begin{equation}
+	g_F = g_J \,\frac{F (F + 1) + J(J + 1) - I(I + 1)}{2 F (F + 1)}
+	\label{eqn:lande_F}
+\end{equation}
+für den Landé Faktor des atomaren Gesamtdrehimpulses.
 
 \subsection{Optisches Pumpen}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.5\linewidth]{content/grafik/duplett.jpg}
-	\caption{\cite{pumpen}}
+	\caption{Entstehung der Dublettstruktur in Alkalispektren. \cite{pumpen}}
 	\label{fig:duplett}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.55\linewidth]{content/grafik/zeeman.jpg}
-	\caption{\cite{pumpen}}
+	\caption{Zeeman Aufspaltung eines Alkaliatoms ohne Kernspin. \cite{pumpen}}
 	\label{fig:zeeman}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.65\linewidth]{content/grafik/pumpen.jpg}
-	\caption{\cite{pumpen}}
+	\caption{Mögliche Übergänge bei Einfall rechtzirkular polarisiertem Lichts. \cite{pumpen}}
 	\label{fig:pumpen}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
+	\includegraphics[width=0.6\linewidth]{content/grafik/transparenz.jpg}
+	\caption{Zeitabhängige Transparenz einer Alkalidampfzelle. \cite{pumpen}}
+	\label{fig:transparenz}
+\end{figure}
+
+\subsection{Zeeman Aufspaltung}
+
+\begin{figure}[H]
+	\centering
 	\includegraphics[width=0.75\linewidth]{content/grafik/uebergang.jpg}
-	\caption{\cite{pumpen}}
+	\caption{Übergangsmöglichkeiten eines Elektrons zwischen Energieniveaus. \cite{pumpen}}
 	\label{fig:uebergang}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.6\linewidth]{content/grafik/transparenz.jpg}
-	\caption{\cite{pumpen}}
-	\label{fig:transparenz}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
 	\includegraphics[width=0.6\linewidth]{content/grafik/minima.jpg}
-	\caption{\cite{pumpen}}
+	\caption{Transparenz einer Alkalidampfzelle unter Wirkung eines hochfrequenten Magnetfeldes in Anbhängigkeit
+			 zur Feldstärke. \cite{pumpen}}
 	\label{fig:minima}
 \end{figure}
-
-\subsection{Zeeman Aufspaltung}
 
 \subsection{Transiente Effekte}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.2\linewidth]{content/grafik/praezession.jpg}
-	\caption{\cite{pumpen}}
+	\caption{Drehimpulspräzession um die Magnetfeldachse. \cite{pumpen}}
 	\label{fig:praezession}
 \end{figure}
 
