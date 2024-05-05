@@ -12,7 +12,7 @@ main: FORCE | build
 		--interaction=batchmode \
 		--halt-on-error \
 	main.tex
-	cp build/main.pdf .
+	cp build/main.pdf ./V18.pdf
 
 build:
 	mkdir -p build

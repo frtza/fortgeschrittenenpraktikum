@@ -21,7 +21,7 @@ main: FORCE | build
 		--interaction=batchmode \
 		--halt-on-error \
 	main.tex
-	cp build/main.pdf .
+	cp build/main.pdf ./V21.pdf
 
 only: FORCE | build
 	# find header file in main directory
@@ -35,7 +35,7 @@ only: FORCE | build
 		--interaction=batchmode \
 		--halt-on-error \
 	main.tex
-	cp build/main.pdf .
+	cp build/main.pdf ./V21.pdf
 
 build:
 	mkdir -p build

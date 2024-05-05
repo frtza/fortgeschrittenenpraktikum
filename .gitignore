@@ -1,5 +1,5 @@
-build/
 __pycache__/
 .ipynb_checkpoints/
-/*/*.pdf
-!/*/main.pdf
+.virtual_documents/
+/*/build/*
+!/*/build/*.pdf

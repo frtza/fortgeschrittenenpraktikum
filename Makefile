@@ -26,6 +26,5 @@ clean:
 	make -k -C V21 clean
 	make -k -C V46 clean
 	make -k -C V60 clean
-	make -k -C
 
 .PHONY: clean template V18 V21 V46 V60
