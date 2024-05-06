@@ -192,9 +192,18 @@ E_87 = 4.53 * 10 ** (-24)
 
 Z_87 = E(g_1,B_87,M_87,E_87)
 Z_85 = E(g_2,B_85,M_85,E_85)
+e = const.e
+Z_87 = Z_87 / e
+Z_85 = Z_85 / e
+
 print('Z_85:', Z_85)
 print('Z_87:', Z_87)
 
+E_85 = E_85 / e
+E_87 = E_87 / e
+
+print('E_85:', E_85)
+print('E_87:',E_87)
 #abweichungen berechnen
 def abw(emp, theo):
     return abs(emp - theo)/theo
