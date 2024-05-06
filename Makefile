@@ -3,6 +3,7 @@ all:
 	make -k -C V18
 	make -k -C V21
 	make -k -C V46
+	make -k -C V47
 	make -k -C V60
 
 template:
@@ -17,6 +18,9 @@ V21:
 V46:
 	make -C V46
 
+V46:
+	make -C V47
+
 V60:
 	make -C V60
 
@@ -25,6 +29,7 @@ clean:
 	make -k -C V18 clean
 	make -k -C V21 clean
 	make -k -C V46 clean
+	make -k -C V47 clean
 	make -k -C V60 clean
 
-.PHONY: clean template V18 V21 V46 V60
+.PHONY: clean template V18 V21 V46 V47 V60
