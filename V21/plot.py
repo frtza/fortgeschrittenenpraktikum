@@ -194,3 +194,30 @@ Z_87 = E(g_1,B_87,M_87,E_87)
 Z_85 = E(g_2,B_85,M_85,E_85)
 print('Z_85:', Z_85)
 print('Z_87:', Z_87)
+
+#abweichungen berechnen
+def abw(emp, theo):
+    return abs(emp - theo)/theo
+
+#abweichung magnetfeld
+
+B_th = 48 * 10 ** (-6)
+B_abw  = abw(B_Erde,B_th )
+print('Abweichung B-Feld Erde:', B_abw)
+
+#Abweichung lande faktor
+
+g_FTheo1 = 1/2 #87
+g_FTheo2 = 1/3
+g_abw = abw(g_1,g_FTheo1)
+g_abw2 = abw(g_2,g_FTheo2)
+print('Abweichung lande Faktor 1:', g_abw)
+print('Abweichung lande Faktor 2:', g_abw2)
+
+#abweichung kernspin
+I_87Theo = 1.5
+I_85Theo = 2.5
+I_abw = abw(I_1,I_87Theo)
+I_abw2 = abw(I_2,I_85Theo)
+print('Abweichung Kernspin 87:', I_abw)
+print('Abweichung Kernspin 85:', I_abw2)
