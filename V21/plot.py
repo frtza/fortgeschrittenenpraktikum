@@ -7,7 +7,7 @@ from uncertainties.unumpy import nominal_values as noms, std_devs as stds, uarra
 from uncertainties import ufloat
 import csv
 
-with open('data/daten.csv', newline='') as csvfile:
+with open('data/messung.csv', newline='') as csvfile:
     data = list(csv.reader(csvfile))
 
 # covert data to float
@@ -38,17 +38,15 @@ o_hori = 0.5
 #Stromstärken berechnen
 
 # get values from column 2 of data numpy array
-U_sweep_1 = data[:,2]
-U_hori_1 = data[:,1]
-U_hori_1 = U_hori_1 - 13.8
-U_sweep_2 = data[:,4]
-U_hori_2 = data[:,3]
-U_hori_2 = U_hori_2 - 13.8
+U_sweep_1 = data[:,1]
+U_hori_1 = data[:,2]
+U_sweep_2 = data[:,3]
+U_hori_2 = data[:,4]
 
-I_sweep_1 = ohm(U_sweep_1, o_sweep)
-I_hori_1 = ohm(U_hori_1, o_hori)
-I_sweep_2 = ohm(U_sweep_2, o_sweep)
-I_hori_2 = ohm(U_hori_2, o_hori)
+I_sweep_1 = U_sweep_1 * 0.1  # I in ampere
+I_hori_1 = 2 * U_hori_1 * 10 ** (-3)
+I_sweep_2 = U_sweep_2 * 0.1  # I in ampere
+I_hori_2 = 2 * U_hori_2 * 10 ** (-3)
 
 #ermittlung b feld
 
@@ -60,34 +58,37 @@ B_hori_2 = B(I_hori_2, N_hori, R_hori)
 
 #Addieren der beiden Magnetfelder
 
-B_1 = B_sweep_1 + B_hori_1
+B_1 = B_sweep_1[:-1] + B_hori_1[:-1]
 B_2 = B_sweep_2 + B_hori_2
 print('B_1:', B_1)
 print('B_2:', B_2)
 
 #Teil 2:Lande Faktor
 #Definition der Ausgleichsfunktion
-def f(a,b,x):
+def f(x, a, b):
     return a * x + b
 
 #Einlesen der Daten der Frequenzen
 F_res = data[:,0]
 
+print(len(F_res))
+
 #Plotte resonanzfrequenzen gegen die Magnetfelder
-plt.plot(F_res, B_1 * 10**3, 'gx', label='Messwerte 1')
-plt.plot(F_res, B_2* 10**3, 'bx', label='Messwerte 2')
+plt.plot(F_res[:-1], B_1 * 10**3, 'gx', label='Messwerte 1')
+plt.plot(F_res, B_2 * 10**3, 'bx', label='Messwerte 2')
+
+print(B_1)
 
 #Lineare Regression der Messwerte
 from scipy.optimize import curve_fit
-params_1, covariance_1 = curve_fit(f, F_res, B_1)
+params_1, covariance_1 = curve_fit(f, F_res[:-1], B_1)
 params_2, covariance_2 = curve_fit(f, F_res, B_2)
 
 errors_1 = np.sqrt(np.diag(covariance_1))
 errors_2 = np.sqrt(np.diag(covariance_2))
 
-
 x_plot = np.linspace(0, 1000, 1000)
-plt.plot(x_plot, f(x_plot, *params_1) * 10**3, 'g-', label='Lineare Regression 1')
+plt.plot(x_plot, f(x_plot, *params_1) * 10**3, 'r-', label='Lineare Regression 1')
 plt.plot(x_plot, f(x_plot, *params_2) * 10**3, 'b-', label='Lineare Regression 2')
 
 #plt.xlabel(r'$B \:/\: \si{\tesla}$')
