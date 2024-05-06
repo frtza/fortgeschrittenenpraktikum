@@ -85,26 +85,44 @@ Der Mittelwert der $y$-Achsenabschnitte wird mittels uncertainties \cite{uncerta
 Über den Satz des Pythagoras kann der Wert des Erdmagnetfeldes ermittelt werden.
 Schlussendlich ergibt sich für das Magnetfeld der Erde ein Wert von \qty{3.939(15)e-05}{\tesla}.
 
-\subsection{Bestimmung Lande-Faktor}
+\subsection{Bestimmung Landé-Faktor}
 \label{sec:best-lande-faktoren}
 
 Durch Umstellen der Gleichung \ref{eqn:larmor} kann auf den Zusammenhang
 \begin{equation}
-    g_F = \frac{h}{\mu_B a }
+    g_{\text{F}} = \frac{h}{\mu_B a }
 \end{equation}
 geschlossen werden.
-Für die Lande Faktoren der Isotope ergeben sich die Werte
+Für die Landé Faktoren der Isotope ergeben sich die Werte
 \begin{align}
     g_1 &= \qty{0.487(4)} \\
     q_2 &= \qty{0.3278(0.5)} .
 \end{align}
-Anhand der in Abschnitt \ref{sec:theorie} bestimmten Werte für die Lande Faktoren der Isotope können schließlich
+
+Anhand der in Abschnitt \ref{sec:theorie} theorethisch bestimmten Werte für die Landé Faktoren der beiden Isotope (Rb-85 \ref{eqn:vorhesage_85} und Rb-87 \ref{eqn:vorhesage_87}) können schließlich
 die experimentellen Werte zugeordnet werden.
-
-
+Daher enspricht $g_1$ dem Wert des Isotops Rb-87 und $g_2$ kann zu dem Isotop Rb-85 eingeordnet werden.
+Im Folgenden werden auch die jeweiligen Ausgleichsgeraden zugeordnet.
+Die lineare Regression 1 entspricht daher Rb-87 und die lineare Regression 2 gehört zu Rb-85.
 
 \subsection{Kernspin der Rubidium-Isotope}
 \label{sec:Kernspin der Rubidium-Isotope}
+
+Mittels der bestimmten $g_{\text{F}}$-Faktoren kann anschließend der Kernspin berechnet werden.
+Aus der Formel \ref{eqn:lande_J} und den Werten der Quantenzahlen, welche in Abschnitt \ref{sec:theorie} angegeben sind,
+ergibt sich $g_{\text{J}} = 2$.
+Somit sind alle benötigten Variablen bekannt.
+Der Kernspin der Isotope kann durch Umstellen der Gleichung \ref{eqn:lande_F} berechnet werden.
+Es folgt für den Kernspin
+\begin{equation}
+    I = -\frac{1}{2} + \sqrt{1 + F(F+1) \cdot (1 - g_{\text{F}})} \, .
+\end{equation}
+
+Für die Isotope Rb-85 und Rb-87 ergeben sich die experimentellen Kernspins
+\begin{align}
+    I_{85} &= \qty{2.511(1)} \\
+    I_{87} &= \qty{1.520(5)} \, .
+\end{align}
 
 \subsection{Isotopenverhältnis}
 \label{sec:Isotopenverhältnis}
