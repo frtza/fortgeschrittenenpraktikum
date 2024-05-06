@@ -164,10 +164,14 @@ in einem Photonenfeld aus rechtshändig zirkular polarisierter $D_1$ Strahlung, 
 	\label{fig:pumpen}
 \end{figure}
 
-Initial herrscht thermisches Gleichgewicht und die Besetzung folgt wie in \eqref{eqn:besetzung} der Boltzmann Verteilung. Durch das
-einfallende Licht werden die Elektronen aus dem niedrigesten $^2S_{1/2}^{-1/2}$ Zustand nach $^2P_{1/2}^{+1/2}$ angeregt. Für
-Photonenemission an sich folgt $\Delta L = -1$ aus Drehimpulserhaltung, sodass die obere Population mit gleichen Wahrscheinlichkeiten
-in $^2S_{1/2}^{-1/2}$ oder $^2S_{1/2}^{+1/2}$ abfallen kann.
+Initial herrscht thermisches Gleichgewicht und die Besetzung ist wie in \eqref{eqn:besetzung} nach Boltzmann verteilt. Durch das
+einfallende Licht werden die Elektronen aus dem niedrigesten $^2S_{-1/2}$ Zustand nach $^2P_{+1/2}$ angeregt.
+
+Für Photonenemission an sich folgt $\Delta L = -1$ aus Drehimpulserhaltung, sodass die obere Population mit gleichen
+Wahrscheinlichkeiten in $^2S_{-1/2}$ oder $^2S_{+1/2}$ abfallen kann. Da Elektronen aus dem $^2S_{+1/2}$
+Zustand bei der gegebenen Lichtfrequenz allerdings nicht wieder angeregt werden und die Wahrscheinlichkeit für ein spontanes
+Absinken in $^2S_{-1/2}$ verschwindend gering ist, wird das höhere der $^2S_{1/2}$ Zeeman Niveaus auf Kosten des niedrigeren
+vollgepumpt. Der so entstehende makroskopische Zustand wird auch Besetzungsinversion genannt.
 
 \begin{figure}[H]
 	\centering
@@ -176,14 +180,28 @@ in $^2S_{1/2}^{-1/2}$ oder $^2S_{1/2}^{+1/2}$ abfallen kann.
 	\label{fig:transparenz}
 \end{figure}
 
-Real mit Kernspin, mehr Auspaltungen, Dopplerverbreiterung 
+Da die Anzahl der absorbierten
+$D_1$ Photonen direkt von der Besetzung des so entleerten Grundniveaus abhängt, steigen Transparenz und Intensität wie
+in Abbildung \ref{fig:transparenz} über
+\begin{equation*}
+	I = I_0 \left( 1 - e^{-t/\tau} \right)
+\end{equation*}
+mit der Zeit an, wobei $\tau$ eine unbekannte Zeitkonstante ist.
+
+Real spielt auch der Kernspin der verschiedenen Isotope eine Rolle und führt zu deutlich mehr Zeeman Unterniveaus. Dazu kommt,
+dass die Spektrallinien einer Gasentladungslampe der Dopplerverbreiterung unterliegen, sodass die feine Aufteilung sicher
+abgedeckt ist. Die auftretenden Phänomene decken sich ansonsten aber hinreichend mit dem vereinfachten Fall.
 
 \subsection{Zeeman Aufspaltung}
 
+Der lineare Zeeman Effekt aus \eqref{eqn:lin_zeeman_J} und \eqref{eqn:lin_zeeman_F} muss für größere Magnetfeldstärken
+in höherer Ordnung entwickelt werden. Mit der Hyperfeinstrukturaufspaltung $\Delta E_{HF}$ aus der Interaktion mit dem Kernspin
+beschreibt
 \begin{equation}
 	\Delta E_Z = g_F \mu_B B + g_F^2 \mu_B^2 B^2 \frac{1 - 2M_F}{\Delta E_{HF}}
 	\label{eqn:quad_zeeman}
 \end{equation}
+die Differenz benachbarter Unterniveaus in quadratischer Ordnung nach Breit und Rabi.
 
 \begin{figure}[H]
 	\centering
@@ -191,6 +209,12 @@ Real mit Kernspin, mehr Auspaltungen, Dopplerverbreiterung
 	\caption{Übergangsmöglichkeiten eines Elektrons zwischen Energieniveaus. \cite{pumpen}}
 	\label{fig:uebergang}
 \end{figure}
+
+Zum Verständnis der Präzisionsmessung sehr geringer Aufspaltungswerte müssen die beteiligten Übergangsmechanismen erläutert werden.
+Abbildung \ref{fig:uebergang} stellt diese schematisch dar. Spontane Emission verläuft ohne Beteiligung äußerer Effekte. Selbst im
+idealen Vakuum und ohne thermische Energie würden durch Quantenfluktuationen angeregte Zustände wieder auf energetisch günstigere
+Niveaus abfallen. Dagegen erfolgt die stimulierte oder induzierte Emission durch resonante Wechselwirkung eines Photons mit dem
+Dipolmoment übergehenden
 
 \begin{figure}[H]
 	\centering
