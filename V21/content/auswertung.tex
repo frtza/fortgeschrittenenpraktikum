@@ -80,6 +80,7 @@ Daher wird diese durch ein vertikal verlaufendes Magnetfeld kompensiert und der 
 sodass die horizontale Komponente parallel oder antiparallel zu dem horizontalen Magnetfeld verläuft.
 Zur Berechnung der Feldstärke des Erdmagnetfeldes muss zunächst die magnetische Feldstärke des vertikalen Feldes gemessen werden.
 Diese betrug in diesem Experiment \qty{0.23}{\ampere}.
+
 Anschließend wird über den $y$-Achsenabschnitt der Ausgleichsgeraden in Abbildung \ref{fig:plot1} die horizontale Magnetfeldstärke bestimmt.
 Der Mittelwert der $y$-Achsenabschnitte wird mittels uncertainties \cite{uncertainties} gebildet, um den Wert des horizontalen Feldes zu bestimmen.
 Über den Satz des Pythagoras kann der Wert des Erdmagnetfeldes ermittelt werden.
@@ -127,12 +128,50 @@ Für die Isotope Rb-85 und Rb-87 ergeben sich die experimentellen Kernspins
 \subsection{Isotopenverhältnis}
 \label{sec:Isotopenverhältnis}
 
+Wegen besserer Ablesbarkeit der Peaks wird die Aufnahme des Oszilloskops bearbeitet, diese ist in Abbildung \ref{fig:edit} zu sehen.
+
 \begin{figure}
     \centering
     \includegraphics[width=0.6\textwidth]{content/messung/edit.jpg}
-    \caption{????????????????????????????????????.}
+    \caption{Bearbeitete Aufnahme des Oszilloskops.}
     \label{fig:edit}
 \end{figure}
 
+Die Aufnahme der Resonanzstellen wurde bei einer Frequenz von $f = \qty{100}{\kilo\hertz}$ getätigt.
+Um das Isotopenverhältnis zu bestimmen, werden die Amplituden der Resonanzstellen abgelesen, indem
+die Kästchen auf dem Oszilloskop gezählt werden.
+Der erste kleinere Peak gehört zu dem Isotop Rb-87 und der größere zu Rb-85.
+Für den ersten Peak hat eine Tiefe von ungefähr 2 und der zweite besitzt eine Tiefe von ungefähr 4 Kästchen.
+Das Verhältnis ist daher 1:2.
+Daraus folgt für die Anteile
+\begin{align}
+    P_1 &= 33 \% \\
+    P_2 &= 67 \% .
+\end{align}
+
 \subsection{Quadratischer Zeeman-Effekt}
 \label{sec:quadratischer-zeeman-effekt}
+
+Zusammen mit der Gleichung \ref{eqn:quad_zeeman} und den Theoriewerten in der Tabelle \ref{tab:zee} kann die
+quadratische Zeemann Aufspaltung brechnet werden.
+
+\begin{table}
+    \centering
+    \caption{Theoriewerte der Isotope zur Berechnung der Zeemann Aufspaltung und experimentell bestimmte Werte des B-Feldes. \cite{pumpen}}
+    \label{tab:zee}
+    \begin{tabular}{c c}
+        \toprule
+        Rb-87 & Rb-85\\
+        \midrule
+        $B = \qty{0.0909}{\milli\tesla}$ & $B = \qty{0.137}{\milli\tesla}$ \\
+        $M_f = 2$ & $M_f = 3$ \\
+        $\Delta E_{hf} = \qty{4.53e-24}{\joule} $ & $\Delta E_{hf} = \qty{2.01e-24}{\joule} $ \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Somit ergeben sich die Werte der quadratischen Zeemann Aufspaltung für beide Isotope
+\begin{align}
+    \Delta E_Z^{87} &= \qty{4.175(7)e-28}{\joule} \\
+    \Delta E_Z^{85} &= \qty{4.105(31)e-28}{\joule} .
+\end{align}
