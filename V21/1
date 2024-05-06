@@ -189,8 +189,8 @@ in Abbildung \ref{fig:transparenz} über
 mit der Zeit an, wobei $\tau$ eine unbekannte Zeitkonstante ist.
 
 Real spielt auch der Kernspin der verschiedenen Isotope eine Rolle und führt zu deutlich mehr Zeeman Unterniveaus. Dazu kommt,
-dass die verwendeten Spektrallinien einer Gasentladungslampe der Dopplerverbreiterung unterliegen, sodass die feine Aufteilung
-sicher abgedeckt ist. Die auftretenden Phänomene decken sich ansonsten aber hinreichend mit dem vereinfachten Fall.
+dass die Spektrallinien einer Gasentladungslampe der Dopplerverbreiterung unterliegen, sodass die feine Aufteilung sicher
+abgedeckt ist. Die auftretenden Phänomene decken sich ansonsten aber hinreichend mit dem vereinfachten Fall.
 
 \subsection{Zeeman Aufspaltung}
 
@@ -222,12 +222,8 @@ Die Wahrscheinlichkeiten für das Auftreten spontaner und induzierter Emission $
 Frequenz $\Delta\nu$ und über \eqref{eqn:photon} mit der Energiedifferenz $\Delta E$ in Verbindung setzen. Dann ist $P_\text{ind}$
 in erster Näherung konstant und $P_\text{spon} \propto \Delta\nu^3 \propto \Delta E^3$ nur für große Niveauabstände relevant.
 Zwischen den höheren Zeeman Aufspaltungen mit $\nu \sim \qty{100}{\kilo\hertz}$ treten spontane Übergänge demnach praktisch nie auf,
-unter den Hauptniveaus im Bereich $\nu \sim \qty{100}{\tera\hertz}$ sind solche Emissionsprozesse dagegen problemlos möglich. 
+unter Hauptniveaus im Bereich $\nu \sim \qty{100}{\tera\hertz}$ sind solche Emissionsprozesse dagegen problemlos möglich. 
 
-Wird nun noch die Magnetfeldstärke im Radiofrequenzbereich $\nu \sim \qty{1}{\mega\hertz}$ variiert, lässt sich über
-die Resonanz $\Delta E_Z = h \nu_{RF}$ nach \eqref{eqn:photon} und \eqref{eqn:quad_zeeman} die Niveauaufspaltung bestimmen, da
-bei passender Einstellung von $B_{RF}$ Emission stimuliert wird und die Elektronen folglich erneut $D_1$ Photonen absorbieren
-können.
 
 \begin{figure}[H]
 	\centering
@@ -237,13 +233,12 @@ können.
 	\label{fig:minima}
 \end{figure}
 
-Die Intensität verläuft dann wie in Abbildung \ref{fig:minima} gezeigt, wobei das tiefere Minimum bei Null Feldstärke
-darin begründet ist, dass bei verschwindender Aufspaltung kein optisches Pumpen mehr möglich ist. Für schwache Felder gibt
+\subsection{Transiente Effekte}
+
 \begin{equation}
-	\omega_{RF} = \pfrac{g_F\mu_B B_{RF}}{\hbar}
+	\omega = \pfrac{g_F\mu_B B}{\hbar}
 	\label{eqn:larmor}
 \end{equation}
-die Kreisfrequenz der in Abbildung \ref{fig:praezession} dargestellten Larmor Präzession bei Resonanz an.
 
 \begin{figure}[H]
 	\centering
