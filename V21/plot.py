@@ -146,6 +146,8 @@ print('g_2:', g_2)
 #verhältnis der Lande-Faktoren
 g_verh = g_1 / g_2
 
+
+
 #Teil 4: Kernspins
 #Berechnung der Kernspins
 
@@ -153,4 +155,20 @@ S = 1/2
 L = 0
 J = S + L
 
+
 g_j = 1+ (J*(J+1)-L*(L+1)+S*(S+1))/(2*J*(J+1))
+print('g_j:', g_j)
+
+#def I(gf):
+   # return g_j / (4 * gf) - 1 + unp.sqrt((g_j / (4 * gf) - 1)**2+ 3 * g_j / (4 * gf) - 3 / 4)
+def I(gf,F):
+    return -1/2 + unp.sqrt(1 + F*(F+1) * (1 - gf))
+F_87 = 2
+F_85 = 3
+
+I_1 = I(g_1, F_87)
+I_2 = I(g_2, F_85)
+
+#ausgabe kernspin
+print('I_1:', I_1)
+print('I_2:', I_2)
