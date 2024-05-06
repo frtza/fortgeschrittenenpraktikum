@@ -5,7 +5,7 @@ Im Folgenden werden die aufgenommenen Messdaten ausgewertet, um den Kernspin der
 Dafür müssen zunächst die Landé-Faktoren der Isotope bestimmt werden und die vertikale Komponente des Erdmagnetfeldes.
 Anschließend wird das Isotopenverhältnis der Rubidium-Isotope bestimmt und der quadratische Zeeman-Effekt untersucht.
 
-Es werden die Werte der Magnetfeldstärken der Horizontalen Spule berechnet, indem die jeweiligen Anteile der sweep und der
+Es werden die Werte der Magnetfeldstärken der Horizontalen Spule berechnet, indem die jeweiligen Anteile der Sweep und der
 horizontalen Verschiebungsspule addiert werden.
 Für die Magnetfeldstärken der Spulen im Zentrum gilt
 
@@ -26,7 +26,7 @@ Die notierten Werte werden in Tabelle \ref{tab:magnetfeldstärken} aufgetragen, 
     \label{tab:magnetfeldstärken}
     \begin{tabular}{c c c c c}
         \toprule
-        $f \mathbin{/} \mathrm{kHz} $& $I_{s1} \mathbin{/} \unit{\ampere}$ & $I_{h1} \mathbin{/} \unit{\ampere}$ & $I_{s2} \mathbin{/} \unit{\ampere}$ & $I_{h2} \mathbin{/} \unit{\ampere}$ \\
+        $f \mathbin{/} \mathrm{kHz} $& $I_{S1} \mathbin{/} \unit{\ampere}$ & $I_{H1} \mathbin{/} \unit{\ampere}$ & $I_{S2} \mathbin{/} \unit{\ampere}$ & $I_{H2} \mathbin{/} \unit{\ampere}$ \\
         \midrule
         100 & 0.54 & 0.00 & 0.658 & 0.00 \\
         200 & 0.776 & 0.00 & 0.731 & 0.0194 \\
@@ -52,6 +52,8 @@ In Abbildung \ref{fig:plot1} sind die mit der Gleichung \ref{eqn:magnetfeld} ber
 \end{figure}
 
 Es wurde eine lineare Regression der Messwerte für beide Isotope durchgeführt.
+Während der Ausgleichsrechnung ist aufgefallen, dass bei dem letzten Wert der gleiche Peak zweimal vermessen wurde.
+Daher wird dieser Messwert für den zweiten Peak bei der weiteren Berechnung vernachlässigt.
 Die verwendete Ausgleichsfunktion hat die Form
 \begin{equation}
     f(x) = a \cdot x + b \, .
@@ -70,7 +72,7 @@ Daraus folgen die Parameter beider Isotope
     b_2 &= \qty{1.760(22)e-05}{\tesla} \, .
 \end{align*}
 
-Die berechneten Werte werden für die weiteren Rechnungen verwendet
+Die berechneten Werte werden für die weiteren Rechnungen verwendet.
 
 \subsection{Magnetfeld der Erde}
 \label{sec:magnetfeld-der-erde}
@@ -84,7 +86,7 @@ Diese betrug in diesem Experiment \qty{0.23}{\ampere}.
 Anschließend wird über den $y$-Achsenabschnitt der Ausgleichsgeraden in Abbildung \ref{fig:plot1} die horizontale Magnetfeldstärke bestimmt.
 Der Mittelwert der $y$-Achsenabschnitte wird mittels uncertainties \cite{uncertainties} gebildet, um den Wert des horizontalen Feldes zu bestimmen.
 Über den Satz des Pythagoras kann der Wert des Erdmagnetfeldes ermittelt werden.
-Schlussendlich ergibt sich für das Magnetfeld der Erde ein Wert von \qty{3.939(15)e-05}{\tesla}.
+Schlussendlich ergibt sich für das Magnetfeld der Erde \qty{3.939(15)e-05}{\tesla}.
 
 \subsection{Bestimmung Landé-Faktor}
 \label{sec:best-lande-faktoren}
@@ -102,7 +104,7 @@ Für die Landé Faktoren der Isotope ergeben sich die Werte
 
 Anhand der in Abschnitt \ref{sec:theorie} theoretisch bestimmten Werte für die Landé Faktoren der beiden Isotope (Rb-85 \ref{eqn:vorhesage_85} und Rb-87 \ref{eqn:vorhesage_87}) können schließlich
 die experimentellen Werte zugeordnet werden.
-Daher enspricht $g_1$ dem Wert des Isotops Rb-87 und $g_2$ kann zu dem Isotop Rb-85 eingeordnet werden.
+Daher enspricht $g_1$ dem Wert des Isotops Rb-87 und $g_2$ kann zu dem Isotop Rb-85 zugeordnet werden.
 Im Folgenden werden auch die jeweiligen Ausgleichsgeraden zugeordnet.
 Die lineare Regression 1 entspricht daher Rb-87 und die lineare Regression 2 gehört zu Rb-85.
 
@@ -113,13 +115,14 @@ Mittels der bestimmten $g_{\text{F}}$-Faktoren kann anschließend der Kernspin b
 Aus der Formel \ref{eqn:lande_J} und den Werten der Quantenzahlen, welche in Abschnitt \ref{sec:theorie} angegeben sind,
 ergibt sich $g_{\text{J}} = 2$.
 Somit sind alle benötigten Variablen bekannt.
+
 Der Kernspin der Isotope kann durch Umstellen der Gleichung \ref{eqn:lande_F} berechnet werden.
 Es folgt für den Kernspin
 \begin{equation}
     I = -\frac{1}{2} + \sqrt{1 + F(F+1) \cdot (1 - g_{\text{F}})} \, .
 \end{equation}
 
-Für die Isotope Rb-85 und Rb-87 ergeben sich die experimentellen Kernspins
+Für die Isotope Rb-85 und Rb-87 ergeben sich die experimentellen bestimmten Kernspins
 \begin{align}
     I_{85} &= \num{2.511(1)} \\
     I_{87} &= \num{1.520(5)} \, .
@@ -141,19 +144,19 @@ Die Aufnahme der Resonanzstellen wurde bei einer Frequenz von $f = \qty{100}{\ki
 Um das Isotopenverhältnis zu bestimmen, werden die Amplituden der Resonanzstellen abgelesen, indem
 die Kästchen auf dem Oszilloskop gezählt werden.
 Der erste kleinere Peak gehört zu dem Isotop Rb-87 und der größere zu Rb-85.
-Für den ersten Peak hat eine Tiefe von ungefähr 2 und der zweite besitzt eine Tiefe von ungefähr 4 Kästchen.
+Der erste Peak hat eine Tiefe von ungefähr 2 Kästchen und der zweite besitzt eine Tiefe von ungefähr 4 Kästchen.
 Das Verhältnis ist daher 1:2.
 Daraus folgt für die Anteile
 \begin{align}
-    P_1 &= 33 \% \\
-    P_2 &= 67 \% .
+    P_1 &\approx 33 \% \\
+    P_2 &\approx 67 \% .
 \end{align}
 
 \subsection{Quadratischer Zeeman-Effekt}
 \label{sec:quadratischer-zeeman-effekt}
 
-Zusammen mit der Gleichung \ref{eqn:quad_zeeman} und den Theoriewerten in der Tabelle \ref{tab:zee} kann die
-quadratische Zeemann Aufspaltung brechnet werden.
+Zusammen mit der Gleichung \ref{eqn:quad_zeeman} und den Theoriewerten in der Tabelle \ref{tab:zee}, kann die
+quadratische Zeeman-Aufspaltung berechnet werden.
 
 \begin{table}
     \centering
@@ -170,7 +173,7 @@ quadratische Zeemann Aufspaltung brechnet werden.
     \end{tabular}
 \end{table}
 
-Somit ergeben sich die Werte der quadratischen Zeemann Aufspaltung für beide Isotope
+Somit ergeben sich die Werte der quadratischen Zeeman-Aufspaltung für beide Isotope
 \begin{align}
     \Delta E_Z^{87} &= \qty{4.175(7)e-28}{\joule} \\
     \Delta E_Z^{85} &= \qty{4.105(31)e-28}{\joule} .
