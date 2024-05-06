@@ -47,6 +47,11 @@ I_sweep_1 = U_sweep_1 * 0.1  # I in ampere
 I_hori_1 = 2 * U_hori_1 * 10 ** (-3)
 I_sweep_2 = U_sweep_2 * 0.1  # I in ampere
 I_hori_2 = 2 * U_hori_2 * 10 ** (-3)
+#ausgabe der stromstärken
+print('I_sweep_1:', I_sweep_1)
+print('I_hori_1:', I_hori_1)
+print('I_sweep_2:', I_sweep_2)
+print('I_hori_2:', I_hori_2 )
 
 #ermittlung b feld
 
@@ -74,8 +79,8 @@ F_res = data[:,0]
 print(len(F_res))
 
 #Plotte resonanzfrequenzen gegen die Magnetfelder
-plt.plot(F_res[:-1], B_1 * 10**3, 'gx', label='Messwerte 1')
-plt.plot(F_res, B_2 * 10**3, 'bx', label='Messwerte 2')
+plt.plot(F_res[:-1], B_1 * 10**3, 'x', c = 'steelblue' , label='Messwerte 1')
+plt.plot(F_res, B_2 * 10**3, 'x', c = 'seagreen' , label='Messwerte 2')
 
 print(B_1)
 
@@ -88,11 +93,13 @@ errors_1 = np.sqrt(np.diag(covariance_1))
 errors_2 = np.sqrt(np.diag(covariance_2))
 
 x_plot = np.linspace(0, 1000, 1000)
-plt.plot(x_plot, f(x_plot, *params_1) * 10**3, 'r-', label='Lineare Regression 1')
-plt.plot(x_plot, f(x_plot, *params_2) * 10**3, 'b-', label='Lineare Regression 2')
+plt.plot(x_plot, f(x_plot, *params_1) * 10**3, '-', c = 'steelblue', alpha = 0.5, label='Lineare Regression 1')
+plt.plot(x_plot, f(x_plot, *params_2) * 10**3, '-',c = 'seagreen', alpha = 0.5 , label='Lineare Regression 2')
 
 #plt.xlabel(r'$B \:/\: \si{\tesla}$')
 #plt.ylabel(r'$f \:/\: \si{\hertz}$')
+plt.xlabel(r'$f \, / \, \mathrm{kHz}$')
+plt.ylabel(r'$B \, / \, \mathrm{mT}$')
 plt.legend()
 plt.grid()
 plt.savefig('build/plot.pdf')
@@ -109,6 +116,19 @@ print('b_1:', b_1)
 print('a_2:', a_2)
 print('b_2:', b_2)
 
+#bilde mittelwert von b_1 und b_2
+#mittelwert bilden
+
+mw = (b_1 + b_2)/ 2
+print('mw:', mw)
+
+I_V = 0.23
+R_V = 0.11735
+N_V= 20.
+B_V = B(I_V,N_V, R_V)
+
+B_Erde = unp.sqrt(mw ** 2 + B_V ** 2)
+print('Erde:', B_Erde)
 #Teil 3: Lande Faktor
 #Berechnung des Lande-Faktors
 

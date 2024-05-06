@@ -5,14 +5,72 @@ Im Folgenden werden die aufgenommenen Messdaten ausgewertet, um den Kernspin der
 Dafür müssen zunächst die Landé-Faktoren der Isotope bestimmt werden und die vertikale Komponente des Erdmagnetfeldes.
 Anschließend wird das Isotopenverhältnis der Rubidium-Isotope bestimmt und der quadratische Zeeman-Effekt untersucht.
 
+Es werden die Werte der Magnetfeldstärken der Horizontalen Spule berechnet, indem die jeweiligen Anteile der sweep und der
+horizontalen Verschiebungsspule addiert werden.
 Für die Magnetfeldstärken der Spulen im Zentrum gilt
+
 \begin{equation}
     B(0) = \frac{8  \mu_0  N I}{\sqrt{125} A}  \, .
+    \label{eqn:magnetfeld}
 \end{equation}
+
 Die Stromstärke des Sweepanteils wird per Umdrehnungen gemessen.
 Dieser Wert wird mit \qty{0.1}{\ampere} pro Umdrehung umgerechnet.
 Für den horizontalen Anteil wurde die Spannung in \unit{\milli\volt} gemessen und kann umgerechnet werden in \unit{\milli\ampere},
 indem die Werte der Spannungen verdoppelt werden.
+Die notierten Werte werden in Tabelle \ref{tab:magnetfeldstärken} aufgetragen, wobei die Stromstärken bereits umgerechnet wurden.
+
+\begin{table}
+    \centering
+    \caption{Die aufgenommenen Messwerte der Sweep-Spule und der horizontalen Verschiebungsspule für beide Isotope.}
+    \label{tab:magnetfeldstärken}
+    \begin{tabular}{c c c c c}
+        \toprule
+        $f \mathbin{/} \mathrm{kHz} $& $I_{s1} \mathbin{/} \unit{\ampere}$ & $I_{h1} \mathbin{/} \unit{\ampere}$ & $I_{s2} \mathbin{/} \unit{\ampere}$ & $I_{h2} \mathbin{/} \unit{\ampere}$ \\
+        \midrule
+        100 & 0.54 & 0.00 & 0.658 & 0.00 \\
+        200 & 0.776 & 0.00 & 0.731 & 0.0194 \\
+        300 & 0.436 & 0.0402 & 0.790 & 0.0402 \\
+        400 & 0.328 & 0.0642 & 0.801 & 0.0642 \\
+        500 & 0.291 & 0.0834 & 0.891 & 0.0834 \\
+        600 & 0.281 & 0.1006 & 0.987 & 0.1006 \\
+        700 & 0.10 & 0.1298 & 0.928 & 0.1298 \\
+        800 & 0.272 & 0.1374 & 0.433 & 0.1894 \\
+        900 & 0.384 & 0.1432 & 0.598 & 0.2028 \\
+        1000 & 0.459 & 0.2374 & 0.522 & 0.2328 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+In Abbildung \ref{fig:plot1} sind die mit der Gleichung \ref{eqn:magnetfeld} berechneten Magnetfeldstärken gegen die Frequenz für beide Isotope aufgetragen.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{build/plot.pdf}
+    \caption{Magnetfeldstärke aufgetragen gegen die Frequenz für beide Isotope.}
+    \label{fig:plot1}
+\end{figure}
+
+Es wurde eine lineare Regression der Messwerte für beide Isotope durchgeführt.
+Die verwendete Ausgleichsfunktion hat die Form
+\begin{equation}
+    f(x) = a \cdot x + b \, .
+\end{equation}
+
+Daraus folgen die Parameter beider Isotope
+%a_1: (1.468+/-0.011)e-07
+%b_1: (1.76+/-0.06)e-05
+%a_2: (2.1795+/-0.0035)e-07
+%b_2: (1.760+/-0.022)e-05
+
+\begin{align*}
+    a_1 &= \qty{1.468(11)e-07}{\tesla\per\hertz} \\
+    b_1 &= \qty{1.76(6)e-05}{\tesla} \\
+    a_2 &= \qty{2.1795(35)e-07}{\tesla\per\hertz} \\
+    b_2 &= \qty{1.760(22)e-05}{\tesla} \, .
+\end{align*}
+
+Die berechneten Werte werden für die weiteren Rechnungen verwendet
 
 \subsection{Magnetfeld der Erde}
 \label{sec:magnetfeld-der-erde}
@@ -20,16 +78,16 @@ indem die Werte der Spannungen verdoppelt werden.
 Die Vertikalkomponente des Erdmagnetfeldes hat aufgrund des horizontal verlaufenden Lichtstrahls einen Einfluss auf die Messung.
 Daher wird diese durch ein vertikal verlaufendes Magnetfeld kompensiert und der Aufbau wird um die vertikale Achse in Nord-Süd Richtung gedreht,
 sodass die horizontale Komponente parallel oder antiparallel zu dem horizontalen Magnetfeld verläuft.
-Zur Berechnung der Feldstärke des Erdfeldes muss zunächst die magnetische Feldstärke des vertikalen Feldes gemessen werden.
+Zur Berechnung der Feldstärke des Erdmagnetfeldes muss zunächst die magnetische Feldstärke des vertikalen Feldes gemessen werden.
 Diese betrug in diesem Experiment \qty{0.23}{\ampere}.
-Anschließend wird über den $y$-Achsenabschnitt des Graphens die horizontale Magnetfeldstärke bestimmt.
-
-
+Anschließend wird über den $y$-Achsenabschnitt der Ausgleichsgeraden in Abbildung \ref{fig:plot1} die horizontale Magnetfeldstärke bestimmt.
+Der Mittelwert der $y$-Achsenabschnitte wird mittels uncertainties \cite{uncertainties} gebildet, um den Wert des horizontalen Feldes zu bestimmen.
+Über den Satz des Pythagoras kann der Wert des Erdmagnetfeldes ermittelt werden.
+Schlussendlich ergibt sich für das Magnetfeld der Erde ein Wert von \qty{3.939(15)e-05}{\tesla}.
 
 \subsection{Bestimmung Lande-Faktor}
 \label{sec:best-lande-faktoren}
 
-% create table with this data
 
 
 
