@@ -68,6 +68,13 @@ B_2 = B_sweep_2 + B_hori_2
 print('B_1:', B_1)
 print('B_2:', B_2)
 
+# calculate mean of B_1 and B_2
+
+B_87 = np.mean(B_1)
+B_85 = np.mean(B_2)
+print('B_87:', B_87)
+print('B_85:', B_85)
+
 #Teil 2:Lande Faktor
 #Definition der Ausgleichsfunktion
 def f(x, a, b):
@@ -172,3 +179,18 @@ I_2 = I(g_2, F_85)
 #ausgabe kernspin
 print('I_1:', I_1)
 print('I_2:', I_2)
+
+#quadratischer Zeemanneffekt
+
+def E(gf,B,Mf,Ehf):
+    return gf * mu_b * B + gf ** 2 * mu_b ** 2 * B ** 2 * ((1- 2 * Mf)/Ehf)
+
+M_85 = 3
+M_87 = 2
+E_85 = 2.01 * 10 ** (-24)
+E_87 = 4.53 * 10 ** (-24)
+
+Z_87 = E(g_1,B_87,M_87,E_87)
+Z_85 = E(g_2,B_85,M_85,E_85)
+print('Z_85:', Z_85)
+print('Z_87:', Z_87)
