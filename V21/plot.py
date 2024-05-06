@@ -129,6 +129,7 @@ B_V = B(I_V,N_V, R_V)
 
 B_Erde = unp.sqrt(mw ** 2 + B_V ** 2)
 print('Erde:', B_Erde)
+
 #Teil 3: Lande Faktor
 #Berechnung des Lande-Faktors
 
@@ -140,6 +141,8 @@ def g(a):
 g_1 = g(a_1)
 g_2 = g(a_2)
 
+print('g_1:', g_1)
+print('g_2:', g_2)
 #verhältnis der Lande-Faktoren
 g_verh = g_1 / g_2
 
@@ -150,3 +153,4 @@ S = 1/2
 L = 0
 J = S + L
 
+g_j = 1+ (J*(J+1)-L*(L+1)+S*(S+1))/(2*J*(J+1))
