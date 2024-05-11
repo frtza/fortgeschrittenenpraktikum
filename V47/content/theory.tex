@@ -101,15 +101,62 @@ which gives
 \begin{equation*}
 	C_P - C_V = 9 \, \alpha_{\!L}^2 \, \kappa_T \, TV
 \end{equation*}
-as the final expression.
+as the final expression. For typical solids with strong binding forces this difference is negligible, though it becomes
+more relevant for liquid or gaseous states of matter.
 
 \subsection{Models}
 
+All approaches discussed in this section model condensed matter as perfect crystal lattices with normal modes of
+participating members as purely harmonic oscillations. In the Hooke regime, the center of mass does not change
+with increasing or decreasing energy. Accordingly, the volume is constant under heat exchange and the condition
+$C_V = C_P$ is always fulfilled. This is of course unphysical, but it should serve as a decent approximation for
+the materials we are interested in. To account for thermal contraction, we would need to consider anharmonic
+effects by expanding the assumed potential minimum to higher orders.
+
 \subsubsection{Classical Physics}
+
+The equipartition theorem from classical thermodynamics affords a mean energy
+\begin{equation*}
+	\left< u \right> = \pfrac{1}{2} k_B T
+\end{equation*}
+to each available degree of freedom. For a singular uncoupled harmonic oscillator, we have the spacial components of
+position and velocity as free coordinates. In this view, a three dimensional system of $N$ atoms has an internal energy
+\begin{equation*}
+	U = 3 N k_B T = 3 nRT
+\end{equation*}
+when we impose zero equilibrium potential. Here $R = N_{\! A} k_B$ is the universal gas constant, $N_{\! A}$ is the Avogadro
+constant and $k_B$ is the Boltzmann constant. \newpage
+
+Because $\up{d}V = 0$ and therefore $\up{d}U = \up{\delta}Q$ we can simply write
+\begin{equation*}
+	C = \pfrac{\del U}{\del T\:} = 3N k_B = 3nR
+\end{equation*}
+to find the heat capacity as predicted through the empirical law by Dulong and Petit.
 
 \subsubsection{Quantum Mechanics}
 
+The classical result estimates the heat capacity reasonably well for high temperatures. At lower temperatures however, we
+expect quantum mechanical effects to play a significant role. This is explained by the quantization of energy in multiples
+of $\hbar\omega$ dividing the range of allowed states into discrete levels. At temperatures where $k_B T \gg \hbar\omega$
+the energy space appears continuous to thermal excitations whereas $k_BT \ll \hbar\omega$ forces most members to remain
+frozen in the ground state. To visualize this description, figure \ref{fig:quantization} presents a coneptual sketch.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.4\linewidth]{content/graphics/quantization.jpg}
+	\caption{Exemplary energy discretization in low and high temperature limits. \cite{GrossMarx+2022}}
+	\label{fig:quantization}
+\end{figure}
+
 \paragraph{Phonons}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.45\linewidth]{content/graphics/branches.jpg}
+	\caption{Schematic phonon branches inside the first Brillouin zone. \cite{GrossMarx+2022}}
+	\label{fig:branches}
+\end{figure}
+
 
 \paragraph{Einstein}
 
