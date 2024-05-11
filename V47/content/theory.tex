@@ -139,9 +139,9 @@ The classical result estimates the heat capacity reasonably well for high temper
 expect quantum mechanical effects to play a significant role. This is explained by the quantization of energy in multiples
 of $\hbar\omega$ dividing the range of allowed states into discrete levels. At temperatures where $k_B T \gg \hbar\omega$
 the energy space appears continuous to thermal excitations whereas $k_BT \ll \hbar\omega$ forces most members to remain
-frozen in the ground state. To visualize this description, figure \ref{fig:quantization} presents a coneptual sketch.
+frozen in the ground state. To visualize this description, figure \ref{fig:quantization} presents a conceptual sketch.
 
-\begin{figure}
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.4\linewidth]{content/graphics/quantization.jpg}
 	\caption{Exemplary energy discretization in low and high temperature limits. \cite{GrossMarx+2022}}
@@ -150,16 +150,63 @@ frozen in the ground state. To visualize this description, figure \ref{fig:quant
 
 \paragraph{Phonons}
 
-\begin{figure}
+As shown in figure \ref{fig:branches} collective lattice vibrations show two types of dispersion relation.
+
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.45\linewidth]{content/graphics/branches.jpg}
 	\caption{Schematic phonon branches inside the first Brillouin zone. \cite{GrossMarx+2022}}
 	\label{fig:branches}
 \end{figure}
 
+Optical branches result from out of phase oscillations, where neighboring atoms have opposite velocity vectors. Conversely,
+acoustic branches represent in phase or parallel vibrational modes. For a crystal with $k$ basis atoms, there are $3$ acoustic
+and $3k - 3$ optical dispersion curves. The differences between these solutions can be more or less relevant under different
+circumstances.
+
+We call such quantized sound waves phonons, which are quasi particles with similar behaviour to photons as the gauge bosons
+representing quantized light waves. The most important difference is the vanishing chemical potential $\mu = 0$ indicating
+that phonons are not conserved.
+
+In accordance with the previous statement, the mean equilibrium population
+\begin{equation*}
+	\left< n \right> = \pfrac{1}{e^{\beta\hbar\omega} - 1}
+\end{equation*}
+follows statistics as described by Bose and Einstein, where
+\begin{equation*}
+	\beta \equiv \pfrac{1}{k_B T\:}
+\end{equation*}
+is the thermodynamic beta and the exponentials trace back to Boltzmann weighting as well as the convergence of the geometric
+series. From the energy levels of a quantum harmonic oscillator
+\begin{equation*}
+	E_n = \hbar\omega \left( \textstyle{\pfrac{1}{2}} + n \right)
+\end{equation*}
+we find the internal energy
+\begin{equation*}
+	U = \sum_{\bm{q}\,r} \textstyle\pfrac{1}{2}\displaystyle \hbar\omega_{\bm{q}\,r} +
+	\sum_{\bm{q}\,r} \pfrac{\hbar\omega_{\bm{q}\,r}}{e^{\beta\hbar\omega_{\bm{q}\,r}} - 1}
+\end{equation*}
+where we sum over all allowed reciprocal vectors $\bm{q}$ and polarisations $r$ to account for multiatomic bases.
+The heat capacity follows as
+\begin{equation*}
+	C = \pfrac{\del}{\del T\:} \sum_{\bm{q}\,r} \pfrac{\hbar\omega_{\bm{q}\,r}}{e^{\beta\hbar\omega_{\bm{q}\,r}} - 1}
+\end{equation*}
+in the most general case. For high temperatures, we get
+\begin{equation*}
+	C = \sum_{\bm{q}\,r} k_B
+\end{equation*}
+by expanding the exponential to linear order. With $\sum_{\bm{q}\,r} = 3N$ this reproduces the classical result as
+asserted by the correspondence principle.
 
 \paragraph{Einstein}
 
 \paragraph{Debye}
 
 \paragraph{Electrons}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\linewidth]{content/graphics/comparison.jpg}
+	\caption{\cite{what-when-how}}
+	\label{fig:comparison}
+\end{figure}
