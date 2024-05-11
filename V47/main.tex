@@ -1,5 +1,10 @@
 \input{english.tex}
 
+\setcounter{secnumdepth}{\subparagraphnumdepth}
+\setcounter{tocdepth}{\subparagraphnumdepth}
+
+\RedeclareSectionCommands[afterskip=1sp]{paragraph,subparagraph}
+
 \subject{\texorpdfstring{\vspace{2ex}}{}V47\texorpdfstring{\vspace{-2ex}}{}} % number
 \title{Molar Heat of Copper} % title
 \date{

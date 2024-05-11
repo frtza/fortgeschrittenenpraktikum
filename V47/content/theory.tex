@@ -26,9 +26,44 @@ for the molar heat capacity, where $n$ is the number of \unit{\mole} contained i
 $n$ one can use readily available values of the molar mass $m$ or molar volume $v$ for the given
 experimental parameters.
 
-\subsubsection{Isobaric Case}
+\subsubsection{Measurement}
 
-\subsubsection{Isochoric Case}
+During the measuring process, it is necessary to constrain certain parameters. To understand the resulting relations,
+we examine the first law of thermodynamics
+\begin{equation*}
+	\up{d} U = \up{\delta} Q - \up{\delta} W = T \up{d} S - P \up{d} V
+\end{equation*}
+where $U$ is the internal energy, $Q$ and $W$ are heat and work, $T$ stands for temperature, $S$ for entropy,
+$P$ for pressure and $V$ for volume. The symbols $\up{d}$ and $\up{\delta}$ denote exact and inexact differentials,
+respectively. \newpage
+
+From this relation, we identify $\up{\delta} Q = T \up{d} S$ and thereby
+\begin{equation*}
+	C = T \: \pfrac{\del S}{\del T\:}
+\end{equation*}
+when translating the defining statement to infinitesimal notation.
+
+\paragraph{Isochoric Case}
+
+At fixed volume, all units of heat result in temperature changes exclusively. The isochoric heat capacity can be written as
+\begin{equation*}
+	C_V = T \left.\pfrac{\del S}{\del T\:}\right|_V
+\end{equation*}
+and constitutes an interesting quantity to study the behaviour of materials due to the isolation of otherwise connected effects.
+
+\paragraph{Isobaric Case}
+
+When the pressure is kept constant instead, some of the heat exchange also results in expansion or contraction of the
+sample and therefore reduces the total temperature difference. Intuition therefore tells us that $C_P > C_V$ where we write
+\begin{equation*}
+	C_P = T \left.\pfrac{\del S}{\del T\:}\right|_P
+\end{equation*}
+for the isobaric heat capacity. This situation is more easily realizable in experiments but comes at the cost of no longer
+separating different mechanisms affecting the substance.
+
+\paragraph{Connection}
+
+In order to convert between $C_P$ and $C_V$ we need some generally applicable relationship between the two quantities.
 
 \subsection{Models}
 
