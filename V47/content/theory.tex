@@ -28,8 +28,8 @@ experimental parameters.
 
 \subsubsection{Measurement}
 
-During the measuring process, it is necessary to constrain certain parameters. To understand the resulting relations,
-we examine the first law of thermodynamics
+During the measuring process, it is necessary to constrain certain parameters. To grasp the following relations,
+we examine the first and second laws of thermodynamics
 \begin{equation*}
 	\up{d} U = \up{\delta} Q - \up{\delta} W = T \up{d} S - P \up{d} V
 \end{equation*}
@@ -64,6 +64,43 @@ separating different mechanisms affecting the substance.
 \paragraph{Connection}
 
 In order to convert between $C_P$ and $C_V$ we need some generally applicable relationship between the two quantities.
+We establish the differential form for entropy
+\begin{equation*}
+	\up{d}S = \left.\pfrac{\del S}{\del T\:}\right|_V \!\up{d}T + \left.\pfrac{\del S}{\del V\:}\right|_T \!\up{d}V
+\end{equation*}
+in terms of volume as an extensive and temperature as an intensive property. We obtain
+\begin{equation*}
+	\left.\pfrac{\del S}{\del T\:}\right|_P \!= \left.\pfrac{\del S}{\del T\:}\right|_V \!+
+	\left.\pfrac{\del S}{\del V\:}\right|_T \left.\pfrac{\del V}{\del T\:}\right|_P
+\end{equation*}
+by differentiating, allowing us to reformulate our desired quantites
+\begin{equation*}
+	C_P - C_V = T\left(\left.\pfrac{\del S}{\del T\:}\right|_P \!- \left.\pfrac{\del S}{\del T\:}\right|_V \:\right) =
+	T\left.\pfrac{\del S}{\del V\:}\right|_T \left.\pfrac{\del V}{\del T\:}\right|_P
+\end{equation*}
+as the difference between them. \newpage
+
+A combination of Jacobian coordinate transformations and Maxwell relations yields
+\begin{equation*}
+	C_P - C_V = \alpha_V^2 \, \kappa_T \, TV
+\end{equation*}
+with the isothermal bulk modulus
+\begin{equation*}
+	\kappa_T = -V\left.\pfrac{\del P\:}{\del V\:}\right|_T
+\end{equation*}
+and the volumetric thermal expansion coefficient
+\begin{equation*}
+	\alpha_V = \pfrac{1}{V\:} \left.\pfrac{\del V\:}{\del T\:}\right|_P
+\end{equation*}
+of the material. For isotropic materials, the last term can be expressed as $\alpha_V = 3\,\alpha_{\!L}$ via the linear analogue
+\begin{equation*}
+	\alpha_{\!L} = \pfrac{1}{L\:} \left.\pfrac{\del L\:}{\del T\:}\right|_P
+\end{equation*}
+which gives
+\begin{equation*}
+	C_P - C_V = 9 \, \alpha_{\!L}^2 \, \kappa_T \, TV
+\end{equation*}
+as the final result.
 
 \subsection{Models}
 
