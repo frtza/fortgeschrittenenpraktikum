@@ -164,9 +164,9 @@ acoustic branches represent in phase or parallel vibrational modes. For a crysta
 and $3k - 3$ optical dispersion curves. The differences between these solutions can be more or less relevant under different
 circumstances.
 
-We call such quantized sound waves phonons, which are quasi particles with similar behaviour to photons as the gauge bosons
-representing quantized light waves. The most important difference is the vanishing chemical potential $\mu = 0$ indicating
-that phonons are not conserved.
+We call such quantized sound waves phonons, which funtion as quasiparticles with similar behaviour to photons as gauge bosons
+acting like quantized light waves. An important characteristic is the vanishing chemical potential $\mu$ indicating
+that population numbers are not conserved and that quasiparticles can be created or destroyed.
 
 In accordance with the previous statement, the mean equilibrium population
 \begin{equation*}
@@ -191,14 +191,39 @@ The heat capacity follows as
 \begin{equation*}
 	C = \pfrac{\del}{\del T\:} \sum_{\bm{q}\,r} \pfrac{\hbar\omega_{\bm{q}\,r}}{e^{\beta\hbar\omega_{\bm{q}\,r}} - 1}
 \end{equation*}
-in the most general case. For high temperatures, we get
-\begin{equation*}
-	C = \sum_{\bm{q}\,r} k_B
-\end{equation*}
-by expanding the exponential to linear order. Due to the relation $\sum_{\bm{q}\,r} = 3N$ this asymptote reproduces
-the classical result as asserted by the correspondence principle.
+in the most general case. Due to $\sum_{\bm{q}\,r} = 3N$ we always get $C = 3Nk_B$ at high temperatures
+by expanding the exponential function to linear order. This asymptote reproduces the classical result as asserted by
+the correspondence principle independent from any further restrictions introduced by additional simplifications. The global
+models described below therefore both approach the same value at high thermal energies but differ when quantum effects
+dominate at low temperatures. \newpage
 
 \paragraph{Einstein}
+
+The core assumption proposed by Einstein is a monochromatic eigenmode spectrum. By introducing $\omega_E$ as the
+frequency for all oscillations, we can write
+\begin{equation*}
+	C = \pfrac{\del}{\del T\:} \sum_{\bm{q}\,r} \pfrac{\hbar\omega_E}{e^{\beta\hbar\omega_E} - 1}
+\end{equation*}
+and after differentiating
+\begin{equation*}
+	C = 3N \, \pfrac{\hbar^2 \omega_E^2}{k_B T^2} \, \pfrac{e^{\beta\hbar\omega_E}}{( e^{\beta\hbar\omega_E} - 1 )^2}
+\end{equation*}
+with $\sum_{\bm{q}\,r} = 3N$ for the summation. We introduce the Einstein temperature
+\begin{equation*}
+	\vartheta_{\! E} \equiv \pfrac{\hbar\omega_E}{k_B}
+\end{equation*}
+and reformulate the previous expression as
+\begin{equation*}
+	C = 3N k_B \, \Bigl(\pfrac{\vartheta_{\! E}}{T}\Bigr)^{\!\! 2} \pfrac{e^{\vartheta_{\! E} / T}}{( e^{\vartheta_{\! E} / T} - 1 )^2}
+\end{equation*}
+for our result. By using the expansions $e^{\vartheta_{\! E} / T} = 1$ and $e^{\vartheta_{\! E} / T} - 1 = \vartheta_{\! E} / T$
+it is trivial to show that $C = 3N k_B$ at high temperatures. With $e^{\vartheta_{\! E} / T} \gg 1$ we find
+\begin{equation*}
+	C = 3N k_B \, \Bigl(\pfrac{\vartheta_{\! E}}{T}\Bigr)^{\!\! 2} e^{-\vartheta_{\! E} / T}
+\end{equation*}
+in the low temperature limit. The flat dispersion underlying these results most closely resembles the typical behavior
+of optical phonons. Due to their contribution being most significant at higher energies, the accuracy of the cold regime
+approximation suffers as acoustic phonons dominate.
 
 \paragraph{Debye}
 
