@@ -227,6 +227,26 @@ approximation suffers as acoustic phonons dominate.
 
 \paragraph{Debye}
 
+According to Debye, we replace all phonon branches with the three acoustic ones and approximate these to exhibit linear
+dispersion. Additionally, instead of summing over wave vectors $\bm{q}$ we integrate over a spherical constant energy
+surface of the first Brillouin zone. Each dispersion branch contains $N$ states occupying a total phase space
+volume
+\begin{equation*}
+	8\pi^3 \pfrac{N}{V\:} = \pfrac{4}{3} \pi q_D^3
+\end{equation*}
+where the right hand side follows as the volume of a sphere with radius $q_D$ equal to the magnitude of the reciprocal
+Debye vector. \newpage
+
+Solving this equation leads to
+\begin{equation*}
+	q_D = \left( 6\pi^2 \pfrac{N}{V\:} \: \right)^{\!\!1/3}
+\end{equation*}
+which defines $\omega_{D\,i} = q_D v_i$ for the frequencies. We see here that the speed of sound
+\begin{equation*}
+	v_i = \frac{\omega_{D\,i}}{\raisebox{0.25ex}{$q_D$}} = \frac{\del \omega_{D\,i}}{\del q_D}
+\end{equation*}
+is both the phase and group velocity.
+
 \paragraph{Electrons}
 
 \begin{figure}[H]
