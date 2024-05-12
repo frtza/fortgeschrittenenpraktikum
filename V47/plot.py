@@ -103,6 +103,15 @@ print('alpha:', alpha[:-1])
 print('T:', T[:-1])
 print('Cv:', Cv)
 
+Cv_mean = np.mean(Cv)
+print('Cv_mean:', Cv_mean)
+
+#molare wärmekapazität
+
+Cv_m = Cv_mean * M
+print('Cv_m:', Cv_m)
+
+
 # plot Cp against T
 plt.plot(noms(T[:-1]), noms(Cp), 'x',c = 'seagreen', label='Messwerte')
 plt.xlabel('T in K')
