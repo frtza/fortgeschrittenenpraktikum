@@ -219,7 +219,7 @@ and reformulate the previous expression as
 for our result. By using the expansions $e^{\vartheta_{\! E} / T} = 1$ and $e^{\vartheta_{\! E} / T} - 1 = \vartheta_{\! E} / T$
 it is trivial to show that $C = 3N k_B$ at high temperatures. With $e^{\vartheta_{\! E} / T} \gg 1$ we find
 \begin{equation*}
-	C = 3N k_B \, \Bigl(\pfrac{\vartheta_{\! E}}{T}\Bigr)^{\!\! 2} e^{-\vartheta_{\! E} / T}
+	C = 3N k_B \, \Bigl(\pfrac{\vartheta_{\! E}}{T\:}\Bigr)^{\!\! 2} e^{-\vartheta_{\! E} / T}
 \end{equation*}
 in the low temperature limit. The flat dispersion underlying these results most closely resembles the typical behavior
 of optical phonons. Due to their contribution being most significant at higher energies, the accuracy of the cold regime
@@ -245,13 +245,73 @@ which defines $\omega_{D\,i} = q_D v_i$ for the frequencies. We see here that th
 \begin{equation*}
 	v_i = \frac{\omega_{D\,i}}{\raisebox{0.25ex}{$q_D$}} = \frac{\del \omega_{D\,i}}{\del q_D}
 \end{equation*}
-is both the phase and group velocity.
+is both the phase and group velocity. Accounting for the density of states, we find
+\begin{equation*}
+	C = \,\pfrac{\del}{\del T\:} \sum_{i = 1}^3 \int_0^{2\pi} \up{d} \varphi
+	\int_0^\pi \up{d}\vartheta \sin\vartheta \int_0^{q_D} \up{d}q \,q^2 Z(q) \,\pfrac{\hbar q v_i}{e^{\beta\hbar q v_i} - 1}
+\end{equation*}
+in spherical coordinates. We define the cubed harmonic mean sound velocity $v_s$ via
+\begin{equation*}
+	\pfrac{1}{v_{\! s}^3} = \pfrac{1}{3} \sum_{i=1}^3 \pfrac{1}{v_i^3}
+\end{equation*}
+or more explicitly
+\begin{equation*}
+	v_{\! s} = \Bigl( \raisebox{0.25ex}{$\displaystyle\pfrac{1}{3v_l^3} + \pfrac{2}{3v_t^3}$} \Bigr)^{\!\! -1/3}
+\end{equation*}
+where we require identical velocities $v_t$ for both transversal components with the singular longitudinal mode $v_l$ as independent.
+Using this, we can write
+\begin{equation*}
+	C = \pfrac{3V\hbar^2 v_{\! s}^2}{2\pi^2k_B T^2} \int_0^{q_D} \up{d}q \,
+	\pfrac{q^4 e^{\beta\hbar q v_{\! s}}}{(e^{\beta\hbar q v_{\! s}} - 1)^2}
+\end{equation*}
+after integrating over the solid angle and differentiating with respect to temperature. The substitution
+$x \equiv \beta\hbar q v_{\! s}$ gives
+\begin{equation*}
+	C = \pfrac{3V k_B^4 T^3}{2\pi^2 \hbar^3 v_{\! s}^3} \int_0^{\beta\hbar q_D v_{\! s}} \up{d}x \, \pfrac{x^4 e^x}{(e^x - 1)^2}
+\end{equation*}
+as an equivalent formulation. By introducing the Debye temperature
+\begin{equation*}
+	\vartheta_{\! D} \equiv \pfrac{\hbar\omega_D}{k_B} = \pfrac{\hbar q_D v_{\! s}}{k_B} = \pfrac{\hbar v_{\! s}}{\k_B}
+	\left( 6\pi^2 \pfrac{N}{V\:} \: \right)^{\!\!1/3}
+\end{equation*}
+we finally arrive at
+\begin{equation*}
+	C = 9N k_B \Bigl( \pfrac{T}{\vartheta_{\! D}} \Bigr)^{\! 3} \int_0^{\vartheta_{\! D} / T} \up{d}x \, \pfrac{x^4 e^x}{(e^x - 1)^2}
+\end{equation*}
+for our result. At high temperatures $e^x = 1$ and $e^x - 1 = x$ lead to $C = 3N k_B$ again. \newpage
+
+In the case of low temperatures, the integral approaches
+\begin{equation*}
+	\int_0^\infty \up{d}x \, \pfrac{x^4 e^x}{(e^x - 1)^2} = \pfrac{4\pi^4}{15}
+\end{equation*}
+and the heat capacity
+\begin{equation*}
+	C = \pfrac{12\pi^4}{5} N k_B \Bigl( \pfrac{T}{\vartheta_{\! D}} \Bigr)^{\! 3}
+\end{equation*}
+has a cubic temperature dependence. Thanks to the assumption of linear dispersion, this closely matches observations.
+From the above considerations
+\begin{equation*}
+	\omega_D = q_D v_{\! s} = \left( 18\pi^2
+	\Bigl( \raisebox{0.25ex}{$\displaystyle\pfrac{1}{v_l^3} + \pfrac{2}{v_t^3}$} \Bigr)^{\!\! -1}
+	\pfrac{N}{V\:} \: \right)^{\!\!\! 1/3} 
+\end{equation*}
+gives the prescription for the resulting frequency.
 
 \paragraph{Electrons}
+
+Especially in metals, the contribution from free electrons can add significantly to the heat capacity. We model this as an
+ideal fermion gas, meaning that all interactions are governed by the Pauli exclusion principle, resulting in a statistic
+as described by Fermi and Dirac. From a Sommerfeld expansion we find
+\begin{equation*}
+	C = \pfrac{\pi^2}{2} N k_B \pfrac{T}{T_F\,}
+\end{equation*}
+where the Fermi temperature $T_F$ is defined via the Fermi energy $E_F = k_B T_F$ and the heat capacity depends linearly
+on the absolute temperature. Exemplary isochoric heat capacities can be viewed in figure \ref{fig:comparison} to compare
+the competing models.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.5\linewidth]{content/graphics/comparison.jpg}
-	\caption{\cite{what-when-how}}
+	\caption{Different models of isochoric heat capacity for a typical solid material. \cite{what-when-how}}
 	\label{fig:comparison}
 \end{figure}
