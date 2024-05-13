@@ -13,7 +13,7 @@ with open('data/messung.csv') as csvfile:
     data = list(csv.reader(csvfile))
 with open('data/alpha_ph.csv') as csvfile:
     alpha = list(csv.reader(csvfile))
-with open('data/debye_philipp.csv') as csvfile:
+with open('data/debye.csv') as csvfile:
     debye = list(csv.reader(csvfile))
 
 #coverting data to float
@@ -126,8 +126,8 @@ plt.clf()
 
 #debye temperature
 
-#D = debye * T
-#print('D:', D)
+D = debye * T
+print('D:', D)
 
 #print('dT:')
 #for i in range(len(dT)):
@@ -150,14 +150,23 @@ plt.clf()
  #   print(np.round(noms(Cp[i]), 2), "+/-", np.round(stds(Cp[i]), 2))
 
 print('T:')
-for i in range(len(T)):
+for i in range(10):
     print(np.round(noms(T[i]),2), '+/-', np.round(stds(T[i]),2))
 
 
-print('Cv:')
-for i in range(len(Cv)):
-    print(np.round(noms(Cv[i]), 2), "+/-", np.round(stds(Cv[i]), 2))
+#print('Cv:')
+#for i in range(len(Cv)):
+    #print(np.round(noms(Cv[i]), 2), "+/-", np.round(stds(Cv[i]), 2))
 
-print('alpha:')
-for i in range(len(alpha)):
-    print(alpha[i])
+#print('alpha:')
+#for i in range(len(alpha)):
+    #print(alpha[i])
+
+print('D:')
+for i in range(10):
+    print(D[i])
+
+#calculate mean value of debye temperature for the first 10 values
+
+D_mean = np.mean(D[:10])
+print('D_mean:', D_mean)
