@@ -99,7 +99,7 @@ Cp = cp(E[:-1], dT)
 print('Cp:', Cp)
 
 # plot Cp against T
-plt.plot(noms(T[:-1]), noms(Cp), 'x',c = 'seagreen', label='Messwerte')
+plt.plot(noms(T[:-1]), noms(Cp), 'x',c = 'darkorchid', label='Messwerte')
 plt.xlabel('T in K')
 plt.ylabel('Cp in J/K')
 plt.legend()
@@ -116,9 +116,9 @@ print('Cv:', Cv)
 
 #plot Cv against T
 
-plt.plot(noms(T[:-1]), noms(Cv), 'x',c = 'seagreen', label='Messwerte')
+plt.plot(noms(T[:-1]), noms(Cv), 'x',c = 'darkorchid', label='Messwerte')
 plt.xlabel('T in K')
-plt.ylabel('Cv in J/K')
+plt.ylabel('$c_V$ in J/mol K')
 plt.legend()
 plt.grid()
 plt.savefig('build/Cv.pdf')
@@ -126,8 +126,38 @@ plt.clf()
 
 #debye temperature
 
-D = debye * T
-print('D:', D)
+#D = debye * T
+#print('D:', D)
+
+#print('dT:')
+#for i in range(len(dT)):
+    #print(np.round(noms(dT[i]), 2), "+/-", np.round(stds(dT[i]), 2))
+
+#print('dt:')
+#for i in range(len(dt)):
+ #   print(np.round(noms(dt[i]), 2), "+/-", np.round(stds(dt[i]), 2))
+
+#print('I:')
+#for i in range(len(I)):
+ #   print(np.round(noms(I[i]*10**3), 1), "+/-", np.round(stds(I[i]*10**3), 1))
+
+#print('U:')
+#for i in range(len(U)):
+ #   print(np.round(noms(U[i]), 2), "+/-", np.round(stds(U[i]), 2))
+
+#print('Cp:')
+#for i in range(len(Cp)):
+ #   print(np.round(noms(Cp[i]), 2), "+/-", np.round(stds(Cp[i]), 2))
+
+print('T:')
+for i in range(len(T)):
+    print(np.round(noms(T[i]),2), '+/-', np.round(stds(T[i]),2))
 
 
+print('Cv:')
+for i in range(len(Cv)):
+    print(np.round(noms(Cv[i]), 2), "+/-", np.round(stds(Cv[i]), 2))
 
+print('alpha:')
+for i in range(len(alpha)):
+    print(alpha[i])
