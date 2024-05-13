@@ -9,7 +9,7 @@ import csv
 
 #Data import
 
-with open('data/daten_philipp.csv') as csvfile:
+with open('data/messung.csv') as csvfile:
     data = list(csv.reader(csvfile))
 with open('data/alpha_ph.csv') as csvfile:
     alpha = list(csv.reader(csvfile))
@@ -70,7 +70,6 @@ print('R:', R)
 
 T = T(R) #array an temperaturen
 print('T:', T)
-
 #create array with temperature differences
 dT = T[1:] - T[:-1]
 
@@ -88,7 +87,7 @@ print('dt:', dt)
 #calculate energy
 U = data[:,1]
 U = uar(U, 0.01)
-I = data[:,2] #in ampere
+I = data[:,2] * 10 ** (-3)#in ampere
 I = uar(I, 0.1)
 
 E = Energie(U, I, dt)
@@ -99,17 +98,6 @@ print('E:', E)
 Cp = cp(E[:-1], dT)
 print('Cp:', Cp)
 
-#caluclate cv
-Cv = cv(Cp, alpha[:-1], T[:-1])
-print('alpha:', alpha[:-1])
-print('T:', T[:-1])
-print('Cv:', Cv)
-
-#molare wärmekapazität
-
-Cv_m = Cv / n
-print('Cv_m:', Cv_m)
-
 # plot Cp against T
 plt.plot(noms(T[:-1]), noms(Cp), 'x',c = 'seagreen', label='Messwerte')
 plt.xlabel('T in K')
@@ -118,6 +106,13 @@ plt.legend()
 plt.grid()
 plt.savefig('build/Cp.pdf')
 plt.clf()
+
+#caluclate cv
+Cv = cv(Cp, alpha[:-1], T[:-1])
+print('alpha:', alpha[:-1])
+print('T:', T[:-1])
+print('Cv:', Cv)
+
 
 #plot Cv against T
 

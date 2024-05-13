@@ -81,9 +81,10 @@ by differentiating, allowing us to reformulate our desired quantites
 as the difference between them. \newpage
 
 A combination of Jacobian coordinate transformations and Maxwell relations yields
-\begin{equation*}
+\begin{equation}
 	C_P - C_V = \alpha_V^2 \, \kappa_T \, TV
-\end{equation*}
+	\label{eqn:heat_capacity_difference}
+\end{equation}
 with the isothermal bulk modulus
 \begin{equation*}
 	\kappa_T = -V\left.\pfrac{\del P\:}{\del V\:}\right|_T
@@ -270,10 +271,11 @@ $x \equiv \beta\hbar q v_{\! s}$ gives
 	C = \pfrac{3V k_B^4 T^3}{2\pi^2 \hbar^3 v_{\! s}^3} \int_0^{\beta\hbar q_D v_{\! s}} \up{d}x \, \pfrac{x^4 e^x}{(e^x - 1)^2}
 \end{equation*}
 as an equivalent formulation. By introducing the Debye temperature
-\begin{equation*}
+\begin{equation}
 	\vartheta_{\! D} \equiv \pfrac{\hbar\omega_D}{k_B} = \pfrac{\hbar q_D v_{\! s}}{k_B} = \pfrac{\hbar v_{\! s}}{\k_B}
 	\left( 6\pi^2 \pfrac{N}{V\:} \: \right)^{\!\!1/3}
-\end{equation*}
+	\label{eqn:debye_temperature}
+\end{equation}
 we finally arrive at
 \begin{equation*}
 	C = 9N k_B \Bigl( \pfrac{T}{\vartheta_{\! D}} \Bigr)^{\! 3} \int_0^{\vartheta_{\! D} / T} \up{d}x \, \pfrac{x^4 e^x}{(e^x - 1)^2}
@@ -290,11 +292,12 @@ and the heat capacity
 \end{equation*}
 has a cubic temperature dependence. Thanks to the assumption of linear dispersion, this closely matches observations.
 From the above considerations
-\begin{equation*}
+\begin{equation}
 	\omega_D = q_D v_{\! s} = \left( 18\pi^2
 	\Bigl( \raisebox{0.25ex}{$\displaystyle\pfrac{1}{v_l^3} + \pfrac{2}{v_t^3}$} \Bigr)^{\!\! -1}
-	\pfrac{N}{V\:} \: \right)^{\!\!\! 1/3} 
-\end{equation*}
+	\pfrac{N}{V\:} \: \right)^{\!\!\! 1/3}
+	\label{eqn:debye_frequency}
+\end{equation}
 gives the prescription for the resulting frequency.
 
 \paragraph{Electrons}

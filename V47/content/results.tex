@@ -40,31 +40,44 @@ The result for the number of particles is
 	N = n \cdot N_A = \num{3.07e24}.
 \end{equation*}
 
+The volume of the sample is calculated as follows
+\begin{equation*}
+	V = \frac{m}{\rho} = \qty{3.628e-5}{\meter^3}.
+\end{equation*}
+
 The transverse velocity of sound and the longitudinal velocity of sound are also required for further calculations.
 These are $v_t = \qty{2260}{\meter \per \second}$ and $v_l = \qty{4700}{\meter \per \second}$ \cite{molar_heat}.
 
 \subsection{Theoretical Debye Temperature}
 \label{sec:theoretical_debye_temperature}
 
-The Debye temperature is calculated using the formula %\ref{eq:debye_temperature}.
+The Debye temperature is calculated using the formula \ref{eqn:debye_temperature}.
+The Debye frequency is determined by the formula \ref{eqn:debye_frequency}.
+The result for the Debye temperature with the parameters given in section {sec:parameters} is
+\begin{equation*}
+	\vartheta_D = \qty{332.208}{\kelvin}.
+\end{equation*}
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.6\linewidth]{content/graphics/resistance.jpg}
-	\caption{\cite{molar_heat}}
-	\label{fig:resistance}
-\end{figure}
+\subsection{Calculation of the Molar Heat Capacity $C_p$}
+\label{sec:calculation_of_the_molar_heat_capacity_cp}
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.6\linewidth]{content/graphics/expansion.jpg}
-	\caption{\cite{molar_heat}}
-	\label{fig:expansion}
-\end{figure}
+The molar heat capacity $C_p$ can be calculated using the equation
+\begin{equation}
+	C_p = \frac{1}{n} \cdot \frac{E}{\Delta T}.
+\end{equation}
+Here the energy is defined as follows
+\begin{equation}
+	E = I \cdot U \cdot \Delta t.
+\end{equation}
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.8\linewidth]{content/graphics/ratio.jpg}
-	\caption{\cite{molar_heat}}
-	\label{fig:ratio}
-\end{figure}
+The measured values as well as the calculated results are shown in the table
+
+\subsection{Calculation of the Molar Heat Capacity $C_v$}
+\label{sec:calculation_of_the_molar_heat_capacity_cv}
+
+The molar heat capacity $C_v$ can be calculated using the equation \ref{eqn:heat_capacity_difference}.
+The values of the expansion coefficient can be read from the source \cite{molar_heat}.
+The heat capacities, the temperatures and the expansion coefficient are shown in Figure .
+
+\subsection{Experimental Debye Temperature}
+\label{sec:experimental_debye_temperature}
