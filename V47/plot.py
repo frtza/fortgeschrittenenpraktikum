@@ -28,7 +28,7 @@ debye = debye[:,0]
 # constants definition
 
 V_m = 7.11 * 10 ** (-6)
-rho = 8920
+rho = 8930 # kg/m^3
 m = 0.324
 M = rho * V_m #molare masse
 k = 137 * 10 ** 9
@@ -37,9 +37,11 @@ v_t = 2260 # transversalgeschwindigkeit
 v_l = 4700 # longitudinalgeschwindigkeit
 N_a = const.Avogadro
 N = (m / M) * N_a #anzahl teilchen probe
+n = m / M #anzahl mol
 V = m / rho
 h_quer = const.hbar
 
+print('n:', n)
 #funtion to calculate cp
 
 def cp(E, dT):
@@ -103,14 +105,10 @@ print('alpha:', alpha[:-1])
 print('T:', T[:-1])
 print('Cv:', Cv)
 
-Cv_mean = np.mean(Cv)
-print('Cv_mean:', Cv_mean)
-
 #molare wärmekapazität
 
-Cv_m = Cv_mean * M
+Cv_m = Cv / n
 print('Cv_m:', Cv_m)
-
 
 # plot Cp against T
 plt.plot(noms(T[:-1]), noms(Cp), 'x',c = 'seagreen', label='Messwerte')
