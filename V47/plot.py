@@ -170,3 +170,16 @@ for i in range(10):
 
 D_mean = np.mean(D[:10])
 print('D_mean:', D_mean)
+
+def abw(emp, theo):
+    return abs(emp - theo)/theo * 100
+
+print('Abweichung:', abw(D_mean, theta_D))
+
+#theorethische wärmekapazität
+C_exp= Cv[-1]
+print('C_exp:', C_exp)
+C_theo = 390 * M
+print('C_theo:', C_theo)
+
+print('Abweichung:', abw(C_exp, C_theo))
